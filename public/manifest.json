@@ -1,0 +1,25 @@
+{
+  "short_name": "Group 61",
+  "name": "Group 61 website",
+  "icons": [
+    {
+      "src": "Logo_edited.webp",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/webp"
+    },
+    {
+      "src": "Logo_edited.webp",
+      "type": "image/webp",
+      "sizes": "192x192"
+    },
+    {
+      "src": "Logo_edited.webp",
+      "type": "image/webp",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
