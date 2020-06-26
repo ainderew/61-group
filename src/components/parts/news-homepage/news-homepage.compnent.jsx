@@ -10,7 +10,7 @@ export const NewsHomepage = () =>{
       <div className="news-homepage">
         <div className="inner-news-hp-row-1">
           <div className="inner-news-hp-r1-left">
-            <img src={News1} alt="News" className="news-hp-img" />
+            <img loading="lazy" src={News1} alt="News" className="news-hp-img" />
           </div>
           
           <div className="inner-news-hp-r1-right">
