@@ -18,7 +18,7 @@
   height: 0.3rem;
   position: absolute;
   bottom: -0.3rem;
-  background: #1ea8e7;
+  background: $main-color;
 }
 
 .footer-inner-container {
@@ -29,18 +29,18 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
-.footer-col-1 {
-  // .footer-contact-ul {
-  //   list-style-type: none;
-  //   .footer-contact-li {
-  //     margin-bottom: 1rem;
-  //     font-size: 1rem;
-  //   }
-  // }
-}
+// .footer-col-1 {
+//   // .footer-contact-ul {
+//   //   list-style-type: none;
+//   //   .footer-contact-li {
+//   //     margin-bottom: 1rem;
+//   //     font-size: 1rem;
+//   //   }
+//   // }
+// }
 
-.footer-col-2 {
-}
+// .footer-col-2 {
+// }
 
 .footer-contact-header,
 .footer-product-header {

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./web-navigation.style.scss";
 
 //LOGO
-import LogoImg from "../../../assets/logos/Logo.webp";
+import LogoImg from "../../../assets/logos/Logo.svg";
 
 //ICON
 import SearchIcon from "../../../assets/icons/search_white.svg";

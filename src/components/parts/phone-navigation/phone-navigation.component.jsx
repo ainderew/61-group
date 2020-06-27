@@ -2,7 +2,7 @@ import React from "react";
 import "./phone-navigation.style.scss";
 
 import MenuIcon from "../../../assets/icons/menu2.svg"
-import MenuLogo from "../../../assets/logos/Logo.webp"
+import MenuLogo from "../../../assets/logos/Logo.svg"
 
 
 export const PhoneNavigation = () =>{

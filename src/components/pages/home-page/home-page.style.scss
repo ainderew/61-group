@@ -6,10 +6,10 @@
   display: grid;
   grid-template-rows: 40vh 270px 40vh 1fr;
 
-  background: #544737 url("../../../assets/images/homepage-background.jpeg")
+  background: #000000 url("../../../assets/images/homepage-background.jpg")
     no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-position: top;
+  background-size: contain;
 }
 
 .header-div {
@@ -134,10 +134,10 @@
     display: grid;
     grid-template-rows: 70vh 230px 40vh 1fr;
 
-    background: #544737 url("../../../assets/images/homepage-background.jpeg")
+    background: #000000 url("../../../assets/images/homepage-background.jpg")
       no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-position: top;
+    background-size: contain;
   }
 
   .header-div {
@@ -173,70 +173,10 @@
       height: 100%;
       display: flex;
 
-      .rec-slider-container {
-        margin: 0;
-      }
-
-      .rec-arrow-right {
-        position: absolute;
-        right: 0;
-      }
-      .rec-arrow-left {
-        position: absolute;
-        left: 0;
-        z-index: 2;
-      }
     }
   }
 
-  .homepage-row-4 {
-    width: 100%;
-    display: flex;
-    align-items: center;
-
-    .hp-row-4-inner {
-      width: 100%;
-      height: 90%;
-      display: grid;
-      grid-template-columns: repeat(2, 50%);
-
-      background: $background-color;
-
-      .hp-row-4-col-1 {
-        height: 100%;
-        width: 100%;
-        background: url(../../../assets//images/hp-row-4-img.webp) no-repeat
-          center;
-        background-size: cover;
-      }
-
-      .hp-row-4-col-2 {
-        padding: 3rem 2rem;
-        display: flex;
-        flex-direction: column;
-        .hp-row-4-col-2-heading {
-          color: #ffcd11;
-          font-size: 1.4rem;
-          margin-bottom: 0.5rem;
-        }
-        .hp-row-4-col-2-body {
-          color: $font-off-white;
-          font-size: 1rem;
-          margin-bottom: 1rem;
-        }
-
-        .hp-row-4-col-2-btn {
-          border: none;
-          width: 10rem;
-          height: 2.5rem;
-
-          color: white;
-          font-size: 1rem;
-          background: #6f6f6f;
-        }
-      }
-    }
-  }
+  
 
   .bottom-div {
     display: flex;
@@ -261,7 +201,7 @@
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-rows: 50vh 0.5fr 30vh 1fr;
+    grid-template-rows: 50vh 0.4fr 30vh 1fr;
 
     background: url("../../../assets/images/homepage-background.webp") no-repeat;
     background-position: left;
@@ -299,6 +239,55 @@
       display: flex;
       flex-direction: column;
       //   align-items: center;
+    }
+  }
+  .homepage-row-4 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .hp-row-4-inner {
+      width: 100%;
+      height: 90%;
+      display: grid;
+      grid-template-columns: 1fr;
+
+      background: $background-color;
+
+      .hp-row-4-col-1 {
+        height: 100%;
+        width: 100%;
+        background: url(../../../assets//images/hp-row-4-img.webp) no-repeat
+          center;
+        background-size: cover;
+        display: none;
+      }
+
+      .hp-row-4-col-2 {
+        padding: 0rem 2rem;
+        display: flex;
+        flex-direction: column;
+        .hp-row-4-col-2-heading {
+          color: $main-color;
+          font-size: 1.4rem;
+          margin-bottom: 0.5rem;
+        }
+        .hp-row-4-col-2-body {
+          color: $font-off-white;
+          font-size: 1rem;
+          margin-bottom: 1rem;
+        }
+
+        .hp-row-4-col-2-btn {
+          border: none;
+          width: 10rem;
+          height: 2.5rem;
+
+          color: white;
+          font-size: 1rem;
+          background: #6f6f6f;
+        }
+      }
     }
   }
 
