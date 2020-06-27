@@ -6,6 +6,8 @@ import LogoImg from "../../../assets/logos/Logo.webp";
 
 //ICON
 import SearchIcon from "../../../assets/icons/search_white.svg";
+import EmailIcon from "../../../assets/icons/mail_white.svg"
+import PhoneIcon from "../../../assets/icons/phone_white.svg"
 
 export const WebNavigation = () => {
   //USESTATES
@@ -45,6 +47,10 @@ export const WebNavigation = () => {
               </a>
             </li>
           </ul>
+          <img src={EmailIcon} alt="" className="web-nav-contact-icon" />
+          <h5 className="web-nav-email">info@61-group.ru</h5>
+          <img src={PhoneIcon} alt="" className="web-nav-contact-icon" />
+          <h5 className="web-nav-email">+7 918 048-34-18</h5>
         </div>
         <div className="web-nav-col-3">
           {searchState ? (

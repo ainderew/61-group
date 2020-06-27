@@ -16,11 +16,12 @@ import SilicaSandLarge2 from "../../../assets/products/Silica sand of large frac
 import SilicaSandMedium from "../../../assets/products/Silica sand of medium fractions.webp";
 import SilicaSandMedium2 from "../../../assets/products/Silica sand of medium fractions2.webp";
 import WhiteQuartz from "../../../assets/products/White fraction quartz.webp";
+import Row4IMG from "../../../assets/images/hp-row-4-img.webp";
 
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
   { width: 550, itemsToShow: 2 },
-  { width: 768, itemsToShow: 4 },
+  { width: 768, itemsToShow: 5 },
   { width: 1000, itemsToShow: 5 },
   { width: 1200, itemsToShow: 5 },
 ];
@@ -39,10 +40,7 @@ export const HomePage = () => {
         <div className="center-align-container">
           {/* <div className="center-products-container"> */}
           <Carousel
-            style={{
-              position: "relative",
-            //   width: "10rem"
-            }}
+            showArrows={false}
             pagination={false}
             breakPoints={breakPoints}>
             <ProductHomepage
@@ -66,14 +64,20 @@ export const HomePage = () => {
             <ProductHomepage image={WhiteQuartz} name={"WHITE QUARTZ"} />
             <ProductHomepage image={WhiteQuartz} name={"WHITE QUARTZ"} />
           </Carousel>
-          {/* </div> */}
-          {/* <div className="center-find-more">
-            <h1 className="center-find-more-1">NEED MORE PRODUCTS</h1>
-            <h1 className="center-find-more-2">FIND IT HEAR</h1>
-            <div className="center-find-more-btn-container">
-              <button className="center-find-more-btn">PRODUCTS</button>
-            </div>
-          </div> */}
+        </div>
+      </div>
+
+      <div className="homepage-row-4">
+        <div className="hp-row-4-inner">
+          <div className="hp-row-4-col-1">
+            {/* <img src={Row4IMG} alt="Covid 19" className="hp-row-4-img" /> */}
+          </div>
+
+          <div className="hp-row-4-col-2">
+            <h4 className="hp-row-4-col-2-heading">CUSTOMER COVID-19 RECOURCE CENTER</h4>
+            <h5 className="hp-row-4-col-2-body">Information and resources to support you during the global pandemic.</h5>
+            <button className="hp-row-4-col-2-btn">VIEW RESOURCES</button>
+          </div>
         </div>
       </div>
 

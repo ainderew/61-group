@@ -20,7 +20,89 @@
 // }
 
 .web-navigation-container{
-  width: 65vw;
+  width: 85vw;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 0.5fr 3fr 1fr;
+}
+
+.web-nav-col-1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  .web-nav-logo {
+    width: 3.6rem;
+  }
+  
+}
+
+.web-nav-col-2 {
+  display: flex;
+  align-items: center;
+  color: white;
+  .web-nav-ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .web-nav-li {
+      list-style-type: none;
+      margin-right: 3rem;
+
+      .web-nav-link {
+        text-decoration: none;
+        color: white;
+        font-size: 1rem;
+        font-family: "Open Sans Condensed", sans-serif;
+      }
+    }
+  }
+  .web-nav-email{
+    font-size: .8rem;
+    white-space: nowrap;
+    margin-right: 1rem;
+  }
+  .web-nav-contact-icon{
+    width: 1.2rem;
+    margin-right: 1rem;
+  }
+}
+.web-nav-col-3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+
+  .web-nav-search-input {
+    width: 80%;
+    outline: none;
+    border: none;
+    border-radius: 0.2rem;
+  }
+
+  .web-nav-search-icon {
+    width: 1.1rem;
+    margin-left: 2rem;
+  }
+}
+
+
+@media only screen and (max-width: 1280px){
+  .web-nav {
+  width: 100%;
+  height: 4.5rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  
+  background: $background-color;
+}
+
+
+.web-navigation-container{
+  width: 85vw;
   height: 100%;
   display: grid;
   grid-template-columns: 0.5fr 3fr 1fr;
@@ -51,7 +133,7 @@
       .web-nav-link {
         text-decoration: none;
         color: white;
-        font-size: 1rem;
+        font-size: .8rem;
         font-family: "Open Sans Condensed", sans-serif;
       }
     }
@@ -71,57 +153,11 @@
   }
 
   .web-nav-search-icon {
-    width: 1.3rem;
+    width: 1.1rem;
     margin-left: 2rem;
   }
 }
-@-webkit-keyframes bounce {
-  0% {
-    transform: scale(1, 1) translateY(0);
-  }
-  10% {
-    transform: scale(1.1, 0.9) translateY(0);
-  }
-  30% {
-    transform: scale(0.9, 1.1) translateY(-25px);
-  }
-  50% {
-    transform: scale(1.05, 0.95) translateY(0);
-  }
-  57% {
-    transform: scale(1, 1) translateY(-7px);
-  }
-  64% {
-    transform: scale(1, 1) translateY(0);
-  }
-  100% {
-    transform: scale(1, 1) translateY(0);
-  }
 }
-@keyframes bounce {
-  0% {
-    transform: scale(1, 1) translateY(0);
-  }
-  10% {
-    transform: scale(1.1, 0.9) translateY(0);
-  }
-  30% {
-    transform: scale(0.9, 1.1) translateY(-15px);
-  }
-  50% {
-    transform: scale(1.05, 0.95) translateY(0);
-  }
-  57% {
-    transform: scale(1, 1) translateY(-2px);
-  }
-  64% {
-    transform: scale(1, 1) translateY(0);
-  }
-  100% {
-    transform: scale(1, 1) translateY(0);
-  }
-}
-
 
 @media only screen and (max-width: 1000px){
   .web-nav{
