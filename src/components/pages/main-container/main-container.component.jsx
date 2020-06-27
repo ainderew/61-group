@@ -20,7 +20,7 @@ export const MainContainer = () =>{
           <PhoneNavigation />
           <Switch>
             <Route path="/" exact component={HomePage} />
-            <Route path="/products" exact component={ProductsPage} />
+            <Route path="/Products" exact component={ProductsPage} />
           </Switch>
           <Footer />
         </div>
