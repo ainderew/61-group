@@ -25,7 +25,7 @@ export const WebNavigation = () => {
         <div className="web-nav-col-2">
           <ul className="web-nav-ul">
             <li className="web-nav-li">
-              <a href="#Products" className="web-nav-link">
+              <a href="Products" className="web-nav-link">
                 PRODUCTS
               </a>
             </li>
