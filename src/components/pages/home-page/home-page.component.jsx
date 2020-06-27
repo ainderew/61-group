@@ -20,8 +20,9 @@ import WhiteQuartz from "../../../assets/products/White fraction quartz.webp";
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
   { width: 550, itemsToShow: 2 },
-  { width: 768, itemsToShow: 3 },
-  { width: 1200, itemsToShow: 4 },
+  { width: 768, itemsToShow: 4 },
+  { width: 1000, itemsToShow: 5 },
+  { width: 1200, itemsToShow: 5 },
 ];
 
 export const HomePage = () => {
@@ -35,34 +36,53 @@ export const HomePage = () => {
       </div>
 
       <div className="center-div">
-        <div className="center-products-container">
-          <Carousel pagination={false} breakPoints={breakPoints}>
-            <ProductHomepage image={SilicaSandFines} name={"Silica Sand"} image2={SilicaSandFines2} />
+        <div className="center-align-container">
+          {/* <div className="center-products-container"> */}
+          <Carousel
+            style={{
+              position: "relative",
+            //   width: "10rem"
+            }}
+            pagination={false}
+            breakPoints={breakPoints}>
+            <ProductHomepage
+              image={SilicaSandFines}
+              name={"SILICA SAND"}
+              image2={SilicaSandFines2}
+            />
 
-            <ProductHomepage image={SilicaSandLarge} name={"Medium Fractions"} image2={SilicaSandLarge2} />
+            <ProductHomepage
+              image={SilicaSandLarge}
+              name={"MEDIUM FACTIONS"}
+              image2={SilicaSandLarge2}
+            />
 
-            <ProductHomepage image={SilicaSandMedium} name={"Medium Fractions"} image2={SilicaSandMedium2} />
+            <ProductHomepage
+              image={SilicaSandMedium}
+              name={"MEDIUM FACTIONS"}
+              image2={SilicaSandMedium2}
+            />
 
-            <ProductHomepage image={WhiteQuartz} name={"Medium Fractions"} />
+            <ProductHomepage image={WhiteQuartz} name={"WHITE QUARTZ"} />
+            <ProductHomepage image={WhiteQuartz} name={"WHITE QUARTZ"} />
           </Carousel>
-          
+          {/* </div> */}
+          {/* <div className="center-find-more">
+            <h1 className="center-find-more-1">NEED MORE PRODUCTS</h1>
+            <h1 className="center-find-more-2">FIND IT HEAR</h1>
+            <div className="center-find-more-btn-container">
+              <button className="center-find-more-btn">PRODUCTS</button>
+            </div>
+          </div> */}
         </div>
-        <div className="center-find-more">
-              <h1 className="center-find-more-1">NEED MORE PRODUCTS</h1>
-              <h1 className="center-find-more-2">FIND IT HEAR</h1>
-              <div className="center-find-more-btn-container">
-                  <button className="center-find-more-btn">PRODUCTS</button>
-              </div>
-          </div>
       </div>
-      
-      
+
       <div className="bottom-div">
-          <div className="bottom-news-container">
-              <NewsHomepage />
-              <NewsHomepage />
-              <NewsHomepage />
-          </div>
+        <div className="bottom-news-container">
+          <NewsHomepage />
+          <NewsHomepage />
+          <NewsHomepage />
+        </div>
       </div>
     </div>
   );
