@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./web-navigation.style.scss";
 
 //LOGO
@@ -6,16 +6,26 @@ import LogoImg from "../../../assets/logos/Logo.svg";
 
 //ICON
 import SearchIcon from "../../../assets/icons/search_white.svg";
-import EmailIcon from "../../../assets/icons/mail_white.svg"
-import PhoneIcon from "../../../assets/icons/phone_white.svg"
+import EmailIcon from "../../../assets/icons/mail_white.svg";
+import PhoneIcon from "../../../assets/icons/phone_white.svg";
 
 export const WebNavigation = () => {
+  //USEREF
+  const productsSubMenu = useRef(null);
+
   //USESTATES
   const [searchState, setSearchState] = useState(false);
 
   //FUNCTIONS
   const onSearchClick = () => {
     setSearchState(true);
+  };
+
+  const onProductEnter = (element) => {
+    element.current.style.display = "grid";
+  };
+  const onProductLeave = (element) => {
+    element.current.style.display = "none";
   };
 
   return (
@@ -26,7 +36,33 @@ export const WebNavigation = () => {
         </div>
         <div className="web-nav-col-2">
           <ul className="web-nav-ul">
-            <li className="web-nav-li">
+            <div
+              ref={productsSubMenu}
+              onMouseEnter={() => onProductEnter(productsSubMenu)}
+              onMouseLeave={() => onProductLeave(productsSubMenu)}
+              className="web-nav-sub-menu products-sub-menu">
+              <div className="web-nav-product-sub-menu-row-1">
+                <h3 className="sub-menu-header">PRODUCTS</h3>
+              </div>
+              <div className="web-nav-product-sub-menu-row-2">
+                <div className="web-nav-product-sub-menu-col">
+                  <a href="silica large" className="sub-menu-item">Silica Sand Large Fraction</a>
+                  <a href="silica large" className="sub-menu-item">Silica Sand Medium Fraction</a>
+                  <a href="silica large" className="sub-menu-item">Silica Sand Small Fraction</a>
+                </div>
+                <div className="web-nav-product-sub-menu-col">
+                  <a href="silica large" className="sub-menu-item">White Quartz</a>
+                </div>
+                <div className="web-nav-product-sub-menu-col">
+                  <a href="silica large" className="sub-menu-item">Wood Pellets</a>
+                </div>
+              </div>
+            </div>
+
+            <li
+              onMouseEnter={() => onProductEnter(productsSubMenu)}
+              onMouseLeave={() => onProductLeave(productsSubMenu)}
+              className="web-nav-li products-li">
               <a href="Products" className="web-nav-link">
                 PRODUCTS
               </a>

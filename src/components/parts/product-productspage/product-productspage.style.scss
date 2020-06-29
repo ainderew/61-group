@@ -1,5 +1,5 @@
 .product-productspage {
-  width: 360px;
+  width: 340px;
   height: 380px;
   display: grid;
   grid-template-rows: 160px 1fr;
@@ -9,7 +9,7 @@
 
 .product-pp-row-1 {
   .product-pp-img {
-    width: 360px;
+    width: 340px;
     height: 160px;
   }
 }
@@ -80,7 +80,6 @@
       // margin: 1rem 0 2rem 0;
     }
 
-    .product-pp-btn {
-    }
+    
   }
 }

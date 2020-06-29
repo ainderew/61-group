@@ -49,6 +49,12 @@ export const ProductsPage = () => {
               ProductName="WHITE QUARTZ"
               ProductSummary="Crushed milk-white quartz of high quality with a SiO2 content of at least 97% and a low content of clay impurities."
             />
+            <ProductProductspage
+              ProductImage={WhiteQuartz}
+              ProductImageAlt="White Quartz"
+              ProductName="WHITE QUARTZ"
+              ProductSummary="Crushed milk-white quartz of high quality with a SiO2 content of at least 97% and a low content of clay impurities."
+            />
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-rows: 65vh 100vh;
+  grid-template-rows: 65vh 1fr;
 }
 
 .products-page-row-1 {
@@ -88,6 +88,98 @@
   }
 }
 
+@media only screen and (max-width: 1280px) {
+  .products-page {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 85vh 1fr;
+   
+  }
+
+  .products-page-row-1 {
+    width: 100%;
+    height: 100%;
+    background: url("../../../assets/images/products-header.webp") no-repeat
+      center;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 6rem;
+    .products-page-header {
+      position: relative;
+      color: $font-off-white;
+      font-size: 4.5rem;
+    }
+
+    .products-page-header::before {
+      content: "";
+      position: absolute;
+      width: 10%;
+      bottom: -10%;
+      left: 0;
+      border-bottom: 5px solid $main-color;
+    }
+  }
+
+  .products-page-row-2 {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 50vh 1fr;
+
+    background: $products-background;
+  }
+
+  .products-body-row-1,
+  .products-body-row-2 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .products-body-row-1-inner {
+    width: 85vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    .products-body-heading {
+      font-size: 3.5rem;
+      position: relative;
+    }
+
+    .products-body-heading::before {
+      content: "";
+      position: absolute;
+      width: 3%;
+      bottom: -10%;
+      left: 0;
+      border-bottom: 5px solid $main-color;
+    }
+  }
+
+  .products-body-paragraph-container {
+    width: 80%;
+    .products-body-paragraph {
+      font-family: "Open Sans", sans-serif;
+      font-weight: 500;
+    }
+  }
+
+  .products-body-row-2 {
+    height: 100%;
+    .products-body-row-2-inner {
+      width: 85vw;
+      height: 100%;
+
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 340px);
+      grid-gap: 1rem;
+    }
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .products-page {
     height: 100%;
@@ -155,8 +247,8 @@
   }
 
   .products-body-row-2 {
-      display: flex;
-      justify-content: center;
+    display: flex;
+    justify-content: center;
     .products-body-row-2-inner {
       width: 100%;
       height: 100%;
@@ -164,7 +256,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      
     }
   }
 }
