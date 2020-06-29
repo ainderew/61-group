@@ -269,22 +269,25 @@
         flex-direction: column;
         .hp-row-4-col-2-heading {
           color: $main-color;
-          font-size: 1.4rem;
+          font-size: 1.3rem;
           margin-bottom: 0.5rem;
         }
         .hp-row-4-col-2-body {
           color: $font-off-white;
-          font-size: 1rem;
+          font-size: .9rem;
           margin-bottom: 1rem;
+          font-family: "Open Sans";
+          font-weight: 300;
         }
 
         .hp-row-4-col-2-btn {
           border: none;
-          width: 10rem;
-          height: 2.5rem;
+          width: 8rem;
+          height: 2rem;
+          
 
           color: white;
-          font-size: 1rem;
+          font-size: .9rem;
           background: #6f6f6f;
         }
       }

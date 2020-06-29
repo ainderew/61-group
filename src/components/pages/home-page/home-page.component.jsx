@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./home-page.style.scss";
 
 //DEPENDENCIES
@@ -42,14 +43,25 @@ export const HomePage = () => {
             showArrows={false}
             pagination={false}
             breakPoints={breakPoints}>
-            <ProductHomepage image={SilicaSandLarge} name={"SILICA SAND"} description="large fractions" />
-
-            <ProductHomepage image={SilicaSandMedium} name={"SILICA SAND"} description="medium fractions"/>
-
-            <ProductHomepage image={SilicaSandFines} name={"SILICA SAND"} description="small fractions"/>
-
-            <ProductHomepage image={WhiteQuartz} name={"WHITE QUARTZ"} />
-            <ProductHomepage image={WoodPellets} name={"WOOD PELLETS"} />
+             <Link>
+              <ProductHomepage image={SilicaSandLarge} name={"SILICA SAND"} description="large fractions" />
+             </Link>
+            
+             <Link>
+              <ProductHomepage image={SilicaSandMedium} name={"SILICA SAND"} description="medium fractions"/>
+             </Link>
+            
+             <Link>
+              <ProductHomepage image={SilicaSandFines} name={"SILICA SAND"} description="small fractions"/>
+            </Link>
+            
+            <Link to="/Products/whitequartz"> 
+              <ProductHomepage style={{display:"block"}} image={WhiteQuartz} name={"WHITE QUARTZ"} /> 
+            </Link>
+            
+            <Link to="/Products/woodpellets"> 
+              <ProductHomepage image={WoodPellets} name={"WOOD PELLETS"} />
+            </Link>
           </Carousel>
         </div>
       </div>

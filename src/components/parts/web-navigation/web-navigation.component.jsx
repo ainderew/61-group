@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import "./web-navigation.style.scss";
 
 //LOGO
@@ -32,7 +33,9 @@ export const WebNavigation = () => {
     <header className="web-nav">
       <div className="web-navigation-container">
         <div className="web-nav-col-1">
-          <img src={LogoImg} alt="Group 61 Logo" className="web-nav-logo" />
+          <Link to="/">
+            <img src={LogoImg} alt="Group 61 Logo" className="web-nav-logo" />
+          </Link>
         </div>
         <div className="web-nav-col-2">
           <ul className="web-nav-ul">
@@ -46,15 +49,25 @@ export const WebNavigation = () => {
               </div>
               <div className="web-nav-product-sub-menu-row-2">
                 <div className="web-nav-product-sub-menu-col">
-                  <a href="silica large" className="sub-menu-item">Silica Sand Large Fraction</a>
-                  <a href="silica large" className="sub-menu-item">Silica Sand Medium Fraction</a>
-                  <a href="silica large" className="sub-menu-item">Silica Sand Small Fraction</a>
+                  <a href="silica large" className="sub-menu-item">
+                    Silica Sand Large Fraction
+                  </a>
+                  <a href="silica large" className="sub-menu-item">
+                    Silica Sand Medium Fraction
+                  </a>
+                  <a href="silica large" className="sub-menu-item">
+                    Silica Sand Small Fraction
+                  </a>
                 </div>
                 <div className="web-nav-product-sub-menu-col">
-                  <a href="silica large" className="sub-menu-item">White Quartz</a>
+                  <a href="Products/whitequartz" className="sub-menu-item">
+                    White Quartz
+                  </a>
                 </div>
                 <div className="web-nav-product-sub-menu-col">
-                  <a href="silica large" className="sub-menu-item">Wood Pellets</a>
+                  <a href="silica large" className="sub-menu-item">
+                    Wood Pellets
+                  </a>
                 </div>
               </div>
             </div>
@@ -63,7 +76,7 @@ export const WebNavigation = () => {
               onMouseEnter={() => onProductEnter(productsSubMenu)}
               onMouseLeave={() => onProductLeave(productsSubMenu)}
               className="web-nav-li products-li">
-              <a href="Products" className="web-nav-link">
+              <a href="/Products" className="web-nav-link">
                 PRODUCTS
               </a>
             </li>

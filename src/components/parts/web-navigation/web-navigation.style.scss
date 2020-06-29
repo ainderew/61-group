@@ -36,6 +36,20 @@
   }
 }
 
+.rec-item-wrapper{
+   display: block!important;
+   transition: 100ms linear;
+   a{
+     text-decoration: none;
+     color: rgb(117, 117, 117)
+   }
+  
+}
+.rec-item-wrapper:hover{
+  a{
+    color: black;
+  }
+}
 .web-nav-col-2 {
   display: flex;
   align-items: center;
