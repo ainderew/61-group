@@ -28,8 +28,8 @@ export const ContactModal = ({modalState,parentFunction}) =>{
                     <input type="text" name="name" placeholder="Enter Your Name" className="contact-form-input input-name"/>
                 </div>
                 <div className="contact-form-input-container">
-                    <label htmlFor="email" className="contact-form-label">Email</label>
-                    <input type="text" name="email" placeholder="Enter Your Email" className="contact-form-input"/>
+                    <label htmlFor="email" className="contact-form-label">Email/Phone</label>
+                    <input type="text" name="email" placeholder="Enter Your Email and/or Phone Number" className="contact-form-input"/>
                 </div>
             </div>
             <div className="contact-form-row">
