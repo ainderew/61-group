@@ -1,13 +1,26 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./products-page.style.scss";
 
+//COMPONENTS
 import { ProductProductspage } from "../../parts/product-productspage/product-productspage.component";
 
 //IMAGES
-
 import WhiteQuartz from "../../../assets/products/White_quartz_productpage.webp";
+import WoodPellets from "../../../assets/products/wood-pellets.webp";
+import SandSilicaLarge from "../../../assets/products/Silica sand of large fractions.webp";
+import SandSilicaMedium from "../../../assets/products/Silica sand of medium fractions.webp";
+import SandSilicaSmall from "../../../assets/products/Silica sand fines.webp";
+
 
 export const ProductsPage = () => {
+  
+  useEffect(() => {
+    
+    document.title ="Products"
+    
+  },[])
+  
+  
   return (
     <div className="products-page">
       <div className="products-page-row-1">
@@ -36,24 +49,35 @@ export const ProductsPage = () => {
               ProductImageAlt="White Quartz"
               ProductName="WHITE QUARTZ"
               ProductSummary="Crushed milk-white quartz of high quality with a SiO2 content of at least 97% and a low content of clay impurities."
+              link="/Products/whitequartz"
             />
             <ProductProductspage
-              ProductImage={WhiteQuartz}
-              ProductImageAlt="White Quartz"
-              ProductName="WHITE QUARTZ"
+              ProductImage={WoodPellets}
+              ProductImageAlt="wood pellets"
+              ProductName="WOOD PELLETS"
               ProductSummary="Crushed milk-white quartz of high quality with a SiO2 content of at least 97% and a low content of clay impurities."
+              link="/Products/woodpellets"
             />
             <ProductProductspage
-              ProductImage={WhiteQuartz}
-              ProductImageAlt="White Quartz"
-              ProductName="WHITE QUARTZ"
+              ProductImage={SandSilicaSmall}
+              ProductImageAlt="sand silica small"
+              ProductName="SILICA SAND SMALL"
               ProductSummary="Crushed milk-white quartz of high quality with a SiO2 content of at least 97% and a low content of clay impurities."
+              link="/Products/silicasandsmall"
             />
             <ProductProductspage
-              ProductImage={WhiteQuartz}
-              ProductImageAlt="White Quartz"
-              ProductName="WHITE QUARTZ"
+              ProductImage={SandSilicaMedium}
+              ProductImageAlt="SILICA SAND medium"
+              ProductName="SAND SILICA MEDIUM"
               ProductSummary="Crushed milk-white quartz of high quality with a SiO2 content of at least 97% and a low content of clay impurities."
+              link="/Products/silicasandmedium"
+            />
+            <ProductProductspage
+              ProductImage={SandSilicaLarge}
+              ProductImageAlt="SILICA SAND large"
+              ProductName="SAND SILICA LARGE"
+              ProductSummary="Crushed milk-white quartz of high quality with a SiO2 content of at least 97% and a low content of clay impurities."
+              link="/Products/silicasandlarge"
             />
           </div>
         </div>

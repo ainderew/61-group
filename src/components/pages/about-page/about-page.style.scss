@@ -1,0 +1,274 @@
+@import "../../../variables_SCSS/colors";
+
+.about-us{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    
+    background: white;
+}
+
+.about-us-inner{
+    width: 85vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+
+.about-us-col-1{
+    position: relative;
+    
+}
+.about-us-col-1::before{
+    content: "";
+    position: absolute;
+    right: -10%;
+    top: 50%;
+    transform: translate(0%,-50%);
+    height: 90%;
+    border-right: 1px solid grey;
+}
+.about-us-sub-header{
+    font-size: .9rem;
+    padding-top: 3rem;
+}
+
+.about-us-header{
+    font-size: 2rem;
+    padding-top: 2rem;
+}
+
+.about-us-body{
+    font-family: "Open Sans", sans-serif;
+    font-size: .7rem;
+    padding-top: 1rem;
+}
+
+.about-us-quote-container{
+    padding-top: 7rem;
+}
+
+.about-us-quote-title{
+    font-size: 1.3rem;
+    text-align: center;
+    
+    padding-bottom: 2rem;
+}
+
+.about-us-quote{
+    font-family: "Open Sans", sans-serif;
+    font-size: .8rem;
+    font-weight: 400;
+    text-align: center;
+    
+}
+
+
+.about-us-quote-person{
+    font-size: 1rem;
+    
+    padding-top: 2rem;
+    text-align: right;
+}
+
+.about-us-benefits-title{
+    padding-top: 8rem;
+    font-size: 1.8rem;
+}
+
+.about-us-benefit-list-inner{
+    padding: 2rem 0;
+
+}
+.about-us-benefit-header-container{
+    display: flex;
+    align-items: center;
+    
+    .about-us-benefit-img{
+        width: 3rem;
+    }
+    
+    .about-us-benefit-header{
+        font-family: "Open Sans", sans-serif;
+        font-size: 1rem;
+        padding-left: 1rem;
+    }
+}
+
+.about-us-benefit-body-container{
+    width: 70%;
+    display: flex;
+    padding-left: 3rem;
+    
+    .about-us-benefit-body{
+        font-family: "Open Sans", sans-serif;
+        font-size: .8rem;
+        font-weight: 400;
+        
+        padding-top: 2rem;
+        
+    }
+}
+
+
+.about-us-col-2{
+    position: relative;
+    
+
+    .about-us-company-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 20%;
+        right: 10%;
+    }
+    .about-us-logo{
+        width: 90%;
+    }
+    .about-us-company-name{
+        font-size: 3rem;
+    }
+    .about-us-btn{
+        width: 10rem;
+        height: 2.5rem;
+        
+        border: 1px solid black;
+        background: $main-color;
+        
+    }
+    
+}
+
+
+//MEDIA QUERIES
+
+@media only screen and (min-width: 1300px){
+   
+    
+    .about-us-inner{
+        width: 65vw;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+    
+    .about-us-col-1{
+        position: relative;
+    }
+    .about-us-col-1::before{
+        content: "";
+        position: absolute;
+        right: -10%;
+        top: 50%;
+        transform: translate(0%,-50%);
+        height: 90%;
+        border-right: 1px solid grey;
+    }
+    .about-us-sub-header{
+        font-size: 1rem;
+        padding-top: 3rem;
+    }
+    
+    .about-us-header{
+        font-size: 2.5rem;
+        padding-top: 2rem;
+    }
+    
+    .about-us-body{
+        font-family: "Open Sans", sans-serif;
+        font-size: 1rem;
+        padding-top: 1rem;
+    }
+    
+    .about-us-quote-container{
+        padding-top: 10rem;
+    }
+    
+    .about-us-quote-title{
+        font-size: 1.5rem;
+        text-align: center;
+        
+        padding-bottom: 2rem;
+    }
+    
+    .about-us-quote{
+        font-family: "Open Sans", sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        text-align: center;
+        
+    }
+    
+    
+    .about-us-quote-person{
+        font-size: 1.2rem;
+        
+        padding-top: 3rem;
+        text-align: right;
+    }
+    
+    .about-us-benefits-title{
+        padding-top: 10rem;
+        font-size: 2rem;
+    }
+    
+    .about-us-benefit-list-inner{
+        padding: 2rem 0;
+    
+    }
+    .about-us-benefit-header-container{
+        display: flex;
+        align-items: center;
+        
+        .about-us-benefit-img{
+            width: 3rem;
+        }
+        
+        .about-us-benefit-header{
+            font-family: "Open Sans", sans-serif;
+            font-size: 1.2rem;
+            padding-left: 1rem;
+        }
+    }
+    
+    .about-us-benefit-body-container{
+        width: 70%;
+        display: flex;
+        padding-left: 4rem;
+        
+        .about-us-benefit-body{
+            font-family: "Open Sans", sans-serif;
+            font-size: .9rem;
+            font-weight: 400;
+            
+            padding-top: 2rem;
+        }
+    }
+    
+    
+    .about-us-col-2{
+        position: relative;
+    
+        .about-us-company-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: fixed;
+            top: 30%;
+            right: 15%;
+        }
+        .about-us-logo{
+            width: 100%;
+        }
+        
+        .about-us-company-name{
+            font-size: 3rem;
+            margin-top: 1rem;
+        }
+    }
+    
+}
+

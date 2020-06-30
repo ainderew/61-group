@@ -49,23 +49,23 @@ export const WebNavigation = () => {
               </div>
               <div className="web-nav-product-sub-menu-row-2">
                 <div className="web-nav-product-sub-menu-col">
-                  <a href="silica large" className="sub-menu-item">
+                  <a href="/Products/silicasandlarge" className="sub-menu-item">
                     Silica Sand Large Fraction
                   </a>
-                  <a href="silica large" className="sub-menu-item">
+                  <a href="/Products/silicasandmedium" className="sub-menu-item">
                     Silica Sand Medium Fraction
                   </a>
-                  <a href="silica large" className="sub-menu-item">
+                  <a href="/Products/silicasandsmall" className="sub-menu-item">
                     Silica Sand Small Fraction
                   </a>
                 </div>
                 <div className="web-nav-product-sub-menu-col">
-                  <a href="Products/whitequartz" className="sub-menu-item">
+                  <a href="/Products/whitequartz" className="sub-menu-item">
                     White Quartz
                   </a>
                 </div>
                 <div className="web-nav-product-sub-menu-col">
-                  <a href="silica large" className="sub-menu-item">
+                  <a href="/Products/woodpellets" className="sub-menu-item">
                     Wood Pellets
                   </a>
                 </div>
@@ -81,17 +81,17 @@ export const WebNavigation = () => {
               </a>
             </li>
             <li className="web-nav-li">
-              <a href="#Products" className="web-nav-link">
+              <a href="/" className="web-nav-link">
                 GENERAL
               </a>
             </li>
             <li className="web-nav-li">
-              <a href="#Products" className="web-nav-link">
+              <a href="/ContactUs" className="web-nav-link">
                 CONTACT US
               </a>
             </li>
             <li className="web-nav-li">
-              <a href="#Products" className="web-nav-link">
+              <a href="/AboutUs" className="web-nav-link">
                 ABOUT US
               </a>
             </li>

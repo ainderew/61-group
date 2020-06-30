@@ -1,6 +1,6 @@
 @import "../../../../variables_SCSS/colors";
 
-.white-quartz-page {
+.silica-sand-small-page {
   height: 100%;
   width: 100%;
   display: flex;
@@ -10,91 +10,91 @@
   position: relative;
 }
 
-.white-quartz-page-inner {
+.silica-sand-small-page-inner {
   width: 85vw;
   height: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 
-// .white-quartz-page-col-1 {
+// .silica-sand-small-page-col-1 {
 //   //   border: 1px solid red;
 // }
 
-.white-quartz-header-container {
+.silica-sand-small-header-container {
   padding-top: 3rem;
   //   border: 1px solid green;
   display: flex;
   flex-direction: column;
 
-  .white-quartz-sub-header {
+  .silica-sand-small-sub-header {
     font-size: 1rem;
     margin-bottom: 0.5rem;
   }
-  .white-quartz-header {
+  .silica-sand-small-header {
     font-size: 1.7rem;
     margin-bottom: 2rem;
   }
-  .white-quartz-paragraph {
+  .silica-sand-small-paragraph {
     font-family: "Open Sans", sans-serif;
     font-size: 0.8rem;
     font-weight: 300;
     margin-bottom: 1rem;
   }
 }
-.white-quartz-contact-container {
+.silica-sand-small-contact-container {
   margin-bottom: 1rem;
-  .white-quartz-contact {
+  .silica-sand-small-contact {
     font-size: 0.8rem;
     text-decoration: none;
     color: #3a7bb8;
   }
 }
-.white-quartz-body-title {
+.silica-sand-small-body-title {
   font-size: 1rem;
 }
-.white-quartz-body-ul {
+.silica-sand-small-body-ul {
   list-style-position: inside;
   margin-bottom: 2rem;
-  .white-quartz-body-li {
+  .silica-sand-small-body-li {
     font-family: "Open Sans", sans-serif;
     font-size: 0.8rem;
 
     margin-top: 0.5rem;
   }
 }
-.white-quartz-business-container {
+.silica-sand-small-business-container {
   margin-bottom: 1rem;
-  .white-quartz-business {
+  .silica-sand-small-business {
     // font-family: "Open Sans", sans-serif;
     font-size: 0.8rem;
   }
 }
 
-.white-quartz-delivery-container {
+.silica-sand-small-delivery-container {
   display: flex;
   margin-bottom: 1rem;
-  .white-quartz-delivery-icon {
+  .silica-sand-small-delivery-icon {
     width: 1rem;
     margin-right: 1rem;
   }
-  .white-quartz-delivery {
+  .silica-sand-small-delivery {
     font-family: "Open Sans", sans-serif;
     font-size: 0.5rem;
   }
 }
 
-.white-quartz-page-col-2 {
+.silica-sand-small-page-col-2 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   
-  .white-quartz-col-2-product-img{
+  .silica-sand-small-col-2-product-img{
       margin-bottom: 1rem;
   }
   
-  .white-quartz-page-col-2-btn{
+  .silica-sand-small-page-col-2-btn{
       border: none;
       width: 15rem;
       height: 3rem;
@@ -106,7 +106,7 @@
 
 //MEDIA QUERIES
 @media only screen and (max-width: 768px) {
-  .white-quartz-page {
+  .silica-sand-small-page {
     height: 100%;
     width: 100%;
     display: flex;
@@ -114,81 +114,81 @@
     background: white;
   }
 
-  .white-quartz-page-inner {
+  .silica-sand-small-page-inner {
     width: 85vw;
     height: 100%;
     display: grid;
     grid-template-columns: 1fr;
   }
 
-  // .white-quartz-page-col-1 {
-  //   //   border: 1px solid red;
-  // }
+  .silica-sand-small-page-col-1 {
+    //   border: 1px solid red;
+  }
 
-  .white-quartz-header-container {
+  .silica-sand-small-header-container {
     padding-top: 6rem;
     //   border: 1px solid green;
     display: flex;
     flex-direction: column;
 
-    .white-quartz-sub-header {
+    .silica-sand-small-sub-header {
       font-size: 1rem;
       margin-bottom: 0.5rem;
     }
-    .white-quartz-header {
+    .silica-sand-small-header {
       font-size: 1.7rem;
       margin-bottom: 2rem;
     }
-    .white-quartz-paragraph {
+    .silica-sand-small-paragraph {
       font-family: "Open Sans", sans-serif;
       font-size: 0.8rem;
       font-weight: 300;
       margin-bottom: 1rem;
     }
   }
-  .white-quartz-contact-container {
+  .silica-sand-small-contact-container {
     margin-bottom: 1rem;
-    .white-quartz-contact {
+    .silica-sand-small-contact {
       font-size: 0.8rem;
       text-decoration: none;
       color: #3a7bb8;
     }
   }
-  .white-quartz-body-title {
+  .silica-sand-small-body-title {
     font-size: 1rem;
   }
-  .white-quartz-body-ul {
+  .silica-sand-small-body-ul {
     list-style-position: inside;
     margin-bottom: 2rem;
-    .white-quartz-body-li {
+    .silica-sand-small-body-li {
       font-family: "Open Sans", sans-serif;
       font-size: 0.8rem;
 
       margin-top: 0.5rem;
     }
   }
-  .white-quartz-business-container {
+  .silica-sand-small-business-container {
     margin-bottom: 1rem;
-    .white-quartz-business {
+    .silica-sand-small-business {
       // font-family: "Open Sans", sans-serif;
       font-size: 0.8rem;
     }
   }
 
-  .white-quartz-delivery-container {
+  .silica-sand-small-delivery-container {
     display: flex;
     margin-bottom: 1rem;
-    .white-quartz-delivery-icon {
+    .silica-sand-small-delivery-icon {
       width: 1rem;
       margin-right: 1rem;
     }
-    .white-quartz-delivery {
+    .silica-sand-small-delivery {
       font-family: "Open Sans", sans-serif;
       font-size: 0.5rem;
     }
   }
 
-  .white-quartz-page-col-2 {
+  .silica-sand-small-page-col-2 {
     display: flex;
     flex-direction: column;
     align-items: center;

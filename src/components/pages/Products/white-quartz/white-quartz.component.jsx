@@ -1,11 +1,27 @@
-import React from "react";
+import React, {useState, useRef} from "react";
 import "./white-quartz.style.scss";
+
+//COMPONENTS
+import { ContactModal } from "../../../parts/contact-modal/contact-modal.component";
 
 import DeliverySVG from "../../../../assets/icons/delivery.svg";
 import ProductImage from "../../../../assets/products/White fraction quartz.webp";
+
 export const WhiteQuartz = () => {
+  //USEREF VARS
+  const screen = useRef(null)
+  //USESTATE VARS
+  const [modalState, setModalState] = useState(false)
+  
+  //FUNCTIONS
+  const modalOnClick = () =>{
+    setModalState(prevState => !prevState)
+    screen.current.scrollIntoView({block: "center"})
+}
+  
   return (
-    <div className="white-quartz-page">
+    <div ref={screen} className="white-quartz-page">
+      <ContactModal parentFunction={modalOnClick} modalState={modalState} />
       <div className="white-quartz-page-inner">
         <div className="white-quartz-page-col-1">
           <div className="white-quartz-header-container">
@@ -80,7 +96,7 @@ export const WhiteQuartz = () => {
             alt="White Quartz"
             className="white-quartz-col-2-product-img"
           />
-          <button className="white-quartz-page-col-2-btn">Send a Message</button>
+          <button onClick={modalOnClick} className="white-quartz-page-col-2-btn">Send a Message</button>
         </div>
       </div>
     </div>
