@@ -16,6 +16,7 @@ import { WoodPellets } from "../Products/wood-pellets/wood-pellets.component";
 import { WebNavigation } from "../../parts/web-navigation/web-navigation.component";
 import { PhoneNavigation } from "../../parts/phone-navigation/phone-navigation.component";
 import { Footer } from "../../parts/footer/footer.component";
+import { PhoneNavOpen } from "../../parts/phone-navigation/phone-navigation-open.component";
 
 export const MainContainer = () =>{
     
@@ -24,6 +25,7 @@ export const MainContainer = () =>{
         <div className="main-container">
           <WebNavigation />
           <PhoneNavigation />
+          
           <Switch>
             <Route path="/" exact component={HomePage} />
             <Route path="/Products" exact component={ProductsPage} />

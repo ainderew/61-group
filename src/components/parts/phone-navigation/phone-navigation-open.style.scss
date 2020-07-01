@@ -1,0 +1,73 @@
+@import "../../../variables_SCSS/colors";
+
+.phone-nav-display{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    background: $background-color;
+    
+    z-index: 10;
+    // display: none;
+    animation: menuClose 100ms linear forwards;
+}
+
+.phone-nav-display-open{
+    width: 100%;
+    height: calc(100% - 4rem);
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    display: block;
+    background: $background-color;
+    z-index: 10;
+    animation: menuOpen 200ms linear forwards;
+}
+.phone-nav-ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    .phone-nav-li{
+        height: 3.5rem;
+        display: flex;
+        align-items: center;
+        
+        color: white;
+        border: 1px solid grey;
+        padding-left: 2rem;
+    }
+}
+
+
+
+@keyframes menuOpen{
+    0%{
+        transform: translateY(calc(-100vh - 4rem));
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes menuClose{
+    0%{
+        transform: translateY(0);
+    }
+    
+    100%{
+        transform: translateY(-100%);
+    }
+    
+}
+
+
+
+
+@media only screen and (max-width: 1000px){
+    .phone-nav-open{
+        display: none;
+    }
+}

@@ -11,11 +11,8 @@ import { NewsHomepage } from "../../parts/news-homepage/news-homepage.compnent";
 
 //IMAGES
 import SilicaSandFines from "../../../assets/products/Silica sand fines.webp";
-import SilicaSandFines2 from "../../../assets/products/Silica sand fines2.webp";
 import SilicaSandLarge from "../../../assets/products/Silica sand of large fractions.webp";
-import SilicaSandLarge2 from "../../../assets/products/Silica sand of large fractions2.webp";
 import SilicaSandMedium from "../../../assets/products/Silica sand of medium fractions.webp";
-import SilicaSandMedium2 from "../../../assets/products/Silica sand of medium fractions2.webp";
 import WhiteQuartz from "../../../assets/products/White fraction quartz.webp";
 import WoodPellets from "../../../assets/products/wood-pellets.webp";
 
@@ -43,15 +40,15 @@ export const HomePage = () => {
             showArrows={false}
             pagination={false}
             breakPoints={breakPoints}>
-             <Link>
+             <Link to="/Products/silicasandlarge">
               <ProductHomepage image={SilicaSandLarge} name={"SILICA SAND"} description="large fractions" />
              </Link>
             
-             <Link>
+             <Link to="/Products/silicasandmedium">
               <ProductHomepage image={SilicaSandMedium} name={"SILICA SAND"} description="medium fractions"/>
              </Link>
             
-             <Link>
+             <Link to="/Products/silicasandsmall">
               <ProductHomepage image={SilicaSandFines} name={"SILICA SAND"} description="small fractions"/>
             </Link>
             
