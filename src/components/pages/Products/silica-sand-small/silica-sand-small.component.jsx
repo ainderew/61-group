@@ -41,7 +41,7 @@ export const SilicaSandSmall = () => {
             </p>
           </div>
           <div className="silica-sand-small-contact-container">
-              <a href="#" className="silica-sand-small-contact">Contact Us</a>
+              <a href="/ContactUs" className="silica-sand-small-contact">Contact Us</a>
           </div>
           <div className="silica-sand-small-body-container">
             <h4 className="silica-sand-small-body-title">Sand of large fractions is used in the following areas:</h4>

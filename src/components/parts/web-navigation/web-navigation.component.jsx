@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./web-navigation.style.scss";
 
@@ -9,23 +10,33 @@ import LogoImg from "../../../assets/logos/Logo.svg";
 import SearchIcon from "../../../assets/icons/search_white.svg";
 import EmailIcon from "../../../assets/icons/mail_white.svg";
 import PhoneIcon from "../../../assets/icons/phone_white.svg";
+import RussianFlag from "../../../assets/icons/russia.svg";
+import UkFlag from "../../../assets/icons/uk.svg";
+
+
 
 export const WebNavigation = () => {
+  let history = useHistory()
   //USEREF
   const productsSubMenu = useRef(null);
 
   //USESTATES
   const [searchState, setSearchState] = useState(false);
+  const [languageState, setLanguageState] = useState(false)
 
   //FUNCTIONS
   const onSearchClick = () => {
     setSearchState(true);
   };
+  
+  const onLanguageHover = () =>{
+    setLanguageState(prevState => !prevState);
+  }
 
-  const onProductEnter = (element) => {
+  const onProductEnter = element => {
     element.current.style.display = "grid";
   };
-  const onProductLeave = (element) => {
+  const onProductLeave = element => {
     element.current.style.display = "none";
   };
 
@@ -52,7 +63,9 @@ export const WebNavigation = () => {
                   <a href="/Products/silicasandlarge" className="sub-menu-item">
                     Silica Sand Large Fraction
                   </a>
-                  <a href="/Products/silicasandmedium" className="sub-menu-item">
+                  <a
+                    href="/Products/silicasandmedium"
+                    className="sub-menu-item">
                     Silica Sand Medium Fraction
                   </a>
                   <a href="/Products/silicasandsmall" className="sub-menu-item">
@@ -72,22 +85,19 @@ export const WebNavigation = () => {
               </div>
             </div>
 
-            
             <li className="web-nav-li">
               <a href="/" className="web-nav-link">
                 GENERAL
               </a>
             </li>
-            
+
             <li
               onMouseEnter={() => onProductEnter(productsSubMenu)}
               onMouseLeave={() => onProductLeave(productsSubMenu)}
               className="web-nav-li products-li">
-              <h3 className="web-nav-link">
-                PRODUCTS
-              </h3>
+              <h3 className="web-nav-link">PRODUCTS</h3>
             </li>
-            
+
             <li className="web-nav-li">
               <a href="/ContactUs" className="web-nav-link">
                 CONTACT US
@@ -107,7 +117,36 @@ export const WebNavigation = () => {
         <div className="web-nav-col-3">
           {searchState ? (
             <input type="text" className="web-nav-search-input" />
-          ) : null}
+          ) : (
+            <div onMouseEnter={onLanguageHover} onMouseLeave={onLanguageHover} className="language-selector">
+              <img
+                src={RussianFlag}
+                alt="russian flag"
+                className="language-flag"
+              />
+              <h3 className="language-selected">Russian</h3>
+              <div className={(languageState) ? "language-selector-options" : "language-selector-options-off"}>
+                <ul className="language-selector-ul">
+                  <li onClick={()=>history.push("/ru")} className="language-selector-li">
+                    <img
+                      src={RussianFlag}
+                      alt="russian flag"
+                      className="language-flag"
+                    />
+                    Russian
+                  </li>
+                  <li onClick={()=>history.push("/en")} className="language-selector-li">
+                    <img
+                      src={UkFlag}
+                      alt="russian flag"
+                      className="language-flag"
+                    />
+                    English
+                  </li>
+                </ul>
+              </div>
+            </div>
+          )}
 
           <img
             onClick={onSearchClick}

@@ -42,7 +42,7 @@ export const SilicaSandLarge = () => {
             </p>
           </div>
           <div className="silica-sand-large-contact-container">
-            <a href="#" className="silica-sand-large-contact">
+            <a href="/ContactUs" className="silica-sand-large-contact">
               Contact Us
             </a>
           </div>

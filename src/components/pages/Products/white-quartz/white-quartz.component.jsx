@@ -42,7 +42,7 @@ export const WhiteQuartz = () => {
             </p>
           </div>
           <div className="white-quartz-contact-container">
-              <a href="#" className="white-quartz-contact">Contact Us</a>
+              <a href="/ContactUs" className="white-quartz-contact">Contact Us</a>
           </div>
           <div className="white-quartz-body-container">
             <h4 className="white-quartz-body-title">SCOPE OF WHITE QUARTZ</h4>

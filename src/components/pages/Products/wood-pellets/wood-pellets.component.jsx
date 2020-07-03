@@ -35,7 +35,7 @@ export const WoodPellets = () => {
             </p>
           </div>
           <div className="wood-pellets-contact-container">
-            <a href="#" className="wood-pellets-contact">
+            <a href="/ContactUs" className="wood-pellets-contact">
               Contact Us
             </a>
           </div>

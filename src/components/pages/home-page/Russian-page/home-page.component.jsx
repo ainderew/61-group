@@ -1,20 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./home-page.style.scss";
+import "../home-page.style.scss";
 
 //DEPENDENCIES
 import Carousel from "react-elastic-carousel";
 
 //COMPONENTS
-import { ProductHomepage } from "../../parts/product-homepage/product-homepage.component";
-import { NewsHomepage } from "../../parts/news-homepage/news-homepage.compnent";
+import { ProductHomepage } from "../../../parts/product-homepage/product-homepage.component";
+import { NewsHomepage } from "../../../parts/news-homepage/news-homepage.compnent";
 
 //IMAGES
-import SilicaSandFines from "../../../assets/products/Silica sand fines.webp";
-import SilicaSandLarge from "../../../assets/products/Silica sand of large fractions.webp";
-import SilicaSandMedium from "../../../assets/products/Silica sand of medium fractions.webp";
-import WhiteQuartz from "../../../assets/products/White fraction quartz.webp";
-import WoodPellets from "../../../assets/products/wood-pellets.webp";
+import SilicaSandFines from "../../../../assets/products/Silica sand fines.webp";
+import SilicaSandLarge from "../../../../assets/products/Silica sand of large fractions.webp";
+import SilicaSandMedium from "../../../../assets/products/Silica sand of medium fractions.webp";
+import WhiteQuartz from "../../../../assets/products/White fraction quartz.webp";
+import WoodPellets from "../../../../assets/products/wood-pellets.webp";
 
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
@@ -24,16 +24,16 @@ const breakPoints = [
   { width: 1200, itemsToShow: 5 },
 ];
 
-
-export const HomePage = () => {
+export const HomePageRU = () => {
   return (
     <div className="homepage">
       <div className="header-div">
         <h1 className="header-text">
           <span className="header-span">61 GROUP</span>
-          <br /> WHITE QUARTZ
           <br />
-          SILICA SAND AND WOOD PELLETS.
+          кварцевый песок
+          <br />
+          белый кварц и древесные гранулы.
         </h1>
       </div>
 
@@ -46,24 +46,24 @@ export const HomePage = () => {
             <Link to="/Products/silicasandlarge">
               <ProductHomepage
                 image={SilicaSandLarge}
-                name={"SILICA SAND"}
-                description="large fractions"
+                name={"КВАРЦЕВЫЙ ПЕСОК"}
+                description="крупная фракция"
               />
             </Link>
 
             <Link to="/Products/silicasandmedium">
               <ProductHomepage
                 image={SilicaSandMedium}
-                name={"SILICA SAND"}
-                description="medium fractions"
+                name={"КВАРЦЕВЫЙ ПЕСОК"}
+                description="(средняя фракция)"
               />
             </Link>
 
             <Link to="/Products/silicasandsmall">
               <ProductHomepage
                 image={SilicaSandFines}
-                name={"SILICA SAND"}
-                description="small fractions"
+                name={"КВАРЦЕВЫЙ ПЕСОК"}
+                description="мелкая фракция"
               />
             </Link>
 
@@ -71,16 +71,16 @@ export const HomePage = () => {
               <ProductHomepage
                 style={{ display: "block" }}
                 image={WhiteQuartz}
-                name={"WHITE QUARTZ"}
-                description="crushed"
+                name={"КВАРЦ ДРОБЛЕНЫЙ"}
+                description="молочного цвета"
               />
             </Link>
 
             <Link to="/Products/woodpellets">
               <ProductHomepage
                 image={WoodPellets}
-                name={"WOOD PELLETS"}
-                description="class A1, A2"
+                name={"ДРЕВЕСНЫЕ ПЕЛЛЕТЫ"}
+                description="класс А1, А2"
               />
             </Link>
           </Carousel>
@@ -89,18 +89,16 @@ export const HomePage = () => {
 
       <div className="homepage-row-4">
         <div className="hp-row-4-inner">
-          <div className="hp-row-4-col-1">
-          
-          </div>
+          <div className="hp-row-4-col-1"></div>
 
           <div className="hp-row-4-col-2">
             <h4 className="hp-row-4-col-2-heading">
-              WE DELIVER BY TRUCKS, RAILWAY AND SEA CONTAINERS
+              МЫ ДОСТАВЛЯЕМ АВТОМОБИЛЯМИ, ЖЕЛЕЗНОДОРОЖНЫМИ И МОРСКИМИ
+              КОНТЕЙНЕРАМИ
             </h4>
             <h2 className="hp-row-4-col-2-body">
-            We will provide delivery at the most favorable prices for you.
+              Мы обеспечим доставку по самым выгодным для вас ценам.
             </h2>
-          
           </div>
         </div>
       </div>
