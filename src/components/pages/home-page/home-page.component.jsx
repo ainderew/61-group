@@ -29,8 +29,10 @@ export const HomePage = () => {
     <div className="homepage">
       <div className="header-div">
         <h1 className="header-text">
-          <span className="header-span">61 GROUP,</span>
-          <br /> THE BEST SERVICE FOR THE BEST PEOPLE
+          <span className="header-span">61 GROUP</span>
+          <br /> WHITE QUARTZ
+          <br />
+          SILICA SAND AND WOOD PELLETS.
         </h1>
       </div>
 
@@ -40,24 +42,45 @@ export const HomePage = () => {
             showArrows={false}
             pagination={false}
             breakPoints={breakPoints}>
-             <Link to="/Products/silicasandlarge">
-              <ProductHomepage image={SilicaSandLarge} name={"SILICA SAND"} description="large fractions" />
-             </Link>
-            
-             <Link to="/Products/silicasandmedium">
-              <ProductHomepage image={SilicaSandMedium} name={"SILICA SAND"} description="medium fractions"/>
-             </Link>
-            
-             <Link to="/Products/silicasandsmall">
-              <ProductHomepage image={SilicaSandFines} name={"SILICA SAND"} description="small fractions"/>
+            <Link to="/Products/silicasandlarge">
+              <ProductHomepage
+                image={SilicaSandLarge}
+                name={"SILICA SAND"}
+                description="large fractions"
+              />
             </Link>
-            
-            <Link to="/Products/whitequartz"> 
-              <ProductHomepage style={{display:"block"}} image={WhiteQuartz} name={"WHITE QUARTZ"} /> 
+
+            <Link to="/Products/silicasandmedium">
+              <ProductHomepage
+                image={SilicaSandMedium}
+                name={"SILICA SAND"}
+                description="medium fractions"
+              />
             </Link>
-            
-            <Link to="/Products/woodpellets"> 
-              <ProductHomepage image={WoodPellets} name={"WOOD PELLETS"} />
+
+            <Link to="/Products/silicasandsmall">
+              <ProductHomepage
+                image={SilicaSandFines}
+                name={"SILICA SAND"}
+                description="small fractions"
+              />
+            </Link>
+
+            <Link to="/Products/whitequartz">
+              <ProductHomepage
+                style={{ display: "block" }}
+                image={WhiteQuartz}
+                name={"WHITE QUARTZ"}
+                description="crushed"
+              />
+            </Link>
+
+            <Link to="/Products/woodpellets">
+              <ProductHomepage
+                image={WoodPellets}
+                name={"WOOD PELLETS"}
+                description="class A1, A2"
+              />
             </Link>
           </Carousel>
         </div>
@@ -71,13 +94,12 @@ export const HomePage = () => {
 
           <div className="hp-row-4-col-2">
             <h4 className="hp-row-4-col-2-heading">
-              CUSTOMER COVID-19 RECOURCE CENTER
+              WE DELIVER BY TRUCKS, RAILWAY AND SEA CONTAINERS
             </h4>
-            <h5 className="hp-row-4-col-2-body">
-              Information and resources to support you during the global
-              pandemic.
-            </h5>
-            <button className="hp-row-4-col-2-btn">VIEW RESOURCES</button>
+            <h2 className="hp-row-4-col-2-body">
+            We will provide delivery at the most favorable prices for you.
+            </h2>
+          
           </div>
         </div>
       </div>

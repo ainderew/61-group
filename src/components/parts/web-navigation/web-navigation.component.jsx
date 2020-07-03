@@ -72,19 +72,22 @@ export const WebNavigation = () => {
               </div>
             </div>
 
-            <li
-              onMouseEnter={() => onProductEnter(productsSubMenu)}
-              onMouseLeave={() => onProductLeave(productsSubMenu)}
-              className="web-nav-li products-li">
-              <a href="/Products" className="web-nav-link">
-                PRODUCTS
-              </a>
-            </li>
+            
             <li className="web-nav-li">
               <a href="/" className="web-nav-link">
                 GENERAL
               </a>
             </li>
+            
+            <li
+              onMouseEnter={() => onProductEnter(productsSubMenu)}
+              onMouseLeave={() => onProductLeave(productsSubMenu)}
+              className="web-nav-li products-li">
+              <h3 className="web-nav-link">
+                PRODUCTS
+              </h3>
+            </li>
+            
             <li className="web-nav-li">
               <a href="/ContactUs" className="web-nav-link">
                 CONTACT US
