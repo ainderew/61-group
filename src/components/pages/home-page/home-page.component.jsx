@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import "./home-page.style.scss";
 
@@ -26,8 +26,15 @@ const breakPoints = [
 
 
 export const HomePage = () => {
+  const [setter,setSetter] = useState(false)
+  
+  useEffect(() =>{
+    setTimeout(() => {
+        setSetter(prevState => !prevState)
+    }, 7000);
+  })
   return (
-    <div className="homepage">
+    <div className={(setter) ? "homepage" : "home-page"}>
       <div className="header-div">
         <h1 className="header-text">
           <span className="header-span">61 GROUP</span>

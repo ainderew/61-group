@@ -1,52 +1,51 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
-import "./web-navigation.style.scss";
-import { languageAction } from "../../../redux_actions/index";
+import "../web-navigation.style.scss";
+import { languageAction } from "../../../../redux_actions/index";
 
 //LOGO
-import LogoImg from "../../../assets/logos/Logo.svg";
+import LogoImg from "../../../../assets/logos/Logo.svg";
 
 //ICON
-import SearchIcon from "../../../assets/icons/search_white.svg";
-import EmailIcon from "../../../assets/icons/mail_white.svg";
-import PhoneIcon from "../../../assets/icons/phone_white.svg";
-import RussianFlag from "../../../assets/icons/russia.svg";
-import UkFlag from "../../../assets/icons/uk.svg";
+import SearchIcon from "../../../../assets/icons/search_white.svg";
+import EmailIcon from "../../../../assets/icons/mail_white.svg";
+import PhoneIcon from "../../../../assets/icons/phone_white.svg";
+import RussianFlag from "../../../../assets/icons/russia.svg";
+import UkFlag from "../../../../assets/icons/uk.svg";
 
-
-
-export const WebNavigation = () => {
-  let history = useHistory()
-  const dispatch = useDispatch()
+export const WebNavigationRussian = () => {
+  let history = useHistory();
+  const dispatch = useDispatch();
   //USEREF
   const productsSubMenu = useRef(null);
 
   //USESTATES
   const [searchState, setSearchState] = useState(false);
-  const [languageState, setLanguageState] = useState(false)
+  const [languageState, setLanguageState] = useState(false);
 
   //FUNCTIONS
   const onSearchClick = () => {
     setSearchState(true);
   };
-  
-  const onLanguageHover = () =>{
-    setLanguageState(prevState => !prevState);
-  }
 
-  const onChangeLanguage = (index) =>{
-    if (index === 1){
-      history.push("/ru")
-      dispatch(languageAction("Russian"))
-    }else if (index === 2){
-      history.push("/en")
-      dispatch(languageAction("English"))
+  const onLanguageHover = () => {
+    setLanguageState(prevState => !prevState);
+  };
+
+  const onChangeLanguage = index => {
+    if (index === 1) {
+      history.push("/ru");
+      dispatch(languageAction("Russian"));
+      localStorage.setItem("Language","Russian")
+    } else if (index === 2) {
+      history.push("/en");
+      dispatch(languageAction("English"));
+      localStorage.setItem("Language","English")
     }
-    
-  }
-  
+  };
+
   const onProductEnter = element => {
     element.current.style.display = "grid";
   };
@@ -54,11 +53,19 @@ export const WebNavigation = () => {
     element.current.style.display = "none";
   };
 
+  const [setter,setSetter] = useState(false)
+  
+  useEffect(() =>{
+    setTimeout(() => {
+        setSetter(prevState => !prevState)
+    }, 7000);
+  })
   return (
+    // <header className={(setter) ? "wevb-nav" : "home-page"}>
     <header className="web-nav">
       <div className="web-navigation-container">
         <div className="web-nav-col-1">
-          <Link to="/en">
+          <Link to="/">
             <img src={LogoImg} alt="Group 61 Logo" className="web-nav-logo" />
           </Link>
         </div>
@@ -70,38 +77,38 @@ export const WebNavigation = () => {
               onMouseLeave={() => onProductLeave(productsSubMenu)}
               className="web-nav-sub-menu products-sub-menu">
               <div className="web-nav-product-sub-menu-row-1">
-                <h3 className="sub-menu-header">PRODUCTS</h3>
+                <h3 className="sub-menu-header">ПРОДУКЦИЯ</h3>
               </div>
               <div className="web-nav-product-sub-menu-row-2">
                 <div className="web-nav-product-sub-menu-col">
-                  <a href="/Products/silicasandlarge" className="sub-menu-item">
-                    Silica Sand Large Fraction
+                  <a href="/Products/silicasandlarge/ru" className="sub-menu-item">
+                    КВАРЦЕВЫЙ ПЕСОК КРУПНЫХ ФРАКЦИЙ
                   </a>
                   <a
-                    href="/Products/silicasandmedium"
+                    href="/Products/silicasandmedium/ru"
                     className="sub-menu-item">
-                    Silica Sand Medium Fraction
+                    КВАРЦЕВЫЙ ПЕСОК СРЕДНИХ ФРАКЦИЙ
                   </a>
-                  <a href="/Products/silicasandsmall" className="sub-menu-item">
-                    Silica Sand Small Fraction
-                  </a>
-                </div>
-                <div className="web-nav-product-sub-menu-col">
-                  <a href="/Products/whitequartz" className="sub-menu-item">
-                    White Quartz
+                  <a href="/Products/silicasandsmall/ru" className="sub-menu-item">
+                    КВАРЦЕВЫЙ ПЕСОК МЕЛКИХ ФРАКЦИЙ
                   </a>
                 </div>
                 <div className="web-nav-product-sub-menu-col">
-                  <a href="/Products/woodpellets" className="sub-menu-item">
-                    Wood Pellets
+                  <a href="/Products/whitequartz/ru" className="sub-menu-item">
+                    Белый кварц дробленый
+                  </a>
+                </div>
+                <div className="web-nav-product-sub-menu-col">
+                  <a href="/Products/woodpellets/ru" className="sub-menu-item">
+                    Древесные пеллеты
                   </a>
                 </div>
               </div>
             </div>
 
             <li className="web-nav-li">
-              <a href="/en" className="web-nav-link">
-                GENERAL
+              <a href="/" className="web-nav-link">
+                ГЛАВНАЯ
               </a>
             </li>
 
@@ -109,17 +116,17 @@ export const WebNavigation = () => {
               onMouseEnter={() => onProductEnter(productsSubMenu)}
               onMouseLeave={() => onProductLeave(productsSubMenu)}
               className="web-nav-li products-li">
-              <h3 className="web-nav-link">PRODUCTS</h3>
+              <h3 className="web-nav-link">ПРОДУКЦИЯ</h3>
             </li>
 
             <li className="web-nav-li">
-              <a href="/ContactUs" className="web-nav-link">
-                CONTACT US
+              <a href="/ContactUs/ru" className="web-nav-link">
+                СВЯЖИТЕСЬ С НАМИ
               </a>
             </li>
             <li className="web-nav-li">
-              <a href="/AboutUs" className="web-nav-link">
-                ABOUT US
+              <a href="/AboutUs/ru" className="web-nav-link">
+                О КОМПАНИИ
               </a>
             </li>
           </ul>
@@ -132,24 +139,36 @@ export const WebNavigation = () => {
           {searchState ? (
             <input type="text" className="web-nav-search-input" />
           ) : (
-            <div onMouseEnter={onLanguageHover} onMouseLeave={onLanguageHover} className="language-selector">
+            <div
+              onMouseEnter={onLanguageHover}
+              onMouseLeave={onLanguageHover}
+              className="language-selector">
               <img
-                src={UkFlag}
+                src={RussianFlag}
                 alt="russian flag"
                 className="language-flag"
               />
-              <h3 className="language-selected">English</h3>
-              <div className={(languageState) ? "language-selector-options" : "language-selector-options-off"}>
+              <h3 className="language-selected">русский</h3>
+              <div
+                className={
+                  languageState
+                    ? "language-selector-options"
+                    : "language-selector-options-off"
+                }>
                 <ul className="language-selector-ul">
-                  <li onClick={()=>onChangeLanguage(1)} className="language-selector-li">
+                  <li
+                    onClick={() => onChangeLanguage(1)}
+                    className="language-selector-li">
                     <img
                       src={RussianFlag}
                       alt="russian flag"
                       className="language-flag"
                     />
-                    Russian
+                    русский
                   </li>
-                  <li onClick={()=>onChangeLanguage(2)} className="language-selector-li">
+                  <li
+                    onClick={() => onChangeLanguage(2)}
+                    className="language-selector-li">
                     <img
                       src={UkFlag}
                       alt="russian flag"

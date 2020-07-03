@@ -55,6 +55,7 @@ export const SilicaSandSmall = () => {
               <li className="silica-sand-small-body-li">For building mixtures</li>
               <li className="silica-sand-small-body-li">Roof tile</li>
               <li className="silica-sand-small-body-li">In the manufacture of glass</li>
+
             </ul>
           </div>
           <div className="silica-sand-small-body-container">
@@ -62,7 +63,7 @@ export const SilicaSandSmall = () => {
                 Coarse silica sand fractions available:
             </h4>
             <ul className="silica-sand-small-body-ul">
-              <li className="silica-sand-small-body-li">In the manufacture of glass</li>
+              
               <li className="silica-sand-small-body-li">GM1 (0.63-0.315mm)</li>
               <li className="silica-sand-small-body-li">GM2 (0.8-0.315mm)</li>
               <li className="silica-sand-small-body-li">MDF1 (0.5-0.16 mm)</li>

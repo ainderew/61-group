@@ -48,7 +48,7 @@ export const ContactPage = () => {
         </div>
 
         <div className="contact-page-col-2">
-          <img src={ContactPhoto} alt="contact-photo-Group 61" className="contact-img"/>
+          <img src={ContactPhoto} alt="contact-Group 61" className="contact-img"/>
         </div>
       </div>
     </div>

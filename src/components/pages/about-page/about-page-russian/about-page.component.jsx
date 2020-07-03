@@ -1,18 +1,18 @@
 import React, { useState, useRef } from "react";
-import "./about-page.style.scss";
+import "../about-page.style.scss";
 
-import { ContactModal } from "../../parts/contact-modal/contact-modal.component";
+import { ContactModalRussian } from "../../../parts/contact-modal/contact-modal-russian/contact-modal.component";
 
 //IMAGES
-import TimeImg from "../../../assets/icons/About us/time.svg";
-import LocationImg from "../../../assets/icons/About us/location.svg";
-import PhoneImg from "../../../assets/icons/About us/phone.svg";
+import TimeImg from "../../../../assets/icons/About us/time.svg";
+import LocationImg from "../../../../assets/icons/About us/location.svg";
+import PhoneImg from "../../../../assets/icons/About us/phone.svg";
 
-import AboutUs1 from "../../../assets/images/about-us-1.webp";
-import AboutUs2 from "../../../assets/images/about-us-2.webp";
+import AboutUs1 from "../../../../assets/images/about-us-1.webp";
+import AboutUs2 from "../../../../assets/images/about-us-2.webp";
 // import  from "../../../assets/images/about-us-1.webp";
 
-export const AboutUsPage = () => {
+export const AboutUsPageRussian = () => {
   //USEREF VARS
   const screen = useRef(null);
   //USESTATE VARS
@@ -26,42 +26,48 @@ export const AboutUsPage = () => {
 
   return (
     <div ref={screen} className="about-us">
-      <ContactModal modalState={modalState} parentFunction={modalOnClick} />
+      <ContactModalRussian
+        modalState={modalState}
+        parentFunction={modalOnClick}
+      />
       <div className="about-us-inner">
         <div className="about-us-col-1">
           <div className="about-us-header-container">
             <h1 className="about-us-sub-header">Group 61 - Russia</h1>
-            <h2 className="about-us-header">ABOUT THE COMPANY</h2>
+            <h2 className="about-us-header">О КОМПАНИИ</h2>
           </div>
           <div className="about-us-body-container">
             <p className="about-us-body">
-              The company "61 Group" is a team of professionals with extensive
-              experience in exporting fuel pellets and quartz sand to the CIS
-              countries and Europe. We work directly with manufacturers, so the
-              prices are reasonable. ​ Our partners in auto, railway and sea
-              transportation will efficiently and promptly calculate logistics
-              costs and provide service at a bargain price, delivering the goods
-              efficiently and reliably and on time. ​ Turning to us, you get a
-              reliable partner with a 100% level of service. ​ A huge profit is
-              not important for us, the reputation and constancy of our
-              customers is important to us. ​ And please do not judge us by our
-              victories, judge us by our defeats, because we practically do not
-              have them. ​
+              Компания &quot;61 Group&quot; - это команда профессионалов,
+              имеющих большой опыт по экспорту топливных пеллетов и кварцевого
+              песка в страны СНГ и Европы.Мы работаем на прямую с заводами
+              изготовителями, поэтому цены приемлемые. ​Наши партнеры по авто,
+              ЖД и морским перевозкам качественно и оперативно рассчитают
+              затраты на логистику и окажут сервис по выгодной цене, доставив
+              груз качественно и надежно и точно в срок. ​Обратившись к нам, вы
+              получаете надежного партнера со 100% уровнем сервиса.Для нас не
+              важна огромная прибыль, для нас важна репутация и постоянство
+              наших клиентов. ​И пожалуйста не судите нас по нашим победам,
+              судите нас по нашим поражения, потому что их у нас практически
+              нет.
             </p>
           </div>
 
           <div className="about-us-quote-container">
-            <h1 className="about-us-quote-title">Welcome to the 61 Group.</h1>
+            <h1 className="about-us-quote-title">
+              Добро пожаловать в компанию &quot;61 Group&quot;.
+            </h1>
             <h3 className="about-us-quote">
-              "With respect and hope for a long-term and profitable
-              cooperation."
+              С Уважением и надеждой на долгосрочное и выгодное сотрудничество,
             </h3>
-            <h2 className="about-us-quote-person">-CEO Oleg Liyasov</h2>
+            <h2 className="about-us-quote-person">
+              Генеральный директор Олег Лиясов
+            </h2>
           </div>
 
           <div className="about-us-benefits-container">
             <h2 className="about-us-benefits-title">
-              BENEFITS WHEN WORKING WITH US:
+              Преимущества при работе с нами:
             </h2>
           </div>
           {/* START OF THE BENEFIT LIST */}
@@ -129,8 +135,8 @@ export const AboutUsPage = () => {
           </div>
         </div>
         <div className="about-us-col-2">
-          <img src={AboutUs1} alt="about 1" className="about-us-img"/>
-          <img src={AboutUs2} alt="about 2" className="about-us-img"/>
+          <img src={AboutUs1} alt="about 1" className="about-us-img" />
+          <img src={AboutUs2} alt="about 2" className="about-us-img" />
         </div>
       </div>
     </div>
