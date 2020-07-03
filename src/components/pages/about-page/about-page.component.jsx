@@ -9,6 +9,10 @@ import TimeImg from "../../../assets/icons/About us/time.svg";
 import LocationImg from "../../../assets/icons/About us/location.svg";
 import PhoneImg from "../../../assets/icons/About us/phone.svg";
 
+import AboutUs1 from "../../../assets/images/about-us-1.webp";
+import AboutUs2 from "../../../assets/images/about-us-2.webp";
+// import  from "../../../assets/images/about-us-1.webp";
+
 export const AboutUsPage = () => {
   //USEREF VARS
   const screen = useRef(null);
@@ -126,11 +130,8 @@ export const AboutUsPage = () => {
           </div>
         </div>
         <div className="about-us-col-2">
-          <div className="about-us-company-container">
-            <img src={Logo} alt="" className="about-us-logo" />
-            <h1 className="about-us-company-name">GROUP 61 LTD</h1>
-            <button onClick={modalOnClick} className="about-us-btn">GET IN TOUCH</button>
-          </div>
+          <img src={AboutUs1} alt="about image 1" className="about-us-img"/>
+          <img src={AboutUs2} alt="about image 2" className="about-us-img"/>
         </div>
       </div>
     </div>
