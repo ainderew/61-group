@@ -18,31 +18,42 @@ import { WebNavigation } from "../../parts/web-navigation/web-navigation.compone
 import { PhoneNavigation } from "../../parts/phone-navigation/phone-navigation.component";
 import { Footer } from "../../parts/footer/footer.component";
 
+export const MainContainer = () => {
+  return (
+    <Router>
+      <div className="main-container">
+        <WebNavigation />
+        <PhoneNavigation />
 
-export const MainContainer = () =>{
-    
-    return (
-      <Router>
-        <div className="main-container">
-          <WebNavigation />
-          <PhoneNavigation />
-          
-          <Switch>
-            
-            <Route path="/ru" exact component={HomePageRU} />
-            <Route path="/en" exact component={HomePage} />
-            <Route path="/Products" exact component={ProductsPage} />
-            <Route path="/Products/whitequartz" exact component={WhiteQuartz} />
-            <Route path="/Products/silicasandlarge" exact component={SilicaSandLarge} />
-            <Route path="/Products/silicasandmedium" exact component={SilicaSandMedium} />
-            <Route path="/Products/silicasandsmall" exact component={SilicaSandSmall} />
-            <Route path="/Products/woodpellets" exact component={WoodPellets} />
-            <Route path="/ContactUs" exact component={ContactPage} />
-            <Route path="/AboutUs" exact component={AboutUsPage} />
-            
-          </Switch>
-          <Footer />
-        </div>
-      </Router>
-    );
-}
+        <Switch>
+          <Route path="/" exact>
+            <Redirect to="/ru" />
+          </Route>
+          <Route path="/ru" exact component={HomePageRU} />
+          <Route path="/en" exact component={HomePage} />
+          <Route path="/Products" exact component={ProductsPage} />
+          <Route path="/Products/whitequartz" exact component={WhiteQuartz} />
+          <Route
+            path="/Products/silicasandlarge"
+            exact
+            component={SilicaSandLarge}
+          />
+          <Route
+            path="/Products/silicasandmedium"
+            exact
+            component={SilicaSandMedium}
+          />
+          <Route
+            path="/Products/silicasandsmall"
+            exact
+            component={SilicaSandSmall}
+          />
+          <Route path="/Products/woodpellets" exact component={WoodPellets} />
+          <Route path="/ContactUs" exact component={ContactPage} />
+          <Route path="/AboutUs" exact component={AboutUsPage} />
+        </Switch>
+        <Footer />
+      </div>
+    </Router>
+  );
+};
