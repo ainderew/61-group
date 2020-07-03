@@ -34,7 +34,8 @@ export const HomePage = () => {
     }, 7000);
   })
   return (
-    <div className={(setter) ? "homepage" : "home-page"}>
+    // <div className={(setter) ? "homepage" : "home-page"}>
+    <div className = "homepage">
       <div className="header-div">
         <h1 className="header-text">
           <span className="header-span">61 GROUP</span>
