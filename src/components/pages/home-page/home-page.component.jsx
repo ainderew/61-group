@@ -30,7 +30,7 @@ export const HomePage = () => {
   
   useEffect(() =>{
     setTimeout(() => {
-        setSetter(prevState => !prevState)
+        setSetter(true)
     }, 7000);
   })
   return (

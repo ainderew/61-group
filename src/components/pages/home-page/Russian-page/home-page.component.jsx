@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../home-page.style.scss";
 
@@ -25,16 +25,16 @@ const breakPoints = [
 ];
 
 export const HomePageRU = () => {
-  const [setter,setSetter] = useState(false)
-  
-  useEffect(() =>{
+  const [setter, setSetter] = useState(false);
+
+  useEffect(() => {
     setTimeout(() => {
-        setSetter(prevState => !prevState)
+      setSetter(true);
     }, 7000);
-  })
+  });
   return (
-    // <div className={(setter) ? "homepage" : "home-page"}>
-    <div className="homepage">
+    // <div className={setter ? "homepage" : "home-page"}>
+      <div className="homepage"> 
       <div className="header-div">
         <h1 className="header-text">
           <span className="header-span">61 GROUP</span>
@@ -101,8 +101,8 @@ export const HomePageRU = () => {
 
           <div className="hp-row-4-col-2">
             <h4 className="hp-row-4-col-2-heading">
-              МЫ ДОСТАВЛЯЕМ АВТОМОБИЛЯМИ, ЖЕЛЕЗНОДОРОЖНЫМИ И МОРСКИМИ
-              КОНТЕЙНЕРАМИ
+              МЫ ДОСТАВЛЯЕМ ГРУЗОВЫМИ МАШИНАМИ, ЖЕЛЕЗНОДОРОЖНЫМИ ВАГОНАМИ И
+              МОРСКИМИ КОНТЕЙНЕРАМИ (ПО МОРЮ).
             </h4>
             <h2 className="hp-row-4-col-2-body">
               Мы обеспечим доставку по самым выгодным для вас ценам.

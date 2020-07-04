@@ -38,11 +38,11 @@ export const WebNavigationRussian = () => {
     if (index === 1) {
       history.push("/ru");
       dispatch(languageAction("Russian"));
-      localStorage.setItem("Language","Russian")
+      localStorage.setItem("Language", "Russian");
     } else if (index === 2) {
       history.push("/en");
       dispatch(languageAction("English"));
-      localStorage.setItem("Language","English")
+      localStorage.setItem("Language", "English");
     }
   };
 
@@ -53,16 +53,16 @@ export const WebNavigationRussian = () => {
     element.current.style.display = "none";
   };
 
-  const [setter,setSetter] = useState(false)
-  
-  useEffect(() =>{
+  const [setter, setSetter] = useState(false);
+
+  useEffect(() => {
     setTimeout(() => {
-        setSetter(prevState => !prevState)
+      setSetter(true);
     }, 7000);
-  })
+  });
   return (
-    // <header className={(setter) ? "wevb-nav" : "home-page"}>
-    <header className="web-nav">
+    // <header className={setter ? "web-nav" : "home-page"}>
+      <header className="web-nav">
       <div className="web-navigation-container">
         <div className="web-nav-col-1">
           <Link to="/">
@@ -81,7 +81,9 @@ export const WebNavigationRussian = () => {
               </div>
               <div className="web-nav-product-sub-menu-row-2">
                 <div className="web-nav-product-sub-menu-col">
-                  <a href="/Products/silicasandlarge/ru" className="sub-menu-item">
+                  <a
+                    href="/Products/silicasandlarge/ru"
+                    className="sub-menu-item">
                     КВАРЦЕВЫЙ ПЕСОК КРУПНЫХ ФРАКЦИЙ
                   </a>
                   <a
@@ -89,18 +91,20 @@ export const WebNavigationRussian = () => {
                     className="sub-menu-item">
                     КВАРЦЕВЫЙ ПЕСОК СРЕДНИХ ФРАКЦИЙ
                   </a>
-                  <a href="/Products/silicasandsmall/ru" className="sub-menu-item">
+                  <a
+                    href="/Products/silicasandsmall/ru"
+                    className="sub-menu-item">
                     КВАРЦЕВЫЙ ПЕСОК МЕЛКИХ ФРАКЦИЙ
                   </a>
                 </div>
                 <div className="web-nav-product-sub-menu-col">
                   <a href="/Products/whitequartz/ru" className="sub-menu-item">
-                    Белый кварц дробленый
+                    БЕЛЫЙ КВАРЦ ДРОБЛЕНЫЙ
                   </a>
                 </div>
                 <div className="web-nav-product-sub-menu-col">
                   <a href="/Products/woodpellets/ru" className="sub-menu-item">
-                    Древесные пеллеты
+                    ДРЕВЕСНЫЕ ПЕЛЛЕТЫ
                   </a>
                 </div>
               </div>
