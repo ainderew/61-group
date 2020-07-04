@@ -10,7 +10,7 @@
   display: grid;
   grid-template-rows: 40vh 270px 40vh 1fr;
 
-  background: #191919 url("../../../assets/images/homepage-background.jpg")
+  background: #191919 url("../../../assets/images/homepage-background.webp")
     no-repeat;
   background-position: top;
   background-size: contain;
@@ -302,7 +302,7 @@
     display: grid;
     grid-template-rows: 50vh 0.4fr 30vh 1fr;
 
-    background: url("../../../assets/images/homepage-background.webp") no-repeat;
+    background: url("../../../assets/images/homepage-background-phone.webp") no-repeat;
     background-position: left;
     background-size: cover;
   }
