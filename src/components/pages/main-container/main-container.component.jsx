@@ -41,7 +41,7 @@ export const MainContainer = () => {
         {(language === "Russian") ? <WebNavigationRussian /> : <WebNavigation />}
         
         <PhoneNavigation />
-
+{/* to add translation for phone nav */}
         <Switch>
           <Route path="/" exact>
             <Redirect to="/ru" />
