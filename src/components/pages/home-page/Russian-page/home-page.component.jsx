@@ -51,7 +51,7 @@ export const HomePageRU = () => {
             showArrows={false}
             pagination={false}
             breakPoints={breakPoints}>
-            <Link to="/Products/silicasandlarge">
+            <Link to="/Products/silicasandlarge/ru">
               <ProductHomepage
                 image={SilicaSandLarge}
                 name={"КВАРЦЕВЫЙ ПЕСОК"}
@@ -59,7 +59,7 @@ export const HomePageRU = () => {
               />
             </Link>
 
-            <Link to="/Products/silicasandmedium">
+            <Link to="/Products/silicasandmedium/ru">
               <ProductHomepage
                 image={SilicaSandMedium}
                 name={"КВАРЦЕВЫЙ ПЕСОК"}
@@ -67,7 +67,7 @@ export const HomePageRU = () => {
               />
             </Link>
 
-            <Link to="/Products/silicasandsmall">
+            <Link to="/Products/silicasandsmall/ru">
               <ProductHomepage
                 image={SilicaSandFines}
                 name={"КВАРЦЕВЫЙ ПЕСОК"}
@@ -75,7 +75,7 @@ export const HomePageRU = () => {
               />
             </Link>
 
-            <Link to="/Products/whitequartz">
+            <Link to="/Products/whitequartz/ru">
               <ProductHomepage
                 style={{ display: "block" }}
                 image={WhiteQuartz}
@@ -84,7 +84,7 @@ export const HomePageRU = () => {
               />
             </Link>
 
-            <Link to="/Products/woodpellets">
+            <Link to="/Products/woodpellets/ru">
               <ProductHomepage
                 image={WoodPellets}
                 name={"ДРЕВЕСНЫЕ ПЕЛЛЕТЫ"}
