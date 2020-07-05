@@ -8,7 +8,7 @@ import Carousel from "react-elastic-carousel";
 //COMPONENTS
 import { ProductHomepage } from "../../../parts/product-homepage/product-homepage.component";
 import { NewsHomepage } from "../../../parts/news-homepage/news-homepage.compnent";
-
+import { ContactModalRussian } from "../../../parts/contact-modal/contact-modal-russian/contact-modal.component";
 //IMAGES
 import SilicaSandFines from "../../../../assets/products/Silica sand fines.webp";
 import SilicaSandLarge from "../../../../assets/products/Silica sand of large fractions.webp";
@@ -85,6 +85,26 @@ export const HomePageRU = () => {
               />
             </Link>
           </Carousel>
+          
+          <ul className="phone-homepage-product-ul">
+            <Link to="/Products/silicasandsmall">
+             <li className="phone-homepage-product-li">КВАРЦЕВЫЙ ПЕСОК (мелкая фракция)</li>
+            </Link>
+            
+            <Link to="/Products/silicasandmedium">
+             <li className="phone-homepage-product-li">КВАРЦЕВЫЙ ПЕСОК (средняя фракция)</li>
+            </Link>
+            <Link to="/Products/silicasandlarge">
+              <li className="phone-homepage-product-li">КВАРЦЕВЫЙ ПЕСОК (крупная фракция)</li>
+            </Link>
+            <Link to="/Products/whitequartz">
+             <li className="phone-homepage-product-li">КВАРЦ ДРОБЛЕНЫЙ (молочного цвета)</li>
+            </Link>
+            
+            <Link to="/Products/woodpellets">
+              <li className="phone-homepage-product-li">ДРЕВЕСНЫЕ ПЕЛЛЕТЫ (класс А1, А2)</li>
+            </Link>
+          </ul>
         </div>
       </div>
 

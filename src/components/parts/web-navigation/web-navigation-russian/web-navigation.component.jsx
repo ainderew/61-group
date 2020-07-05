@@ -31,7 +31,10 @@ export const WebNavigationRussian = () => {
   };
 
   const onLanguageHover = () => {
-    setLanguageState(prevState => !prevState);
+    setLanguageState(true);
+  };
+  const onLanguageLeave = () => {
+    setLanguageState(false);
   };
 
   const onChangeLanguage = index => {
@@ -137,7 +140,7 @@ export const WebNavigationRussian = () => {
           ) : (
             <div
               onMouseEnter={onLanguageHover}
-              onMouseLeave={onLanguageHover}
+              onMouseLeave={onLanguageLeave}
               className="language-selector">
               <img
                 src={RussianFlag}
@@ -160,7 +163,7 @@ export const WebNavigationRussian = () => {
                       alt="russian flag"
                       className="language-flag"
                     />
-                    Русский
+                    русский
                   </li>
                   <li
                     onClick={() => onChangeLanguage(2)}

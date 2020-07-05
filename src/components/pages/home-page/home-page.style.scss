@@ -48,7 +48,7 @@
     width: 98%;
     height: 100%;
     display: flex;
-
+    
     .rec-slider-container {
       margin: 0;
     }
@@ -62,6 +62,10 @@
       left: 0;
       z-index: 2;
     }
+  }
+  
+  .phone-homepage-product-ul{
+    display: none;
   }
 }
 
@@ -131,56 +135,56 @@
     background: white;
   }
 }
-@media only screen and (max-width: 1366px) {
-  .homepage-row-4 {
-    width: 100%;
-    display: flex;
-    align-items: center;
+// @media only screen and (max-width: 1366px) {
+//   .homepage-row-4 {
+//     width: 100%;
+//     display: flex;
+//     align-items: center;
 
-    .hp-row-4-inner {
-      width: 100%;
-      height: 90%;
-      display: grid;
-      grid-template-columns: repeat(2, 50%);
+//     .hp-row-4-inner {
+//       width: 100%;
+//       height: 90%;
+//       display: grid;
+//       grid-template-columns: repeat(2, 50%);
 
-      background: $background-color;
+//       background: $background-color;
 
-      .hp-row-4-col-1 {
-        height: 100%;
-        width: 100%;
-        background: url(../../../assets//images/hp-row-4-img.webp) no-repeat
-          center;
-        background-size: cover;
-      }
+//       .hp-row-4-col-1 {
+//         height: 100%;
+//         width: 100%;
+//         background: url(../../../assets//images/hp-row-4-img.webp) no-repeat
+//           center;
+//         background-size: cover;
+//       }
 
-      .hp-row-4-col-2 {
-        padding: 3rem 2rem;
-        display: flex;
-        flex-direction: column;
-        .hp-row-4-col-2-heading {
-          color: #ffcd11;
-          font-size: 1.4rem;
-          margin-bottom: 0.5rem;
-        }
-        .hp-row-4-col-2-body {
-          color: $font-off-white;
-          font-size: 1rem;
-          margin-bottom: 1rem;
-        }
+//       .hp-row-4-col-2 {
+//         padding: 3rem 2rem;
+//         display: flex;
+//         flex-direction: column;
+//         .hp-row-4-col-2-heading {
+//           color: #ffcd11;
+//           font-size: 1.4rem;
+//           margin-bottom: 0.5rem;
+//         }
+//         .hp-row-4-col-2-body {
+//           color: $font-off-white;
+//           font-size: 1rem;
+//           margin-bottom: 1rem;
+//         }
 
-        .hp-row-4-col-2-btn {
-          border: none;
-          width: 10rem;
-          height: 2.5rem;
+//         .hp-row-4-col-2-btn {
+//           border: none;
+//           width: 10rem;
+//           height: 2.5rem;
 
-          color: white;
-          font-size: 1rem;
-          background: #6f6f6f;
-        }
-      }
-    }
-  }
-}
+//           color: white;
+//           font-size: 1rem;
+//           background: #6f6f6f;
+//         }
+//       }
+//     }
+//   }
+// }
 @media only screen and (max-width: 1366px) {
   .homepage {
     width: 85vw;
@@ -281,9 +285,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // margin-top: 5rem;
-    // margin-bottom: 3rem;
-    //   padding: 0 3rem 0 6.5rem;
 
     .bottom-news-container {
       width: 85vw;
@@ -300,7 +301,7 @@
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-rows: 50vh 0.4fr 30vh 1fr;
+    grid-template-rows: 50vh auto auto 1fr;
 
     background: url("../../../assets/images/homepage-background-phone.webp") no-repeat;
     background-position: 0rem 4rem;
@@ -326,31 +327,52 @@
   .center-div {
     width: 100%;
     height: 100%;
-    display: flex;
+    // display: flex;
 
-    padding: 0;
+    // padding: 0;
 
     .center-align-container {
-      width: 100%;
+      width: 90%;
       height: 100%;
-      //   background: white;
+      background: white;
 
       display: flex;
       flex-direction: column;
       //   align-items: center;
+    }
+    .rec{
+      display: none;
+    }
+    .phone-homepage-product-ul{
+      display: flex;
+      flex-direction: column;
+      list-style-type: none;
+      a{
+        text-decoration: none;
+        color: black;
+      }
+      
+      .phone-homepage-product-li{
+        padding: 1rem 1rem;
+        border-bottom: 1px solid grey;
+        font-size: .9rem;
+        
+        
+      }
     }
   }
   .homepage-row-4 {
     width: 100%;
     display: flex;
     align-items: center;
+    
 
     .hp-row-4-inner {
       width: 100%;
       height: 90%;
       display: grid;
       grid-template-columns: 1fr;
-
+      margin: 2rem 0;
       background: $background-color;
 
       .hp-row-4-col-1 {

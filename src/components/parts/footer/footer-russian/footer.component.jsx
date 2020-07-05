@@ -6,8 +6,8 @@ import "../footer.style.scss";
 //IMAGES
 import FooterDown from "../../../../assets/icons/footer-down.svg";
 
-export const FooterRussian = () => {
-  let history = useHistory()
+export const FooterRussian = ({parentFunction}) => {
+
 
   //USESTATES VARS
   const [ulState, setUlState] = useState({
@@ -30,9 +30,7 @@ export const FooterRussian = () => {
     }
   };
 
-  const redirectToContact = () =>{
-    history.push("/ContactUs")
-  }
+
 
   return (
     <footer className="footer">
@@ -61,7 +59,7 @@ export const FooterRussian = () => {
         </div>
 
         <div className="footer-col-2">
-          <button onClick={redirectToContact} className="footer-col-2-btn">СВЯЖИТЕСЬ С НАМИ</button>
+          <button onClick={parentFunction} className="footer-col-2-btn">СВЯЖИТЕСЬ С НАМИ</button>
         </div>
 
         <div className="footer-col-3">

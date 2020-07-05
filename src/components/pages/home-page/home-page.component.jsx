@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./home-page.style.scss";
 
@@ -32,7 +32,6 @@ export const HomePage = ({modalState, parentFunction}) => {
   return (
     
     <div className = "homepage">
-    <ContactModal modalState={modalState} parentFunction={parentFunction} />
       <div className="header-div">
         <h1 className="header-text">
           <span className="header-span">61 GROUP</span>
@@ -89,6 +88,26 @@ export const HomePage = ({modalState, parentFunction}) => {
               />
             </Link>
           </Carousel>
+          
+          <ul className="phone-homepage-product-ul">
+            <Link to="/Products/silicasandsmall">
+             <li className="phone-homepage-product-li">SILICA SAND (Small Fractions)</li>
+            </Link>
+            
+            <Link to="/Products/silicasandmedium">
+             <li className="phone-homepage-product-li">SILICA SAND (Medium Fractions)</li>
+            </Link>
+            <Link to="/Products/silicasandlarge">
+              <li className="phone-homepage-product-li">SILICA SAND (Large Fractions)</li>
+            </Link>
+            <Link to="/Products/whitequartz">
+             <li className="phone-homepage-product-li">WHITE QUARTZ (Crushed)</li>
+            </Link>
+            
+            <Link to="/Products/woodpellets">
+              <li className="phone-homepage-product-li">WOOD PELLETS (Class A1 A2)</li>
+            </Link>
+          </ul>
         </div>
       </div>
 

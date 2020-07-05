@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./phone-navigation-open.style.scss";
+import "../phone-navigation-open.style.scss";
 
 //IMAGES
 
 
-export const PhoneNavOpen = ({ navState, toggleFunction }) => {
+
+export const PhoneNavOpenRussian = ({ navState, toggleFunction }) => {
 
   return (
     <div className={navState ? "phone-nav-display-open" : "phone-nav-display"}>

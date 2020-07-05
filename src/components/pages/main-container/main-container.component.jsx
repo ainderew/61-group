@@ -28,6 +28,7 @@ import { WebNavigationRussian } from "../../parts/web-navigation/web-navigation-
 import { PhoneNavigation } from "../../parts/phone-navigation/phone-navigation.component";
 import { Footer } from "../../parts/footer/footer.component";
 import { FooterRussian } from "../../parts/footer/footer-russian/footer.component";
+import { ContactModal } from "../../parts/contact-modal/contact-modal.component";
 
 export const MainContainer = () => {
   const language = useSelector(state => state.lang)
@@ -43,23 +44,24 @@ export const MainContainer = () => {
  //FUNCCTIONS
   const modalOnClick = () =>{
         setModalState(prevState => !prevState)
-        window.scrollIntoView({ block: "center" })
+        document.body.scrollIntoView()
   }
 
   return (
     <Router>
+      
       <div className="main-container">
+        
         {(language === "Russian") ? <WebNavigationRussian /> : <WebNavigation />}
         
         <PhoneNavigation />
 {/* to add translation for phone nav */}
+        <ContactModal modalState={modalState} parentFunction={modalOnClick} />
+        
         <Switch>
-          <Route path="/" exact>
-            <Redirect to="/ru" />
-          </Route>
-
-          <Route path="/ru" exact render={(props) => <HomePageRU {...props} modalState={modalState} parentFunction={modalOnClick} />} />
-          <Route path="/en" exact render={(props) => <HomePage {...props} modalState={modalState} parentFunction={modalOnClick} />} />
+          <Route path="/" exact> <Redirect to="/ru" /> </Route>
+          <Route path="/ru" exact component={HomePageRU} />
+          <Route path="/en" exact component={HomePage}/>
           <Route path="/Products" exact component={ProductsPage} />
           
           <Route path="/Products/whitequartz" exact component={WhiteQuartz} />

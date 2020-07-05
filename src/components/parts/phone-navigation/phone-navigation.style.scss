@@ -30,10 +30,42 @@
 }
 .phone-nav-right{
     justify-content: flex-end;
+    .phone-nav-translation{
+        display: flex;
+        position: relative;
+        .phone-nav-translation-img{
+            width: 1.2rem;
+        }
+        .phone-nav-translation-text{
+            color: white;
+            margin: 0 2rem 0 .5rem;
+        }
+        
+        .phone-nav-translation-options-container{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            bottom: -350%;
+            left: -15%;
+            background: black;
+        }
+        
+        .phone-nav-translation-options-container-off{
+            display: none;
+        }
+        
+        .phone-nav-translation-options{
+            display: flex;
+            padding: 1rem 0 0 1rem;
+        }
+    }
     .phone-nav-icon{
         width: 1.6rem;
     }
+    
+    
 }
+
 
 @media only screen and (max-width: 1000px){
     .phone-nav{
