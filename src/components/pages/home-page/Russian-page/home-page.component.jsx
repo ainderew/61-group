@@ -26,8 +26,19 @@ const breakPoints = [
 
 export const HomePageRU = () => {
   return (
- 
-      <div className="homepage"> 
+    <div className="homepage">
+      <Helmet>
+        <title>
+          Пеллеты (древесные гранулы), кварцевый песок, нерудные материалы и
+          белый кварц по доступным ценам.
+        </title>
+        <meta
+          name="description"
+          content="Компания 61 GROUP реализует по оптовым ценам нерудные материалы, белый кварц,
+пеллеты (древесные гранулы) и кварцевый песок. Заказать и купить данные материалы
+можно онлайн."
+        />
+      </Helmet>
       <div className="header-div">
         <h1 className="header-text">
           <span className="header-span">61 GROUP</span>
@@ -85,24 +96,34 @@ export const HomePageRU = () => {
               />
             </Link>
           </Carousel>
-          
+
           <ul className="phone-homepage-product-ul">
             <Link to="/Products/silicasandsmall">
-             <li className="phone-homepage-product-li">КВАРЦЕВЫЙ ПЕСОК (мелкая фракция)</li>
+              <li className="phone-homepage-product-li">
+                КВАРЦЕВЫЙ ПЕСОК (мелкая фракция)
+              </li>
             </Link>
-            
+
             <Link to="/Products/silicasandmedium">
-             <li className="phone-homepage-product-li">КВАРЦЕВЫЙ ПЕСОК (средняя фракция)</li>
+              <li className="phone-homepage-product-li">
+                КВАРЦЕВЫЙ ПЕСОК (средняя фракция)
+              </li>
             </Link>
             <Link to="/Products/silicasandlarge">
-              <li className="phone-homepage-product-li">КВАРЦЕВЫЙ ПЕСОК (крупная фракция)</li>
+              <li className="phone-homepage-product-li">
+                КВАРЦЕВЫЙ ПЕСОК (крупная фракция)
+              </li>
             </Link>
             <Link to="/Products/whitequartz">
-             <li className="phone-homepage-product-li">КВАРЦ ДРОБЛЕНЫЙ (молочного цвета)</li>
+              <li className="phone-homepage-product-li">
+                КВАРЦ ДРОБЛЕНЫЙ (молочного цвета)
+              </li>
             </Link>
-            
+
             <Link to="/Products/woodpellets">
-              <li className="phone-homepage-product-li">ДРЕВЕСНЫЕ ПЕЛЛЕТЫ (класс А1, А2)</li>
+              <li className="phone-homepage-product-li">
+                ДРЕВЕСНЫЕ ПЕЛЛЕТЫ (класс А1, А2)
+              </li>
             </Link>
           </ul>
         </div>
