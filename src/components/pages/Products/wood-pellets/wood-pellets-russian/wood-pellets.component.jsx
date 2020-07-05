@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { Helmet } from "react-helmet";
 import "../wood-pellets.style.scss";
 
 //COMPONENTS
@@ -20,7 +21,22 @@ export const WoodPelletsRussian = () => {
 
   return (
     <div ref={screen} className="wood-pellets-page">
-      <ContactModalRussian modalState={modalState} parentFunction={modalOnClick} />
+      <Helmet>
+        <title>
+          Древесные гранулы (пеллеты) – экологически чистый вид твердого топлива
+          по доступным ценам.
+        </title>
+        <meta
+          name="description"
+          content="Пеллеты - гранулы являются 100% древесным продуктом, применяются для комфортного
+          отопления любых помещений. Мы предлагаем приобрести продукт по оптовой цене с
+          доставкой по РФ и зарубеж."
+        />
+      </Helmet>
+      <ContactModalRussian
+        modalState={modalState}
+        parentFunction={modalOnClick}
+      />
       <div className="wood-pellets-page-inner">
         <div className="wood-pellets-page-col-1">
           <div className="wood-pellets-header-container">

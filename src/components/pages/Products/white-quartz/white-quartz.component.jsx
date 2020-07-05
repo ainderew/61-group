@@ -1,4 +1,5 @@
 import React, {useState, useRef} from "react";
+import { Helmet } from "react-helmet";
 import "./white-quartz.style.scss";
 
 //COMPONENTS
@@ -21,6 +22,16 @@ export const WhiteQuartz = () => {
   
   return (
     <div ref={screen} className="white-quartz-page">
+      <Helmet>
+        <title>
+        High-quality milky white quartz crushed, used in various fields.
+        </title>
+        <meta
+          name="description"
+          content="«61 GROUP» sells white crushed quartz at an affordable cost. You can order and buy material
+          online. Delivery is carried out to the near and far abroad."
+        />
+      </Helmet>
       <ContactModal parentFunction={modalOnClick} modalState={modalState} />
       <div className="white-quartz-page-inner">
         <div className="white-quartz-page-col-1">

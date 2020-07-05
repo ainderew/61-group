@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { Helmet } from "react-helmet";
 import "../white-quartz.style.scss";
 
 //COMPONENTS
@@ -21,7 +22,22 @@ export const WhiteQuartzRussian = () => {
 
   return (
     <div ref={screen} className="white-quartz-page">
-      <ContactModalRussian parentFunction={modalOnClick} modalState={modalState} />
+      <Helmet>
+        <title>
+          Высококачественный молочно-белый кварц дробленый, используемый в
+          различных сферах.
+        </title>
+        <meta
+          name="description"
+          content="Компания 61 GROUP реализует по доступной стоимости белый дробленный кварц.
+          Заказать и купить материал можно онлайн. Доставка осуществляется в ближнее и дальнее
+          зарубежье."
+        />
+      </Helmet>
+      <ContactModalRussian
+        parentFunction={modalOnClick}
+        modalState={modalState}
+      />
       <div className="white-quartz-page-inner">
         <div className="white-quartz-page-col-1">
           <div className="white-quartz-header-container">

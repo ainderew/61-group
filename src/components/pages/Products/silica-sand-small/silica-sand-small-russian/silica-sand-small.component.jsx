@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { Helmet } from "react-helmet";
 import "../silica-sand-small.style.scss";
 
 //COMPONENTS
@@ -20,7 +21,22 @@ export const SilicaSandSmallRussian = () => {
   };
   return (
     <div ref={screen} className="silica-sand-small-page">
-      <ContactModalRussian modalState={modalState} parentFunction={modalOnClick} />
+      <Helmet>
+        <title>
+          Заказать Кварцевый песок окатанный мелких фракций оптом и с доставкой
+          в компании «61 Group»
+        </title>
+        <meta
+          name="description"
+          content="Предлагаем купить востребованный в напольных покрытиях окатанный кварцевый песок
+          мелкой фракции в любых объемах. Доставка осуществляется оперативно нашими
+          партнерами – транспортными компаниями."
+        />
+      </Helmet>
+      <ContactModalRussian
+        modalState={modalState}
+        parentFunction={modalOnClick}
+      />
       <div className="silica-sand-small-page-inner">
         <div className="silica-sand-small-page-col-1">
           <div className="silica-sand-small-header-container">

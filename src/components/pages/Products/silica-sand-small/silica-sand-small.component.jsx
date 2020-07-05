@@ -1,4 +1,5 @@
-import React,{useState, useRef} from "react";
+import React, { useState, useRef } from "react";
+import { Helmet } from "react-helmet";
 import "./silica-sand-small.style.scss";
 
 //COMPONENTS
@@ -9,17 +10,28 @@ import ProductImage from "../../../../assets/products/Silica sand fines.webp";
 
 export const SilicaSandSmall = () => {
   //USEREF VARS
-  const screen = useRef(null)
+  const screen = useRef(null);
   //USESTATE VARS
-  const [modalState, setModalState] = useState(false)
-  
+  const [modalState, setModalState] = useState(false);
+
   //FUNCTIONS
-  const modalOnClick = () =>{
-    setModalState(prevState => !prevState)
-    screen.current.scrollIntoView({block: "center"})
-}
+  const modalOnClick = () => {
+    setModalState(prevState => !prevState);
+    screen.current.scrollIntoView({ block: "center" });
+  };
   return (
     <div ref={screen} className="silica-sand-small-page">
+      <Helmet>
+        <title>
+          Order Quartz sand rounded of fine fractions in bulk and with delivery
+          to the &lt;61 Group&gt; company.
+        </title>
+        <meta
+          name="description"
+          content="We offer to buy rounded quartz sand of a fine fraction demanded in floor coverings in any
+          volumes. Delivery is carried out promptly by our partners - transport companies."
+        />
+      </Helmet>
       <ContactModal modalState={modalState} parentFunction={modalOnClick} />
       <div className="silica-sand-small-page-inner">
         <div className="silica-sand-small-page-col-1">
@@ -41,10 +53,14 @@ export const SilicaSandSmall = () => {
             </p>
           </div>
           <div className="silica-sand-small-contact-container">
-              <a href="/ContactUs" className="silica-sand-small-contact">Contact Us</a>
+            <a href="/ContactUs" className="silica-sand-small-contact">
+              Contact Us
+            </a>
           </div>
           <div className="silica-sand-small-body-container">
-            <h4 className="silica-sand-small-body-title">Sand of large fractions is used in the following areas:</h4>
+            <h4 className="silica-sand-small-body-title">
+              Sand of large fractions is used in the following areas:
+            </h4>
             <ul className="silica-sand-small-body-ul">
               <li className="silica-sand-small-body-li">For tennis courts</li>
               <li className="silica-sand-small-body-li">For soccer fields</li>
@@ -52,18 +68,20 @@ export const SilicaSandSmall = () => {
               <li className="silica-sand-small-body-li">For steel casting</li>
               <li className="silica-sand-small-body-li">For reorganization</li>
               <li className="silica-sand-small-body-li">Paving slabs</li>
-              <li className="silica-sand-small-body-li">For building mixtures</li>
+              <li className="silica-sand-small-body-li">
+                For building mixtures
+              </li>
               <li className="silica-sand-small-body-li">Roof tile</li>
-              <li className="silica-sand-small-body-li">In the manufacture of glass</li>
-
+              <li className="silica-sand-small-body-li">
+                In the manufacture of glass
+              </li>
             </ul>
           </div>
           <div className="silica-sand-small-body-container">
             <h4 className="silica-sand-small-body-title">
-                Coarse silica sand fractions available:
+              Coarse silica sand fractions available:
             </h4>
             <ul className="silica-sand-small-body-ul">
-              
               <li className="silica-sand-small-body-li">GM1 (0.63-0.315mm)</li>
               <li className="silica-sand-small-body-li">GM2 (0.8-0.315mm)</li>
               <li className="silica-sand-small-body-li">MDF1 (0.5-0.16 mm)</li>
@@ -96,7 +114,11 @@ export const SilicaSandSmall = () => {
             alt="White Quartz"
             className="silica-sand-small-col-2-product-img"
           />
-          <button onClick={modalOnClick} className="silica-sand-small-page-col-2-btn">Send a Message</button>
+          <button
+            onClick={modalOnClick}
+            className="silica-sand-small-page-col-2-btn">
+            Send a Message
+          </button>
         </div>
       </div>
     </div>

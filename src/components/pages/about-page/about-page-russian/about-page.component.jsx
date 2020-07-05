@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import "../about-page.style.scss";
 
 import { ContactFixedRussian } from "../../../parts/contact-fixed/contact-fixed-russian/contact-fixed.component";
@@ -15,6 +16,18 @@ import AboutUs2 from "../../../../assets/images/about-us-2.webp";
 export const AboutUsPageRussian = () => {
   return (
     <div className="about-us">
+      <Helmet>
+        <title>
+          Компания «61 Group» - надежный партнер по поставкам нерудных
+          материалов.
+        </title>
+        <meta
+          name="description"
+          content="Наша компания на протяжении нескольких лет занимается оптовыми поставками белого
+          кварца, древесных гранул, кварцевого песка и нерудных материалов как по России, так в
+          страны ближнего и дальнего зарубежья."
+        />
+      </Helmet>
       <div className="about-us-inner">
         <div className="about-us-col-1">
           <div className="about-us-header-container">

@@ -1,4 +1,5 @@
 import React, {useState, useRef} from "react";
+import { Helmet } from "react-helmet";
 import "./silica-sand-medium.style.scss";
 
 //COMPONENTS
@@ -20,6 +21,16 @@ export const SilicaSandMedium = () => {
   
   return (
     <div ref={screen} className="silica-sand-medium-page">
+      <Helmet>
+        <title>
+        High-quality rounded quartz sand from a reliable supplier at affordable prices.
+        </title>
+        <meta
+          name="description"
+          content="The demanded material in decorative decoration is rounded quartz sand of medium fraction.
+          Also used in water purification filters and sandblasting."
+        />
+      </Helmet>
       <ContactModal modalState={modalState} parentFunction={modalOnClick} />
       <div className="silica-sand-medium-page-inner">
         <div className="silica-sand-medium-page-col-1">

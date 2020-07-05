@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 import "../contact-page.style.scss";
 
 //COMPONENTS
@@ -16,6 +17,21 @@ export const ContactPageRussian = () => {
   };
   return (
     <div className="contact-page">
+      <Helmet>
+        <title>
+          Заказ материалов онлайн осуществляется по электронной почте, и по
+          телефону. Наш офис находится в г. Краснодар.
+        </title>
+        <meta
+          name="description"
+          content="Адрес нашей электронной почты: info@61-group.ru.
+          Ответим на любые вопросы по телефонам:
+          +7 (962) 877-74-58
+          +7 (918) 048-34-18.
+          Посетить нас можно по адресу:
+          Ростовское шоссе, 14 б, г. Краснодар, Россия"
+        />
+      </Helmet>
       <ContactModalRussian
         modalState={modalState}
         parentFunction={modalOnClick}

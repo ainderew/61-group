@@ -1,4 +1,5 @@
 import React, {useState, useRef} from "react";
+import { Helmet } from "react-helmet";
 import "./wood-pellets.style.scss";
 
 //COMPONENTS
@@ -21,6 +22,17 @@ export const WoodPellets = () => {
   return (
     <div ref={screen} className="wood-pellets-page">
       <ContactModal modalState={modalState} parentFunction={modalOnClick} />
+      <Helmet>
+        <title>
+        Wood pellets - an environmentally friendly type of solid fuel at affordable prices.
+        </title>
+        <meta
+          name="description"
+          content="Pellets - granules are 100% wood product, they are used for comfortable heating of any
+          premises. We offer to purchase the product at a wholesale price with delivery in the Russian
+          Federation and abroad."
+        />
+      </Helmet>
       <div className="wood-pellets-page-inner">
         <div className="wood-pellets-page-col-1">
           <div className="wood-pellets-header-container">

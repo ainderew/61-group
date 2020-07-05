@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { Helmet } from "react-helmet";
 import "./silica-sand-large.style.scss";
 
 //COMPONENTS
@@ -21,6 +22,16 @@ export const SilicaSandLarge = () => {
 
   return (
     <div ref={screen} className="silica-sand-large-page">
+       <Helmet>
+        <title>
+        Coarse quartz sand is a popular material in many industries.
+        </title>
+        <meta
+          name="description"
+          content="Large fraction quartz sand (rounded) is mined in several cities of Volgograd and Voronezh.
+          Material delivery is carried out both in Russia and in the CIS."
+        />
+      </Helmet>
       <ContactModal modalState={modalState}  parentFunction={modalOnClick} />
       <div className="silica-sand-large-page-inner">
         <div className="silica-sand-large-page-col-1">

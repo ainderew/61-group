@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import "./about-page.style.scss";
 
 import { ContactFixedEnglish } from "../../parts/contact-fixed/contact-fixed.component";
@@ -13,12 +14,20 @@ import AboutUs2 from "../../../assets/images/about-us-2.webp";
 // import  from "../../../assets/images/about-us-1.webp";
 
 export const AboutUsPage = () => {
-
- 
-
   return (
     <div className="about-us">
-      
+      <Helmet>
+        <title>
+          The 61 Group company is a reliable partner in the supply of
+          non-metallic materials.
+        </title>
+        <meta
+          name="description"
+          content="For several years, our company has been engaged in the wholesale supply of white quartz, wood
+          pellets, quartz sand and non-metallic materials both in Russia and in countries near and far
+          abroad."
+        />
+      </Helmet>
       <div className="about-us-inner">
         <div className="about-us-col-1">
           <div className="about-us-header-container">
@@ -121,8 +130,8 @@ export const AboutUsPage = () => {
           </div>
         </div>
         <div className="about-us-col-2">
-          <img src={AboutUs1} alt="about 1" className="about-us-img"/>
-          <img src={AboutUs2} alt="about 2" className="about-us-img"/>
+          <img src={AboutUs1} alt="about 1" className="about-us-img" />
+          <img src={AboutUs2} alt="about 2" className="about-us-img" />
           <ContactFixedEnglish />
         </div>
       </div>

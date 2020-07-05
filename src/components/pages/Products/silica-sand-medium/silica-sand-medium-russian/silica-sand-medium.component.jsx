@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { Helmet } from "react-helmet";
 import "../silica-sand-medium.style.scss";
 
 //COMPONENTS
@@ -20,7 +21,22 @@ export const SilicaSandMediumRussian = () => {
 
   return (
     <div ref={screen} className="silica-sand-medium-page">
-      <ContactModalRussian modalState={modalState} parentFunction={modalOnClick} />
+      <Helmet>
+        <title>
+          Окатанный кварцевый песок средней фракции высокого качества от
+          надежного поставщика по приемлемым ценам.
+        </title>
+        <meta
+          name="description"
+          content="Востребованным материалом в декоративной отделке является окатанный кварцевый
+          песок средней фракции. Так же используется в фильтрах очистки воды и пескоструйных
+          работах."
+        />
+      </Helmet>
+      <ContactModalRussian
+        modalState={modalState}
+        parentFunction={modalOnClick}
+      />
       <div className="silica-sand-medium-page-inner">
         <div className="silica-sand-medium-page-col-1">
           <div className="silica-sand-medium-header-container">
