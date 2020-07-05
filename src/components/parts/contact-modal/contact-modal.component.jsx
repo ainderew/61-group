@@ -21,7 +21,6 @@ export const ContactModal = ({modalState,parentFunction}) =>{
         <div className={modalClass}>
             <img onClick={()=>parentFunction()} src={CloseIcon} alt="close icon" className="contact-form-icon"/>
             <form className="contact-form">
-            <input type="hidden" name="form-name" value="contact" />
             <h3 className="contact-form-header">CONTACT US</h3>
             <div className="contact-form-row">
                 <div className="contact-form-input-container">
