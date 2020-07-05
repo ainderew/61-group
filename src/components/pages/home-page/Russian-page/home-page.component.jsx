@@ -99,30 +99,30 @@ export const HomePageRU = () => {
           </Carousel>
 
           <ul className="phone-homepage-product-ul">
-            <Link to="/Products/silicasandsmall">
+            <Link to="/Products/silicasandsmall/ru">
               <li className="phone-homepage-product-li">
                 КВАРЦЕВЫЙ ПЕСОК (мелкая фракция)
               </li>
             </Link>
 
             <Link to="/Products/silicasandmedium">
-              <li className="phone-homepage-product-li">
+              <li className="phone-homepage-product-li/ru">
                 КВАРЦЕВЫЙ ПЕСОК (средняя фракция)
               </li>
             </Link>
             <Link to="/Products/silicasandlarge">
-              <li className="phone-homepage-product-li">
+              <li className="phone-homepage-product-li/ru">
                 КВАРЦЕВЫЙ ПЕСОК (крупная фракция)
               </li>
             </Link>
             <Link to="/Products/whitequartz">
-              <li className="phone-homepage-product-li">
+              <li className="phone-homepage-product-li/ru">
                 КВАРЦ ДРОБЛЕНЫЙ (молочного цвета)
               </li>
             </Link>
 
             <Link to="/Products/woodpellets">
-              <li className="phone-homepage-product-li">
+              <li className="phone-homepage-product-li/ru">
                 ДРЕВЕСНЫЕ ПЕЛЛЕТЫ (класс А1, А2)
               </li>
             </Link>
