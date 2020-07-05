@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 import "../home-page.style.scss";
 
 //DEPENDENCIES
@@ -9,7 +9,7 @@ import Carousel from "react-elastic-carousel";
 //COMPONENTS
 import { ProductHomepage } from "../../../parts/product-homepage/product-homepage.component";
 import { NewsHomepage } from "../../../parts/news-homepage/news-homepage.compnent";
-import { ContactModalRussian } from "../../../parts/contact-modal/contact-modal-russian/contact-modal.component";
+
 //IMAGES
 import SilicaSandFines from "../../../../assets/products/Silica sand fines.webp";
 import SilicaSandLarge from "../../../../assets/products/Silica sand of large fractions.webp";

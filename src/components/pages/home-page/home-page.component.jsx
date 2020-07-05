@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import "./home-page.style.scss";
 
 //DEPENDENCIES
@@ -8,7 +9,6 @@ import Carousel from "react-elastic-carousel";
 //COMPONENTS
 import { ProductHomepage } from "../../parts/product-homepage/product-homepage.component";
 import { NewsHomepage } from "../../parts/news-homepage/news-homepage.compnent";
-import { ContactModal } from "../../parts/contact-modal/contact-modal.component.jsx";
 
 //IMAGES
 import SilicaSandFines from "../../../assets/products/Silica sand fines.webp";
@@ -25,13 +25,19 @@ const breakPoints = [
   { width: 1200, itemsToShow: 5 },
 ];
 
-
-export const HomePage = ({modalState, parentFunction}) => {
-
-  
+export const HomePage = ({ modalState, parentFunction }) => {
   return (
-    
-    <div className = "homepage">
+    <div className="homepage">
+      <Helmet>
+        <title>
+        Pellets (wood pellets), quartz sand, non-metallic materials and white quartz at affordable prices.
+        </title>
+        <meta
+          name="description"
+          content="The Company 61 GROUP sells at wholesale prices non-metallic materials, white quartz, pellets
+          (wood pellets) and quartz sand. You can order and buy data online."
+        />
+      </Helmet>
       <div className="header-div">
         <h1 className="header-text">
           <span className="header-span">61 GROUP</span>
@@ -88,24 +94,34 @@ export const HomePage = ({modalState, parentFunction}) => {
               />
             </Link>
           </Carousel>
-          
+
           <ul className="phone-homepage-product-ul">
             <Link to="/Products/silicasandsmall">
-             <li className="phone-homepage-product-li">SILICA SAND (Small Fractions)</li>
+              <li className="phone-homepage-product-li">
+                SILICA SAND (Small Fractions)
+              </li>
             </Link>
-            
+
             <Link to="/Products/silicasandmedium">
-             <li className="phone-homepage-product-li">SILICA SAND (Medium Fractions)</li>
+              <li className="phone-homepage-product-li">
+                SILICA SAND (Medium Fractions)
+              </li>
             </Link>
             <Link to="/Products/silicasandlarge">
-              <li className="phone-homepage-product-li">SILICA SAND (Large Fractions)</li>
+              <li className="phone-homepage-product-li">
+                SILICA SAND (Large Fractions)
+              </li>
             </Link>
             <Link to="/Products/whitequartz">
-             <li className="phone-homepage-product-li">WHITE QUARTZ (Crushed)</li>
+              <li className="phone-homepage-product-li">
+                WHITE QUARTZ (Crushed)
+              </li>
             </Link>
-            
+
             <Link to="/Products/woodpellets">
-              <li className="phone-homepage-product-li">WOOD PELLETS (Class A1 A2)</li>
+              <li className="phone-homepage-product-li">
+                WOOD PELLETS (Class A1 A2)
+              </li>
             </Link>
           </ul>
         </div>
@@ -113,18 +129,15 @@ export const HomePage = ({modalState, parentFunction}) => {
 
       <div className="homepage-row-4">
         <div className="hp-row-4-inner">
-          <div className="hp-row-4-col-1">
-          
-          </div>
+          <div className="hp-row-4-col-1"></div>
 
           <div className="hp-row-4-col-2">
             <h4 className="hp-row-4-col-2-heading">
               WE DELIVER BY TRUCKS, RAILWAY AND SEA CONTAINERS
             </h4>
             <h2 className="hp-row-4-col-2-body">
-            We will provide delivery at the most favorable prices for you.
+              We will provide delivery at the most favorable prices for you.
             </h2>
-          
           </div>
         </div>
       </div>
