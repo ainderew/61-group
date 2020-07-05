@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import "./home-page.style.scss";
 
@@ -8,6 +8,7 @@ import Carousel from "react-elastic-carousel";
 //COMPONENTS
 import { ProductHomepage } from "../../parts/product-homepage/product-homepage.component";
 import { NewsHomepage } from "../../parts/news-homepage/news-homepage.compnent";
+import { ContactModal } from "../../parts/contact-modal/contact-modal.component.jsx";
 
 //IMAGES
 import SilicaSandFines from "../../../assets/products/Silica sand fines.webp";
@@ -25,11 +26,13 @@ const breakPoints = [
 ];
 
 
-export const HomePage = () => {
- 
+export const HomePage = ({modalState, parentFunction}) => {
+
+  
   return (
     
     <div className = "homepage">
+    <ContactModal modalState={modalState} parentFunction={parentFunction} />
       <div className="header-div">
         <h1 className="header-text">
           <span className="header-span">61 GROUP</span>

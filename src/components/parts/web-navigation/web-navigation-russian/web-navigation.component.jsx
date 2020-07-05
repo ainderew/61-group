@@ -160,7 +160,7 @@ export const WebNavigationRussian = () => {
                       alt="russian flag"
                       className="language-flag"
                     />
-                    русский
+                    Русский
                   </li>
                   <li
                     onClick={() => onChangeLanguage(2)}

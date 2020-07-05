@@ -1,10 +1,12 @@
 import React, {useState} from "react";
 import "./footer.style.scss";
 
+//COMPONENTS
+
 //IMAGES
 import FooterDown from "../../../assets/icons/footer-down.svg"
 
-export const Footer = () => {
+export const Footer = ({parentFunction}) => {
   const [ulState, setUlState] = useState({
     ContatsFooter: false,
     ProductsFooter: false
@@ -40,7 +42,7 @@ export const Footer = () => {
         </div>
         
         <div className="footer-col-2">
-          <button className="footer-col-2-btn">CONTACT US</button>
+          <button onClick={parentFunction} className="footer-col-2-btn">CONTACT US</button>
          
         </div>
 

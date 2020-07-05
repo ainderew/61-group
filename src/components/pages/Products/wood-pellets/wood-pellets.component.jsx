@@ -25,7 +25,7 @@ export const WoodPellets = () => {
         <div className="wood-pellets-page-col-1">
           <div className="wood-pellets-header-container">
             {/* <h2 className="wood-pellets-sub-header">PRODUCTS</h2> */}
-            <h1 className="wood-pellets-header">SILICA SAND (Small)</h1>
+            <h1 className="wood-pellets-header">WOOD PELLETS</h1>
             <p className="wood-pellets-paragraph">
               Wood pellets, they are pellets, is a type of environmentally
               friendly solid fuel. Wood pellets are new biomass fuel. For the

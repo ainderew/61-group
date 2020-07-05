@@ -24,7 +24,7 @@ export const SilicaSandMedium = () => {
       <div className="silica-sand-medium-page-inner">
         <div className="silica-sand-medium-page-col-1">
           <div className="silica-sand-medium-header-container">
-            <h2 className="silica-sand-medium-sub-header">PRODUCTS</h2>
+            {/* <h2 className="silica-sand-medium-sub-header">PRODUCTS</h2> */}
             <h1 className="silica-sand-medium-header">SILICA SAND (Medium)</h1>
             <p className="silica-sand-medium-paragraph">
               Crushed quartz sand is sand obtained by crushing veined milky

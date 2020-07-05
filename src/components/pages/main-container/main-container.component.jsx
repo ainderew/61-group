@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useState, useEffect} from "react";
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./main-container.style.scss";
@@ -35,6 +35,17 @@ export const MainContainer = () => {
   useEffect(() =>{
     console.log(language)
   },[language])
+
+
+  //USESTATE VARS
+  const [modalState, setModalState] = useState(false)
+ 
+ //FUNCCTIONS
+  const modalOnClick = () =>{
+        setModalState(prevState => !prevState)
+        window.scrollIntoView({ block: "center" })
+  }
+
   return (
     <Router>
       <div className="main-container">
@@ -46,8 +57,9 @@ export const MainContainer = () => {
           <Route path="/" exact>
             <Redirect to="/ru" />
           </Route>
-          <Route path="/ru" exact component={HomePageRU} />
-          <Route path="/en" exact component={HomePage} />
+
+          <Route path="/ru" exact render={(props) => <HomePageRU {...props} modalState={modalState} parentFunction={modalOnClick} />} />
+          <Route path="/en" exact render={(props) => <HomePage {...props} modalState={modalState} parentFunction={modalOnClick} />} />
           <Route path="/Products" exact component={ProductsPage} />
           
           <Route path="/Products/whitequartz" exact component={WhiteQuartz} />
@@ -71,7 +83,7 @@ export const MainContainer = () => {
           <Route path="/AboutUs" exact component={AboutUsPage} />
           <Route path="/AboutUs/ru" exact component={AboutUsPageRussian} />
         </Switch>
-        {(language === "Russian") ? <FooterRussian /> : <Footer />}
+        {(language === "Russian") ? <FooterRussian parentFunction={modalOnClick} /> : <Footer parentFunction={modalOnClick} />}
       </div>
     </Router>
   );

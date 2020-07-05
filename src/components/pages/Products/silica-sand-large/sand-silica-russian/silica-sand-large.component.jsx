@@ -54,7 +54,7 @@ export const SilicaSandLargeRussian = () => {
             </h4>
             <ul className="silica-sand-large-body-ul">
               <li className="silica-sand-large-body-li">
-                FДля пескоструйной обработки
+                Для пескоструйной обработки
               </li>
               <li className="silica-sand-large-body-li">
                 Водяные фильтры для очистки питьевой воды

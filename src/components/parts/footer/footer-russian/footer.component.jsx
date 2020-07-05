@@ -1,15 +1,21 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import "../footer.style.scss";
 
+// import {  } from "../../contact-modal/";
 //IMAGES
 import FooterDown from "../../../../assets/icons/footer-down.svg";
 
 export const FooterRussian = () => {
+  let history = useHistory()
+
+  //USESTATES VARS
   const [ulState, setUlState] = useState({
     ContatsFooter: false,
     ProductsFooter: false,
   });
 
+  //FUNCTIONS
   const openUL = number => {
     if (number === 1) {
       setUlState({
@@ -23,6 +29,11 @@ export const FooterRussian = () => {
       });
     }
   };
+
+  const redirectToContact = () =>{
+    history.push("/ContactUs")
+  }
+
   return (
     <footer className="footer">
       <div className="footer-inner-container">
@@ -50,7 +61,7 @@ export const FooterRussian = () => {
         </div>
 
         <div className="footer-col-2">
-          <button className="footer-col-2-btn">СВЯЖИТЕСЬ С НАМИ</button>
+          <button onClick={redirectToContact} className="footer-col-2-btn">СВЯЖИТЕСЬ С НАМИ</button>
         </div>
 
         <div className="footer-col-3">
