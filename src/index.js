@@ -1,11 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import ReactGA from 'react-ga';
 import "./index.scss";
 import { MainContainer } from "./components/pages/main-container/main-container.component";
 // import * as serviceWorker from './serviceWorker';
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import { languageReducer } from "./redux_reducers/language";
+
+const trackingId = "UA-142208290-3"; // Replace with your Google Analytics tracking ID
+
+ReactGA.initialize(trackingId);
 
 export const loadState = () => {
   try {

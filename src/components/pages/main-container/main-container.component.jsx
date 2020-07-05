@@ -6,6 +6,8 @@ import {
   Redirect,
 } from "react-router-dom";
 import { useSelector } from "react-redux";
+import ReactGA from 'react-ga';
+import { createBrowserHistory } from 'history';
 import "./main-container.style.scss";
 
 //PAGES
@@ -36,6 +38,15 @@ import { FooterRussian } from "../../parts/footer/footer-russian/footer.componen
 import { ContactModal } from "../../parts/contact-modal/contact-modal.component";
 import { ContactModalRussian } from "../../parts/contact-modal/contact-modal-russian/contact-modal.component";
 
+
+const history = createBrowserHistory();
+
+history.listen(location => {
+  ReactGA.set({ page: location.pathname }); // Update the user's current page
+  ReactGA.pageview(location.pathname); // Record a pageview for the given page
+});
+
+
 export const MainContainer = () => {
   const language = useSelector(state => state.lang);
   // let language = localStorage.getItem("Language")
@@ -53,7 +64,7 @@ export const MainContainer = () => {
   };
 
   return (
-    <Router>
+    <Router history={history}>
       <div className="main-container">
         {language === "Russian" ? <WebNavigationRussian /> : <WebNavigation />}
 
