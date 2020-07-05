@@ -372,20 +372,15 @@
       height: 90%;
       display: grid;
       grid-template-columns: 1fr;
-      margin: 2rem 0;
+      // margin: 2rem 0;
       background: $background-color;
 
       .hp-row-4-col-1 {
-        height: 100%;
-        width: 100%;
-        background: url(../../../assets//images/hp-row-4-img.webp) no-repeat
-          center;
-        background-size: cover;
         display: none;
       }
 
       .hp-row-4-col-2 {
-        padding: 0rem 2rem;
+        // padding: 0rem 2rem;
         display: flex;
         flex-direction: column;
         .hp-row-4-col-2-heading {

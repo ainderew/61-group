@@ -1,5 +1,10 @@
-import React, {useState, useEffect} from "react";
-import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./main-container.style.scss";
 
@@ -29,63 +34,108 @@ import { PhoneNavigation } from "../../parts/phone-navigation/phone-navigation.c
 import { Footer } from "../../parts/footer/footer.component";
 import { FooterRussian } from "../../parts/footer/footer-russian/footer.component";
 import { ContactModal } from "../../parts/contact-modal/contact-modal.component";
+import { ContactModalRussian } from "../../parts/contact-modal/contact-modal-russian/contact-modal.component";
 
 export const MainContainer = () => {
-  const language = useSelector(state => state.lang)
+  const language = useSelector(state => state.lang);
   // let language = localStorage.getItem("Language")
-  useEffect(() =>{
-    console.log(language)
-  },[language])
-
+  useEffect(() => {
+    console.log(language);
+  }, [language]);
 
   //USESTATE VARS
-  const [modalState, setModalState] = useState(false)
- 
- //FUNCCTIONS
-  const modalOnClick = () =>{
-        setModalState(prevState => !prevState)
-        document.body.scrollIntoView()
-  }
+  const [modalState, setModalState] = useState(false);
+
+  //FUNCCTIONS
+  const modalOnClick = () => {
+    setModalState(prevState => !prevState);
+    document.body.scrollIntoView();
+  };
 
   return (
     <Router>
-      
       <div className="main-container">
-        
-        {(language === "Russian") ? <WebNavigationRussian /> : <WebNavigation />}
-        
+        {language === "Russian" ? <WebNavigationRussian /> : <WebNavigation />}
+
         <PhoneNavigation />
-{/* to add translation for phone nav */}
-        <ContactModal modalState={modalState} parentFunction={modalOnClick} />
+        {/* to add translation for phone nav */}
         
+        {(language === "Russian") ? (
+          <ContactModalRussian
+            modalState={modalState}
+            parentFunction={modalOnClick}
+          />
+        ) : (
+          <ContactModal modalState={modalState} parentFunction={modalOnClick} />
+        )}
+
         <Switch>
-          <Route path="/" exact> <Redirect to="/ru" /> </Route>
+          <Route path="/" exact>
+            {" "}
+            <Redirect to="/ru" />{" "}
+          </Route>
           <Route path="/ru" exact component={HomePageRU} />
-          <Route path="/en" exact component={HomePage}/>
+          <Route path="/en" exact component={HomePage} />
           <Route path="/Products" exact component={ProductsPage} />
-          
+
           <Route path="/Products/whitequartz" exact component={WhiteQuartz} />
-          <Route path="/Products/whitequartz/ru" exact component={WhiteQuartzRussian} />
-          
-          <Route path="/Products/silicasandlarge" exact component={SilicaSandLarge}/>
-          <Route path="/Products/silicasandlarge/ru" exact component={SilicaSandLargeRussian}/>
-          
-          <Route path="/Products/silicasandmedium"exact component={SilicaSandMedium} />
-          <Route path="/Products/silicasandmedium/ru"exact component={SilicaSandMediumRussian} />
-          
-          <Route path="/Products/silicasandsmall" exact component={SilicaSandSmall}/>
-          <Route path="/Products/silicasandsmall/ru" exact component={SilicaSandSmallRussian}/>
-          
+          <Route
+            path="/Products/whitequartz/ru"
+            exact
+            component={WhiteQuartzRussian}
+          />
+
+          <Route
+            path="/Products/silicasandlarge"
+            exact
+            component={SilicaSandLarge}
+          />
+          <Route
+            path="/Products/silicasandlarge/ru"
+            exact
+            component={SilicaSandLargeRussian}
+          />
+
+          <Route
+            path="/Products/silicasandmedium"
+            exact
+            component={SilicaSandMedium}
+          />
+          <Route
+            path="/Products/silicasandmedium/ru"
+            exact
+            component={SilicaSandMediumRussian}
+          />
+
+          <Route
+            path="/Products/silicasandsmall"
+            exact
+            component={SilicaSandSmall}
+          />
+          <Route
+            path="/Products/silicasandsmall/ru"
+            exact
+            component={SilicaSandSmallRussian}
+          />
+
           <Route path="/Products/woodpellets" exact component={WoodPellets} />
-          <Route path="/Products/woodpellets/ru" exact component={WoodPelletsRussian} />
-          
+          <Route
+            path="/Products/woodpellets/ru"
+            exact
+            component={WoodPelletsRussian}
+          />
+
           <Route path="/ContactUs" exact component={ContactPage} />
           <Route path="/ContactUs/ru" exact component={ContactPageRussian} />
-          
+
           <Route path="/AboutUs" exact component={AboutUsPage} />
           <Route path="/AboutUs/ru" exact component={AboutUsPageRussian} />
         </Switch>
-        {(language === "Russian") ? <FooterRussian parentFunction={modalOnClick} /> : <Footer parentFunction={modalOnClick} />}
+        {language === "Russian" ? (
+          <FooterRussian parentFunction={modalOnClick} />
+        ) : (
+          <Footer parentFunction={modalOnClick} />
+        )}
       </div>
     </Router>
   );
