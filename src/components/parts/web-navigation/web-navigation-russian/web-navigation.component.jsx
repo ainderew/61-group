@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -53,15 +53,7 @@ export const WebNavigationRussian = () => {
     element.current.style.display = "none";
   };
 
-  const [setter, setSetter] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setSetter(true);
-    }, 7000);
-  });
   return (
-    // <header className={setter ? "web-nav" : "home-page"}>
       <header className="web-nav">
       <div className="web-navigation-container">
         <div className="web-nav-col-1">

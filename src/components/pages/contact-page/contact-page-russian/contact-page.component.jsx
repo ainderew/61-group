@@ -41,12 +41,12 @@ export const ContactPageRussian = () => {
               СВЯЖИТЕСЬ С НАМИ
             </button>
 
-            <h2 className="contact-page-email-header">CONTACT US BY EMAIL</h2>
+            <h2 className="contact-page-email-header">Наша почта</h2>
             <h1 className="contact-page-email">info@61-group.ru</h1>
-            <h2 className="contact-page-phone-header">CONTACT US BY PHONE</h2>
+            <h2 className="contact-page-phone-header">Наш телефон</h2>
             <h1 className="contact-page-phone">+7 (918) 048 34 18</h1>
             <h1 className="contact-page-phone">+7 (995) 122 58 74</h1>
-            <h2 className="contact-page-email-header">VISIT US</h2>
+            <h2 className="contact-page-email-header">Мы находимся</h2>
             <h1 className="contact-page-email">
               г. Краснодар ул. Ростовское шоссе д.14 оф. 63
             </h1>

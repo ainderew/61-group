@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import "../about-page.style.scss";
 
-import { ContactModalRussian } from "../../../parts/contact-modal/contact-modal-russian/contact-modal.component";
+import { ContactFixedRussian } from "../../../parts/contact-fixed/contact-fixed-russian/contact-fixed.component";
 
 //IMAGES
 import TimeImg from "../../../../assets/icons/About us/time.svg";
@@ -26,10 +26,6 @@ export const AboutUsPageRussian = () => {
 
   return (
     <div ref={screen} className="about-us">
-      <ContactModalRussian
-        modalState={modalState}
-        parentFunction={modalOnClick}
-      />
       <div className="about-us-inner">
         <div className="about-us-col-1">
           <div className="about-us-header-container">
@@ -137,6 +133,7 @@ export const AboutUsPageRussian = () => {
         <div className="about-us-col-2">
           <img src={AboutUs1} alt="about 1" className="about-us-img" />
           <img src={AboutUs2} alt="about 2" className="about-us-img" />
+          <ContactFixedRussian />
         </div>
       </div>
     </div>

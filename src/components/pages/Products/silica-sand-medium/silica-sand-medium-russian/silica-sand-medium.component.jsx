@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import "../silica-sand-medium.style.scss";
 
 //COMPONENTS
-import { ContactModal } from "../../../../parts/contact-modal/contact-modal.component";
+import { ContactModalRussian } from "../../../../parts/contact-modal/contact-modal-russian/contact-modal.component";
 //IMAGES
 import DeliverySVG from "../../../../../assets/icons/delivery.svg";
 import ProductImage from "../../../../../assets/products/Silica sand of medium fractions.webp";
@@ -20,7 +20,7 @@ export const SilicaSandMediumRussian = () => {
 
   return (
     <div ref={screen} className="silica-sand-medium-page">
-      <ContactModal modalState={modalState} parentFunction={modalOnClick} />
+      <ContactModalRussian modalState={modalState} parentFunction={modalOnClick} />
       <div className="silica-sand-medium-page-inner">
         <div className="silica-sand-medium-page-col-1">
           <div className="silica-sand-medium-header-container">
@@ -119,7 +119,7 @@ export const SilicaSandMediumRussian = () => {
           <button
             onClick={modalOnClick}
             className="silica-sand-medium-page-col-2-btn">
-            Послать сообщение
+            Напишите нам
           </button>
         </div>
       </div>

@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import "../wood-pellets.style.scss";
 
 //COMPONENTS
-import { ContactModal } from "../../../../parts/contact-modal/contact-modal.component";
+import { ContactModalRussian } from "../../../../parts/contact-modal/contact-modal-russian/contact-modal.component";
 //IMAGES
 import DeliverySVG from "../../../../../assets/icons/delivery.svg";
 import ProductImage from "../../../../../assets/products/wood-pellets.webp";
@@ -20,11 +20,11 @@ export const WoodPelletsRussian = () => {
 
   return (
     <div ref={screen} className="wood-pellets-page">
-      <ContactModal modalState={modalState} parentFunction={modalOnClick} />
+      <ContactModalRussian modalState={modalState} parentFunction={modalOnClick} />
       <div className="wood-pellets-page-inner">
         <div className="wood-pellets-page-col-1">
           <div className="wood-pellets-header-container">
-            <h2 className="wood-pellets-sub-header">PRODUCTS</h2>
+            {/* <h2 className="wood-pellets-sub-header">PRODUCTS</h2> */}
             <h1 className="wood-pellets-header">ДРЕВЕСНЫЕ ПЕЛЛЕТЫ</h1>
             <p className="wood-pellets-paragraph">
               Древесные гранулы, они же пеллеты, - это вид экологически чистого
@@ -97,7 +97,7 @@ export const WoodPelletsRussian = () => {
           <button
             onClick={modalOnClick}
             className="wood-pellets-page-col-2-btn">
-            Послать сообщение
+            Напишите нам
           </button>
         </div>
       </div>

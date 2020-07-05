@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import "../white-quartz.style.scss";
 
 //COMPONENTS
-import { ContactModal } from "../../../../parts/contact-modal/contact-modal.component";
+import { ContactModalRussian } from "../../../../parts/contact-modal/contact-modal-russian/contact-modal.component";
 
 import DeliverySVG from "../../../../../assets/icons/delivery.svg";
 import ProductImage from "../../../../../assets/products/White fraction quartz.webp";
@@ -21,7 +21,7 @@ export const WhiteQuartzRussian = () => {
 
   return (
     <div ref={screen} className="white-quartz-page">
-      <ContactModal parentFunction={modalOnClick} modalState={modalState} />
+      <ContactModalRussian parentFunction={modalOnClick} modalState={modalState} />
       <div className="white-quartz-page-inner">
         <div className="white-quartz-page-col-1">
           <div className="white-quartz-header-container">
@@ -100,7 +100,7 @@ export const WhiteQuartzRussian = () => {
           <button
             onClick={modalOnClick}
             className="white-quartz-page-col-2-btn">
-            Send a Message
+            Напишите нам
           </button>
         </div>
       </div>

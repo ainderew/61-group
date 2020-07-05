@@ -25,7 +25,7 @@ export const WhiteQuartz = () => {
       <div className="white-quartz-page-inner">
         <div className="white-quartz-page-col-1">
           <div className="white-quartz-header-container">
-            <h2 className="white-quartz-sub-header">PRODUCTS</h2>
+            {/* <h2 className="white-quartz-sub-header">PRODUCTS</h2> */}
             <h1 className="white-quartz-header">WHITE QUARTZ</h1>
             <p className="white-quartz-paragraph">
               Crushed quartz sand is sand obtained by crushing veined milky
