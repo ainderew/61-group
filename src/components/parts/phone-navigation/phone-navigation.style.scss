@@ -32,6 +32,10 @@
     justify-content: flex-end;
     .phone-nav-translation{
         display: flex;
+        align-items: center;
+        width: auto;
+        height: 100%;
+       
         position: relative;
         .phone-nav-translation-img{
             width: 1.2rem;
@@ -45,7 +49,7 @@
             display: flex;
             flex-direction: column;
             position: absolute;
-            bottom: -350%;
+            bottom: -100%;
             left: -15%;
             background: black;
         }
