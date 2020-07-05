@@ -105,24 +105,24 @@ export const HomePageRU = () => {
               </li>
             </Link>
 
-            <Link to="/Products/silicasandmedium">
-              <li className="phone-homepage-product-li/ru">
+            <Link to="/Products/silicasandmedium/ru">
+              <li className="phone-homepage-product-li">
                 КВАРЦЕВЫЙ ПЕСОК (средняя фракция)
               </li>
             </Link>
-            <Link to="/Products/silicasandlarge">
-              <li className="phone-homepage-product-li/ru">
+            <Link to="/Products/silicasandlarge/ru">
+              <li className="phone-homepage-product-li">
                 КВАРЦЕВЫЙ ПЕСОК (крупная фракция)
               </li>
             </Link>
-            <Link to="/Products/whitequartz">
-              <li className="phone-homepage-product-li/ru">
+            <Link to="/Products/whitequartz/ru">
+              <li className="phone-homepage-product-li">
                 КВАРЦ ДРОБЛЕНЫЙ (молочного цвета)
               </li>
             </Link>
 
-            <Link to="/Products/woodpellets">
-              <li className="phone-homepage-product-li/ru">
+            <Link to="/Products/woodpellets/ru">
+              <li className="phone-homepage-product-li">
                 ДРЕВЕСНЫЕ ПЕЛЛЕТЫ (класс А1, А2)
               </li>
             </Link>
