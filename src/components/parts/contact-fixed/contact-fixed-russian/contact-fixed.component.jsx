@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import "../contact-fixed.style.scss";
 
-import CloseIcon from "../../../../assets/icons/close.svg"
+
 
 export const ContactFixedRussian = () =>{
     

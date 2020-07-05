@@ -1,7 +1,7 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import "./about-page.style.scss";
 
-import { ContactModal } from "../../parts/contact-modal/contact-modal.component";
+import { ContactFixedEnglish } from "../../parts/contact-fixed/contact-fixed.component";
 
 //IMAGES
 import TimeImg from "../../../assets/icons/About us/time.svg";
@@ -13,20 +13,12 @@ import AboutUs2 from "../../../assets/images/about-us-2.webp";
 // import  from "../../../assets/images/about-us-1.webp";
 
 export const AboutUsPage = () => {
-  //USEREF VARS
-  const screen = useRef(null);
-  //USESTATE VARS
-  const [modalState, setModalState] = useState(false);
 
-  //FUNCTIONS
-  const modalOnClick = () => {
-    setModalState(prevState => !prevState);
-    screen.current.scrollIntoView({ block: "center" });
-  };
+ 
 
   return (
-    <div ref={screen} className="about-us">
-      <ContactModal modalState={modalState} parentFunction={modalOnClick} />
+    <div className="about-us">
+      
       <div className="about-us-inner">
         <div className="about-us-col-1">
           <div className="about-us-header-container">
@@ -131,6 +123,7 @@ export const AboutUsPage = () => {
         <div className="about-us-col-2">
           <img src={AboutUs1} alt="about 1" className="about-us-img"/>
           <img src={AboutUs2} alt="about 2" className="about-us-img"/>
+          <ContactFixedEnglish />
         </div>
       </div>
     </div>
