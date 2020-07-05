@@ -13,8 +13,6 @@ import AboutUs2 from "../../../../assets/images/about-us-2.webp";
 // import  from "../../../assets/images/about-us-1.webp";
 
 export const AboutUsPageRussian = () => {
-
-
   return (
     <div className="about-us">
       <div className="about-us-inner">
@@ -67,14 +65,14 @@ export const AboutUsPageRussian = () => {
                   className="about-us-benefit-img"
                 />
                 <h3 className="about-us-benefit-header">
-                  Increased attention to customer needs
+                  Повышенное внимание к потребностям клиента
                 </h3>
               </div>
               <div className="about-us-benefit-body-container">
                 <p className="about-us-benefit-body">
-                  We appreciate all your wishes, and try to provide a service in
-                  accordance with your request. The quality pellets and quartz
-                  sand we supply.
+                  Мы ценим все ваши пожелания, и стараемся предоставить сервис в
+                  соответствии с вашим запросом.  Поставляемые нами пеллеты и
+                  кварцевый песок высокого качества.
                 </p>
               </div>
             </div>
@@ -87,14 +85,14 @@ export const AboutUsPageRussian = () => {
                   className="about-us-benefit-img"
                 />
                 <h3 className="about-us-benefit-header">
-                  Prompt and quality delivery
+                  Оперативная и качественная доставка
                 </h3>
               </div>
               <div className="about-us-benefit-body-container">
                 <p className="about-us-benefit-body">
-                  We work with regular and reliable partners, which is why your
-                  goods will be delivered on time and at an affordable price. We
-                  carry out deliveries of cars, railway and sea transport.
+                  Мы работаем с постоянными и надежными партнерами, именно
+                  поэтому ваш груз будет доставлен во время и по доступной
+                  цене.  Осуществляем поставки авто, ЖД и морским транспортом
                 </p>
               </div>
             </div>
@@ -108,14 +106,14 @@ export const AboutUsPageRussian = () => {
                   className="about-us-benefit-img"
                 />
                 <h3 className="about-us-benefit-header">
-                  Personal manager 24/7
+                  Личный менеджер 24/7
                 </h3>
               </div>
               <div className="about-us-benefit-body-container">
                 <p className="about-us-benefit-body">
-                  In many companies, you have a duty to wait for an answer, in
-                  our case you will be provided with a personal manager,
-                  available 24/7 in any way convenient for you to contact.
+                  Во многих компаниях вам долг о приходится ждать ответа, в
+                  нашем случае вам будет предоставлен личный менеджер, доступный
+                  24/7 любым удобным для вас способом связи.
                 </p>
               </div>
             </div>
