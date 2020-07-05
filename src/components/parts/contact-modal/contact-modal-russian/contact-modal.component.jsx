@@ -39,6 +39,7 @@ export const ContactModalRussian = ({modalState,parentFunction}) =>{
                 </div>
             </div>
             <button className="contact-form-btn">ОТПРАВИТЬ</button>
+            <button className="contact-form-btn">ОТПРАВИТЬ</button>
             </form>
         </div>
     )

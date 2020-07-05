@@ -43,9 +43,11 @@ export const WebNavigation = () => {
     if (index === 1){
       history.push("/ru")
       dispatch(languageAction("Russian"))
+      sessionStorage.setItem("Language", "Russian");
     }else if (index === 2){
       history.push("/en")
       dispatch(languageAction("English"))
+      sessionStorage.setItem("Language", "English");
     }
     
   }

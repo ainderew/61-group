@@ -41,11 +41,11 @@ export const WebNavigationRussian = () => {
     if (index === 1) {
       history.push("/ru");
       dispatch(languageAction("Russian"));
-      localStorage.setItem("Language", "Russian");
+      sessionStorage.setItem("Language", "Russian");
     } else if (index === 2) {
       history.push("/en");
       dispatch(languageAction("English"));
-      localStorage.setItem("Language", "English");
+      sessionStorage.setItem("Language", "English");
     }
   };
 
