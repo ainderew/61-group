@@ -153,10 +153,11 @@ export const HomePageRU = () => {
             <NewsHomepage
               ArticleImage={ArticleSilicaSand}
               ArticleHeading={"Кварцевый песок окатанный"}
-              ArticleSecondHeading={"кварцевый песок"}
+              ArticleSecondHeading={"Кварцевый песок"}
               ArticleDescription={
                 "Минеральный материал, получаемый в результате разрушения крупных кварцевых пород, с образованием"
               }
+              Button={"Выучить больше"}
             />
           </Link>
 

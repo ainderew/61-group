@@ -4,7 +4,7 @@ import "./news-homepage.style.scss";
 //IMAGES
 import News1 from "../../../assets/images/news1.webp"
 
-export const NewsHomepage = ({ArticleImage, ArticleHeading, ArticleSecondHeading, ArticleDescription}) =>{
+export const NewsHomepage = ({ArticleImage, ArticleHeading, ArticleSecondHeading, ArticleDescription, Button}) =>{
     
     return (
       <div className="news-homepage">
@@ -15,7 +15,7 @@ export const NewsHomepage = ({ArticleImage, ArticleHeading, ArticleSecondHeading
           
           <div className="inner-news-hp-r1-right">
               <h3 className="news-hp-heading">{ArticleHeading}</h3>
-              <button className="news-hp-btn">Learn More</button>
+              <button className="news-hp-btn">{Button}</button>
           </div>
         </div>
         
