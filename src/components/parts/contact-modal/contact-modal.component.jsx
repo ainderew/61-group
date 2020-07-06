@@ -18,7 +18,7 @@ export const ContactModal = ({modalState,parentFunction}) =>{
     const formInputChange = (key,e) =>{
         setFormData({
             ...formData,
-            [{key}]: e.target.value
+            [`${key}`]: e.target.value
         })
     }
     
