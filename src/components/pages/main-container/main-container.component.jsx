@@ -6,8 +6,8 @@ import {
   Redirect,
 } from "react-router-dom";
 import { useSelector } from "react-redux";
-import ReactGA from 'react-ga';
-import { createBrowserHistory } from 'history';
+import ReactGA from "react-ga";
+import { createBrowserHistory } from "history";
 import "./main-container.style.scss";
 
 //PAGES
@@ -28,6 +28,7 @@ import { SilicaSandSmall } from "../Products/silica-sand-small/silica-sand-small
 import { SilicaSandSmallRussian } from "../Products/silica-sand-small/silica-sand-small-russian/silica-sand-small.component";
 import { WoodPellets } from "../Products/wood-pellets/wood-pellets.component";
 import { WoodPelletsRussian } from "../Products/wood-pellets/wood-pellets-russian/wood-pellets.component";
+import { SilicaSandArticle } from "../articles/silica-sand/russian/silica-sand.component";
 //COMPONENTS
 import { WebNavigation } from "../../parts/web-navigation/web-navigation.component";
 import { WebNavigationRussian } from "../../parts/web-navigation/web-navigation-russian/web-navigation.component";
@@ -37,7 +38,6 @@ import { Footer } from "../../parts/footer/footer.component";
 import { FooterRussian } from "../../parts/footer/footer-russian/footer.component";
 import { ContactModal } from "../../parts/contact-modal/contact-modal.component";
 import { ContactModalRussian } from "../../parts/contact-modal/contact-modal-russian/contact-modal.component";
-
 
 const history = createBrowserHistory();
 
@@ -52,19 +52,19 @@ const trackingId = "UA-142208290-3"; // Replace with your Google Analytics track
 ReactGA.initialize(trackingId);
 
 //Google Analytics
-const InitializeAnalytics = () =>{
-  ReactGA.initialize(trackingId)
+const InitializeAnalytics = () => {
+  ReactGA.initialize(trackingId);
   history.listen(location => {
-      ReactGA.set({ page: location.pathname }); // Update the user's current page
-      ReactGA.pageview(location.pathname); // Record a pageview for the given page
-    });
-  ReactGA.pageview(window.location.pathname)
-}
+    ReactGA.set({ page: location.pathname }); // Update the user's current page
+    ReactGA.pageview(location.pathname); // Record a pageview for the given page
+  });
+  ReactGA.pageview(window.location.pathname);
+};
 
 export const MainContainer = () => {
-  
+  //INITIALIZE GOOGLE ANALYTICS
   InitializeAnalytics();
-  
+
   //USESELECTOR VARIABLES
   const language = useSelector(state => state.lang);
 
@@ -88,31 +88,19 @@ export const MainContainer = () => {
 
         <PhoneNavigation />
         {/* to add translation for phone nav */}
-        
-        {(language === "Russian") ? (
-          <ContactModalRussian
-            modalState={modalState}
-            parentFunction={modalOnClick}
-          />
-        ) : (
-          <ContactModal modalState={modalState} parentFunction={modalOnClick} />
-        )}
+
+        {language === "Russian" ?  <ContactModalRussian modalState={modalState} parentFunction={modalOnClick}/> : <ContactModal modalState={modalState} parentFunction={modalOnClick} />}
 
         <Switch>
-          <Route path="/" exact>
-            {" "}
-            <Redirect to="/ru" />{" "}
-          </Route>
+          <Route path="/" exact> <Redirect to="/ru"/> </Route>
+          
           <Route path="/ru" exact component={HomePageRU} />
           <Route path="/en" exact component={HomePage} />
+          
           <Route path="/Products" exact component={ProductsPage} />
 
           <Route path="/Products/whitequartz" exact component={WhiteQuartz} />
-          <Route
-            path="/Products/whitequartz/ru"
-            exact
-            component={WhiteQuartzRussian}
-          />
+          <Route path="/Products/whitequartz/ru" exact component={WhiteQuartzRussian}/>
 
           <Route
             path="/Products/silicasandlarge"
@@ -159,7 +147,11 @@ export const MainContainer = () => {
 
           <Route path="/AboutUs" exact component={AboutUsPage} />
           <Route path="/AboutUs/ru" exact component={AboutUsPageRussian} />
+          
+          <Route path="/silica-sand-article/ru" exact component={SilicaSandArticle} />
         </Switch>
+        
+        
         {language === "Russian" ? (
           <FooterRussian parentFunction={modalOnClick} />
         ) : (

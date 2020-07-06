@@ -4,55 +4,101 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
+<!-- 1 -->
 <url>
   <loc>https://www.61group.ru/ru</loc>
   <lastmod>2020-07-05T17:32:18+00:00</lastmod>
 </url>
+
+<!-- 2 -->
 <url>
   <loc>https://www.61group.ru/en</loc>
   <lastmod>2020-07-05T17:32:18+00:00</lastmod>
 </url>
+
+<!-- 3 -->
 <url>
   <loc>https://www.61group.ru/Products/silicasandlarge/ru</loc>
   <lastmod>2020-07-05T17:32:18+00:00</lastmod>
 </url>
+
+<!-- 4 -->
 <url>
   <loc>https://www.61group.ru/Products/silicasandlarge/en</loc>
   <lastmod>2020-07-05T17:32:18+00:00</lastmod>
 </url>
+
+<!-- 5 -->
 <url>
   <loc>https://www.61group.ru/Products/silicasandmedium/ru</loc>
   <lastmod>2020-07-05T17:32:18+00:00</lastmod>
 </url>
+
+<!-- 6 -->
 <url>
   <loc>https://www.61group.ru/Products/silicasandmedium/en</loc>
   <lastmod>2020-07-05T17:32:18+00:00</lastmod>
 </url>
+
+<!-- 7 -->
 <url>
   <loc>https://www.61group.ru/Products/silicasandsmall/ru</loc>
   <lastmod>2020-07-05T17:32:18+00:00</lastmod>
 </url>
+
+<!-- 8 -->
 <url>
   <loc>https://www.61group.ru/Products/silicasandsmall/en</loc>
   <lastmod>2020-07-05T17:32:18+00:00</lastmod>
 </url>
+
+<!-- 9 -->
 <url>
   <loc>https://www.61group.ru/Products/whitequartz/ru</loc>
   <lastmod>2020-07-05T17:32:18+00:00</lastmod>
 </url>
+
+<!-- 10 -->
 <url>
   <loc>https://www.61group.ru/Products/whitequartz/en</loc>
   <lastmod>2020-07-05T17:32:18+00:00</lastmod>
 </url>
+
+<!-- 11 -->
 <url>
   <loc>https://www.61group.ru/Products/woodpellets/ru</loc>
   <lastmod>2020-07-05T17:32:18+00:00</lastmod>
 </url>
+
+<!-- 12 -->
 <url>
   <loc>https://www.61group.ru/Products/woodpellets/en</loc>
+  <lastmod>2020-07-05T17:32:18+00:00</lastmod>
+</url>
+
+<!-- 13 -->
+<url>
+  <loc>https://www.61group.ru/ContactUs/ru</loc>
+  <lastmod>2020-07-05T17:32:18+00:00</lastmod>
+</url>
+
+<!-- 14 -->
+<url>
+  <loc>https://www.61group.ru/ContactUs/en</loc>
+  <lastmod>2020-07-05T17:32:18+00:00</lastmod>
+</url>
+
+<!-- 15 -->
+<url>
+  <loc>https://www.61group.ru/AboutUs/ru</loc>
+  <lastmod>2020-07-05T17:32:18+00:00</lastmod>
+</url>
+
+<!-- 16 -->
+<url>
+  <loc>https://www.61group.ru/AboutUs/en</loc>
   <lastmod>2020-07-05T17:32:18+00:00</lastmod>
 </url>
 

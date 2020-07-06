@@ -148,7 +148,10 @@ export const HomePageRU = () => {
 
       <div className="bottom-div">
         <div className="bottom-news-container">
-          <NewsHomepage />
+          <Link to="/silica-sand-article/ru">
+            <NewsHomepage />
+          </Link>
+          
           <NewsHomepage />
           <NewsHomepage />
         </div>

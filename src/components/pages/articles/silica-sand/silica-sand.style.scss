@@ -1,0 +1,79 @@
+@import "../../../../variables_SCSS/colors";
+
+.silica-sand-article{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.article-hero-banner{
+    height: 80vh;
+    background: url(../../../../assets//images/silica-sand-article.jpg) no-repeat center;
+    background-size: cover;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .article-heading-text{
+        color: #fff;
+        font-size: 6rem;
+        
+    }
+}
+
+.article-body{
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    
+}
+
+.article-inner-body{
+    width: 65vw;
+    height: 100%;
+    // border: 1px solid red;
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+
+.article-row-1{
+    margin: 10rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+    .article-row-1-col-left{
+        .article-p{
+            display: flex;
+            align-items: space-between;
+            font-family: "Open-Sans";
+            font-size: 1.1vw;
+        }
+    }
+    
+    .article-row-1-col-right{
+        display: flex;
+        justify-content: flex-end;
+        .article-row-1-img{
+            width: 70%;
+            height: 100%;
+        }
+    }
+}
+
+.article-row-2{
+    height: 25vh;
+    background: url(../../../../assets/images/silica-sand-article-img-2.webp) no-repeat center;
+    background-size: cover;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .article-h2{
+        font-size: 3rem;
+        color: #ffff;
+    }
+}
