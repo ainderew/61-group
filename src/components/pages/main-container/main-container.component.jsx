@@ -41,15 +41,33 @@ import { ContactModalRussian } from "../../parts/contact-modal/contact-modal-rus
 
 const history = createBrowserHistory();
 
-history.listen(location => {
-  ReactGA.set({ page: location.pathname }); // Update the user's current page
-  ReactGA.pageview(location.pathname); // Record a pageview for the given page
-});
+// history.listen(location => {
+//   ReactGA.set({ page: location.pathname }); // Update the user's current page
+//   ReactGA.pageview(location.pathname); // Record a pageview for the given page
+// });
 
+const trackingId = "UA-142208290-3"; // Replace with your Google Analytics tracking ID
+// const trackingId = "UA-171678154-1"; // Replace with your Google Analytics tracking ID
+
+ReactGA.initialize(trackingId);
+
+//Google Analytics
+const InitializeAnalytics = () =>{
+  ReactGA.initialize(trackingId)
+  history.listen(location => {
+      ReactGA.set({ page: location.pathname }); // Update the user's current page
+      ReactGA.pageview(location.pathname); // Record a pageview for the given page
+    });
+  ReactGA.pageview(window.location.pathname)
+}
 
 export const MainContainer = () => {
+  
+  InitializeAnalytics();
+  
+  //USESELECTOR VARIABLES
   const language = useSelector(state => state.lang);
-  // let language = localStorage.getItem("Language")
+
   useEffect(() => {
     console.log(language);
   }, [language]);
