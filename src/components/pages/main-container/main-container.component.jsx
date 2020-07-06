@@ -29,6 +29,7 @@ import { SilicaSandSmallRussian } from "../Products/silica-sand-small/silica-san
 import { WoodPellets } from "../Products/wood-pellets/wood-pellets.component";
 import { WoodPelletsRussian } from "../Products/wood-pellets/wood-pellets-russian/wood-pellets.component";
 import { SilicaSandArticle } from "../articles/silica-sand/russian/silica-sand.component";
+import { WhiteQuartzArticle } from "../articles/white-quartz/russian/white-quartz.component"
 //COMPONENTS
 import { WebNavigation } from "../../parts/web-navigation/web-navigation.component";
 import { WebNavigationRussian } from "../../parts/web-navigation/web-navigation-russian/web-navigation.component";
@@ -149,6 +150,7 @@ export const MainContainer = () => {
           <Route path="/AboutUs/ru" exact component={AboutUsPageRussian} />
           
           <Route path="/silica-sand-article/ru" exact component={SilicaSandArticle} />
+          <Route path="/white-quartz-article/ru" exact component={WhiteQuartzArticle} />
         </Switch>
         
         

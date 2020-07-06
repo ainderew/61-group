@@ -1,0 +1,42 @@
+@import "../../../../variables_SCSS/colors";
+
+.article-white-quartz{
+    width: 100%;
+    height: 100%;
+}
+
+
+.article-banner-quartz{
+    width: 100%;
+    height: 80vh;
+
+    background: url(../../../../assets/images/silica-sand-article.jpg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .article-h1{
+        color: #fff;
+        font-size: 4rem;
+    }
+}
+
+.article-body-quartz{
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.article-inner-body{
+    width: 65vw;
+    height: 100%;
+
+    background: #fff;
+    display: grid;
+    grid-auto-rows: auto;
+    
+}

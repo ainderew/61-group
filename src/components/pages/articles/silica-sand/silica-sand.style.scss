@@ -35,7 +35,7 @@
   height: 100%;
   // border: 1px solid red;
   display: grid;
-  grid-template-rows: auto auto auto;
+  grid-auto-rows: auto;
 
   .article-p,
   .article-li {

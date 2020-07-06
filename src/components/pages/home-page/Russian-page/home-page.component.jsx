@@ -17,6 +17,7 @@ import SilicaSandMedium from "../../../../assets/products/Silica sand of medium 
 import WhiteQuartz from "../../../../assets/products/White fraction quartz.webp";
 import WoodPellets from "../../../../assets/products/wood-pellets.webp";
 import ArticleSilicaSand from "../../../../assets/images/silica-sand-article-home-img.webp";
+import ArticleWhiteQuartz from "../../../../assets/images/white-quartz-article.webp";
 
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
@@ -161,8 +162,19 @@ export const HomePageRU = () => {
             />
           </Link>
 
-          <NewsHomepage />
-          <NewsHomepage />
+          <Link to="/white-quartz-article/ru">
+            <NewsHomepage
+              ArticleImage={ArticleWhiteQuartz}
+              ArticleHeading={"Белый молочный дробленный кварц"}
+              ArticleSecondHeading={"Белый кварц"}
+              ArticleDescription={
+                "Предлагаем дробленый кварц в виде остроугольных зерен."
+              }
+              Button={"Читать дальше"} 
+              />
+          </Link>
+
+            <NewsHomepage />
         </div>
       </div>
     </div>
