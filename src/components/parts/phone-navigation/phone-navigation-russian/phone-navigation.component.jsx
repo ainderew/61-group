@@ -1,19 +1,19 @@
 import React,{useState} from "react";
-import "./phone-navigation.style.scss";
+import "../phone-navigation.style.scss";
 import { useHistory, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { languageAction } from "../../../redux_actions/index";
+import { languageAction } from "../../../../redux_actions/index";
 //COMPONENTS
-import { PhoneNavOpen } from "../phone-navigation/phone-navigation-open.component";
+import { PhoneNavOpen } from "../../phone-navigation/phone-navigation-open.component";
 //IMAGES
-import MenuIcon from "../../../assets/icons/menu2.svg";
-import MenuLogo from "../../../assets/logos/Logo.svg";
-import CloseIcon from  "../../../assets/icons/close.svg";
-import EnglishFlag from "../../../assets/icons/uk.svg";
-import RussianFlag from "../../../assets/icons/russia.svg";
+import MenuIcon from "../../../../assets/icons/menu2.svg";
+import MenuLogo from "../../../../assets/logos/Logo.svg";
+import CloseIcon from  "../../../../assets/icons/close.svg";
+import EnglishFlag from "../../../../assets/icons/uk.svg";
+import RussianFlag from "../../../../assets/icons/russia.svg";
 
-export const PhoneNavigation = () => {
+export const PhoneNavigationRussian = () => {
   const history = useHistory();
   const language = useSelector(state => state.lang)
   const dispatch = useDispatch()
@@ -49,7 +49,7 @@ export const PhoneNavigation = () => {
     <div className="phone-nav-container">
       <header className="phone-nav">
         <div className="phone-nav-left">
-          <Link to={(language === "Russian") ? "/ru" : "/en" }>
+          <Link to="/ru">
             <img src={MenuLogo} alt="" className="phone-nav-logo" />
           </Link>
         </div>

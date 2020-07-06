@@ -39,17 +39,11 @@ export const SilicaSandSmall = () => {
             {/* <h2 className="silica-sand-small-sub-header">PRODUCTS</h2> */}
             <h1 className="silica-sand-small-header">SILICA SAND (Small)</h1>
             <p className="silica-sand-small-paragraph">
-              Crushed quartz sand is sand obtained by crushing veined milky
-              white quartz. It has a clean uniform composition. Due to accurate
-              crushing, the granules acquire a chipped form with high
-              abrasiveness. Crushed milk-white quartz of high quality with a
-              SiO2 content of at least 97% and a low content of clay impurities.
-              The surface of the crushed particles of quartz sand has a high
-              dirt holding capacity and retention.
-              <br />
-              <br /> The products are manufactured in accordance with TU
-              08.99.29-017-16767071-2017 SiO2 content - min 98% Bulk density -
-              1288 kg / m3
+              Our fine quartz sand is in great demand. This is an excellent
+              material used for hydraulic fracturing in the oil industry. Fine
+              sand is also widely used in the production of colored glass. It is
+              widely used in the steel industry, as well as in the production of
+              building mixes.
             </p>
           </div>
           <div className="silica-sand-small-contact-container">

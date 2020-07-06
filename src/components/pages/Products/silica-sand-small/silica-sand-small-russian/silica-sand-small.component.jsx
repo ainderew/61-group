@@ -45,17 +45,13 @@ export const SilicaSandSmallRussian = () => {
               КВАРЦЕВЫЙ ПЕСОК МЕЛКИХ ФРАКЦИЙ
             </h1>
             <p className="silica-sand-small-paragraph">
-              Crushed quartz sand is sand obtained by crushing veined milky
-              white quartz. It has a clean uniform composition. Due to accurate
-              crushing, the granules acquire a chipped form with high
-              abrasiveness. Crushed milk-white quartz of high quality with a
-              SiO2 content of at least 97% and a low content of clay impurities.
-              The surface of the crushed particles of quartz sand has a high
-              dirt holding capacity and retention.
+              Очень большим спросом пользуется наш кварцевый песок мелкой
+              фракции. Это отличный материал используемый для гидроразрыва в
+              нефтедобывающей сфере. Песок мелкой фракции так же имеет широкое
+              применение при производстве цветного стекла.
               <br />
-              <br /> The products are manufactured in accordance with TU
-              08.99.29-017-16767071-2017 SiO2 content - min 98% Bulk density -
-              1288 kg / m3
+              <br /> Обширно применяется в сталелитейной промышленности, а так
+              же при производстве строительных смесей.
             </p>
           </div>
           <div className="silica-sand-small-contact-container">

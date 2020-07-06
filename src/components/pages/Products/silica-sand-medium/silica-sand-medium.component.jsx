@@ -1,4 +1,4 @@
-import React, {useState, useRef} from "react";
+import React, { useState, useRef } from "react";
 import { Helmet } from "react-helmet";
 import "./silica-sand-medium.style.scss";
 
@@ -18,12 +18,13 @@ export const SilicaSandMedium = () => {
     setModalState(prevState => !prevState);
     screen.current.scrollIntoView({ block: "center" });
   };
-  
+
   return (
     <div ref={screen} className="silica-sand-medium-page">
       <Helmet>
         <title>
-        High-quality rounded quartz sand from a reliable supplier at affordable prices.
+          High-quality rounded quartz sand from a reliable supplier at
+          affordable prices.
         </title>
         <meta
           name="description"
@@ -38,17 +39,11 @@ export const SilicaSandMedium = () => {
             {/* <h2 className="silica-sand-medium-sub-header">PRODUCTS</h2> */}
             <h1 className="silica-sand-medium-header">SILICA SAND (Medium)</h1>
             <p className="silica-sand-medium-paragraph">
-              Crushed quartz sand is sand obtained by crushing veined milky
-              white quartz. It has a clean uniform composition. Due to accurate
-              crushing, the granules acquire a chipped form with high
-              abrasiveness. Crushed milk-white quartz of high quality with a
-              SiO2 content of at least 97% and a low content of clay impurities.
-              The surface of the crushed particles of quartz sand has a high
-              dirt holding capacity and retention.
-              <br />
-              <br /> The products are manufactured in accordance with TU
-              08.99.29-017-16767071-2017 SiO2 content - min 98% Bulk density -
-              1288 kg / m3
+              The medium-sized quartz sand supplied by us is very widely used in
+              creating water filters for water treatment plants and companies
+              using water treatment systems, for swimming pools and in the oil
+              industry. It is also an excellent drainage material for football
+              fields and tennis courts.
             </p>
           </div>
           <div className="silica-sand-medium-contact-container">
@@ -120,7 +115,9 @@ export const SilicaSandMedium = () => {
             alt="White Quartz"
             className="silica-sand-medium-col-2-product-img"
           />
-          <button onClick={modalOnClick} className="silica-sand-medium-page-col-2-btn">
+          <button
+            onClick={modalOnClick}
+            className="silica-sand-medium-page-col-2-btn">
             Send a Message
           </button>
         </div>

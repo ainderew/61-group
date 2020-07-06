@@ -22,9 +22,9 @@ export const SilicaSandLarge = () => {
 
   return (
     <div ref={screen} className="silica-sand-large-page">
-       <Helmet>
+      <Helmet>
         <title>
-        Coarse quartz sand is a popular material in many industries.
+          Coarse quartz sand is a popular material in many industries.
         </title>
         <meta
           name="description"
@@ -32,24 +32,18 @@ export const SilicaSandLarge = () => {
           Material delivery is carried out both in Russia and in the CIS."
         />
       </Helmet>
-      <ContactModal modalState={modalState}  parentFunction={modalOnClick} />
+      <ContactModal modalState={modalState} parentFunction={modalOnClick} />
       <div className="silica-sand-large-page-inner">
         <div className="silica-sand-large-page-col-1">
           <div className="silica-sand-large-header-container">
             {/* <h2 className="silica-sand-large-sub-header">PRODUCTS</h2> */}
             <h1 className="silica-sand-large-header">SILICA SAND (Large)</h1>
             <p className="silica-sand-large-paragraph">
-              Crushed quartz sand is sand obtained by crushing veined milky
-              white quartz. It has a clean uniform composition. Due to accurate
-              crushing, the granules acquire a chipped form with high
-              abrasiveness. Crushed milk-white quartz of high quality with a
-              SiO2 content of at least 97% and a low content of clay impurities.
-              The surface of the crushed particles of quartz sand has a high
-              dirt holding capacity and retention.
-              <br />
-              <br /> The products are manufactured in accordance with TU
-              08.99.29-017-16767071-2017 SiO2 content - min 98% Bulk density -
-              1288 kg / m3
+              In our company you can buy sand of large fractions from 1.0 to 7.0
+              mm. (different fractions). As a rule, sand of large fractions is
+              used in the production of concrete products, tiles intended for
+              road lining, solutions, mixtures and other building materials used
+              in the construction industry.
             </p>
           </div>
           <div className="silica-sand-large-contact-container">
@@ -121,7 +115,9 @@ export const SilicaSandLarge = () => {
             alt="White Quartz"
             className="silica-sand-large-col-2-product-img"
           />
-          <button onClick={modalOnClick} className="silica-sand-large-page-col-2-btn">
+          <button
+            onClick={modalOnClick}
+            className="silica-sand-large-page-col-2-btn">
             Send a Message
           </button>
         </div>

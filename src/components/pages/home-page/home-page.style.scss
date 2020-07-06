@@ -133,7 +133,13 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     background: white;
+    
+    a{
+      text-decoration: none;
+      color: black;
+    }
   }
+  
 }
 // @media only screen and (max-width: 1366px) {
 //   .homepage-row-4 {
@@ -418,6 +424,8 @@
       // display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(3, 1fr);
+      
+     
     }
   }
 }

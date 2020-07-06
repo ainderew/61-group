@@ -16,6 +16,7 @@ import SilicaSandLarge from "../../../../assets/products/Silica sand of large fr
 import SilicaSandMedium from "../../../../assets/products/Silica sand of medium fractions.webp";
 import WhiteQuartz from "../../../../assets/products/White fraction quartz.webp";
 import WoodPellets from "../../../../assets/products/wood-pellets.webp";
+import ArticleSilicaSand from "../../../../assets/images/silica-sand-article-home-img.webp";
 
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
@@ -149,9 +150,16 @@ export const HomePageRU = () => {
       <div className="bottom-div">
         <div className="bottom-news-container">
           <Link to="/silica-sand-article/ru">
-            <NewsHomepage />
+            <NewsHomepage
+              ArticleImage={ArticleSilicaSand}
+              ArticleHeading={"Кварцевый песок окатанный"}
+              ArticleSecondHeading={"кварцевый песок"}
+              ArticleDescription={
+                "Минеральный материал, получаемый в результате разрушения крупных кварцевых пород, с образованием"
+              }
+            />
           </Link>
-          
+
           <NewsHomepage />
           <NewsHomepage />
         </div>
