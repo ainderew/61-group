@@ -59,7 +59,7 @@ export const SilicaSandMediumRussian = () => {
             </p>
           </div>
           <div className="silica-sand-medium-contact-container">
-            <a href="/ContactUs" className="silica-sand-medium-contact">
+            <a href="/ContactUs/ru" className="silica-sand-medium-contact">
               Связаться с нами
             </a>
           </div>

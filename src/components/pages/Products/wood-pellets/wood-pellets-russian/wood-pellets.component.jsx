@@ -51,7 +51,7 @@ export const WoodPelletsRussian = () => {
             </p>
           </div>
           <div className="wood-pellets-contact-container">
-            <a href="/ContactUs" className="wood-pellets-contact">
+            <a href="/ContactUs/ru" className="wood-pellets-contact">
               Связаться с нами
             </a>
           </div>

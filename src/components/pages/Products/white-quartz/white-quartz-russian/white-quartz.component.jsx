@@ -55,7 +55,7 @@ export const WhiteQuartzRussian = () => {
             </p>
           </div>
           <div className="white-quartz-contact-container">
-            <a href="/ContactUs" className="white-quartz-contact">
+            <a href="/ContactUs/ru" className="white-quartz-contact">
               Связаться с нами
             </a>
           </div>
