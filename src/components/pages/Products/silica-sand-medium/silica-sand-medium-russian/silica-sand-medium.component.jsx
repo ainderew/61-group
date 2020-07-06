@@ -40,7 +40,7 @@ export const SilicaSandMediumRussian = () => {
       <div className="silica-sand-medium-page-inner">
         <div className="silica-sand-medium-page-col-1">
           <div className="silica-sand-medium-header-container">
-            <h2 className="silica-sand-medium-sub-header">ТОВАРЫ</h2>
+            {/* <h2 className="silica-sand-medium-sub-header">ТОВАРЫ</h2> */}
             <h1 className="silica-sand-medium-header">
               КВАРЦЕВЫЙ ПЕСОК СРЕДНИХ ФРАКЦИЙ
             </h1>

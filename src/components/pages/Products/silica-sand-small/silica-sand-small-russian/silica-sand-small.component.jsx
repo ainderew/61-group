@@ -40,7 +40,7 @@ export const SilicaSandSmallRussian = () => {
       <div className="silica-sand-small-page-inner">
         <div className="silica-sand-small-page-col-1">
           <div className="silica-sand-small-header-container">
-            <h2 className="silica-sand-small-sub-header">ПРОДУКЦИЯ</h2>
+            {/* <h2 className="silica-sand-small-sub-header">ПРОДУКЦИЯ</h2> */}
             <h1 className="silica-sand-small-header">
               КВАРЦЕВЫЙ ПЕСОК МЕЛКИХ ФРАКЦИЙ
             </h1>

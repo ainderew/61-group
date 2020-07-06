@@ -41,7 +41,7 @@ export const WhiteQuartzRussian = () => {
       <div className="white-quartz-page-inner">
         <div className="white-quartz-page-col-1">
           <div className="white-quartz-header-container">
-            <h2 className="white-quartz-sub-header">PRODUCTS</h2>
+            {/* <h2 className="white-quartz-sub-header">PRODUCTS</h2> */}
             <h1 className="white-quartz-header">Кварц белый дробленый</h1>
             <p className="white-quartz-paragraph">
               Кварцевый дроблёный песок – это песок, полученный
