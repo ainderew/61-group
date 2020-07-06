@@ -1,8 +1,10 @@
-@import "../../../../variables_SCSS/colors";
+
 
 .article-white-quartz{
     width: 100%;
     height: 100%;
+    
+    background: #fff;
 }
 
 
@@ -10,7 +12,7 @@
     width: 100%;
     height: 80vh;
 
-    background: url(../../../../assets/images/silica-sand-article.jpg) no-repeat center;
+    background: url(../../../../assets/images/white-quartz-article-hero.webp) no-repeat center;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -39,4 +41,286 @@
     display: grid;
     grid-auto-rows: auto;
     
+}
+
+.article-quartz-row-1{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+    margin: 4rem 0;
+    
+    .article-quartz-row-1-col-right{
+        display: flex;
+        justify-content: flex-end;
+        .article-img{
+            width: 80%;
+        }
+    }
+}
+
+.article-quartz-row-2{
+    margin: 4rem 0;
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../../../../assets/images/silica-sand-article-img-2.webp) no-repeat center;
+    background-size: cover;
+    
+    
+    .article-h2{
+        color: #fff;
+        font-size: 2rem;
+    }
+}
+
+.article-quartz-row-3{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+    margin: 2rem 0;
+    
+    .article-quartz-row-3-col-left,
+    .article-quartz-row-3-col-right{
+        padding: 0 2rem;
+    }
+ 
+}
+
+.article-quartz-row-4{
+    .article-ul{
+        list-style-position: inside;
+        margin: 2rem 0;
+    }
+    .article-li,
+    .article-p{
+        margin: 2rem 0;
+    }
+   
+}
+
+.article-quartz-row-5{
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    .article-h2{
+        font-size: 2rem;
+    }
+}
+
+.article-quartz-row-6{
+    .article-p,
+    .article-li{
+        margin: 2rem 0;
+    }
+    
+    .article-ul{
+        list-style-position: inside;
+    }
+    
+}
+
+.article-quartz-row-7{
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    
+    .article-img{
+        width: 90%;
+        height: 100%;
+    }
+}
+
+.article-quartz-row-8{
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .article-h2{
+        font-size: 2rem;
+    }
+}
+.article-quartz-row-9{
+    margin: 2rem 0;
+    
+    .article-p,
+    .article-ul,
+    .article-li{
+        margin: 2rem 0;
+    }
+    
+    .article-ul{
+        list-style-position: inside;
+    }
+    
+}
+
+
+@media only screen and (max-width: 900px){
+    .article-white-quartz{
+        width: 100%;
+        height: 100%;
+        
+        background: #fff;
+    }
+    
+    
+    .article-banner-quartz{
+        width: 100%;
+        height: 50vh;
+    
+        background: url(../../../../assets/images/white-quartz-article-hero.webp) no-repeat center;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        .article-h1{
+            color: #fff;
+            font-size: 4rem;
+        }
+    }
+    
+    .article-body-quartz{
+        width: 100%;
+        height: 100%;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .article-inner-body{
+        width: 90vw;
+        height: 100%;
+    
+        background: #fff;
+        display: grid;
+        grid-auto-rows: auto;
+        
+    }
+    
+    .article-quartz-row-1{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        
+        margin: 4rem 0;
+        
+        .article-quartz-row-1-col-right{
+            margin: 2rem 0;
+            display: flex;
+            justify-content: center;
+            .article-img{
+                width: 100%;
+            }
+        }
+    }
+    
+    .article-quartz-row-2{
+        margin: 0rem 0;
+        height: 20vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: none;
+        
+        .article-h2{
+            color: #000;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+    }
+    
+    .article-quartz-row-3{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        
+        margin: 2rem 0;
+        
+        .article-quartz-row-3-col-left,
+        .article-quartz-row-3-col-right{
+            padding: 0 0rem;
+            margin: 2rem 0;
+        }
+     
+    }
+    
+    .article-quartz-row-4{
+        .article-ul{
+            list-style-position: inside;
+            margin: 2rem 0;
+        }
+        .article-li,
+        .article-p{
+            margin: 2rem 0;
+        }
+       
+    }
+    
+    .article-quartz-row-5{
+        margin: 2rem 0;
+        display: flex;
+        justify-content: center;
+        background: url(../../../../assets/images/silica-sand-article-img-2.webp) no-repeat center;
+        background-size: cover;
+        .article-h2{
+            font-size: 2rem;
+            color: #fff;
+            text-align: center;
+        }
+    }
+    
+    .article-quartz-row-6{
+        .article-p,
+        .article-li{
+            margin: 2rem 0;
+        }
+        
+        .article-ul{
+            list-style-position: inside;
+        }
+        
+    }
+    
+    .article-quartz-row-7{
+        margin: 2rem 0;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        
+        .article-img{
+            width: 90%;
+            height: 100%;
+        }
+    }
+    
+    .article-quartz-row-8{
+        margin: 2rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        .article-h2{
+            font-size: 1.5rem;
+            text-align: center;
+        }
+    }
+    .article-quartz-row-9{
+        margin: 2rem 0;
+        
+        .article-p,
+        .article-ul,
+        .article-li{
+            margin: 2rem 0;
+        }
+        
+        .article-ul{
+            list-style-position: inside;
+        }
+        
+    }
 }
