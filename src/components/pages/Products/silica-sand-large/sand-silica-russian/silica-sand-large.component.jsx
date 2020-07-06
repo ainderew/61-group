@@ -60,7 +60,7 @@ export const SilicaSandLargeRussian = () => {
           </div>
           <div className="silica-sand-large-contact-container">
             <a href="/ContactUs" className="silica-sand-large-contact">
-              Contact Us
+              Связаться с нами
             </a>
           </div>
           <div className="silica-sand-large-body-container">
