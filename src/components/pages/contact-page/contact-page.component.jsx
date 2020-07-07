@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
+import Image from "react-image-webp";
 import "./contact-page.style.scss";
 
 //COMPONENTS

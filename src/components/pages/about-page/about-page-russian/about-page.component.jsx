@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import Image from "react-image-webp";
 import "../about-page.style.scss";
 
 import { ContactFixedRussian } from "../../../parts/contact-fixed/contact-fixed-russian/contact-fixed.component";
