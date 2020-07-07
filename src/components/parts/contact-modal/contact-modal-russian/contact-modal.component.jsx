@@ -25,7 +25,7 @@ export const ContactModalRussian = ({ modalState, parentFunction }) => {
     parentFunction(e)
     e.preventDefault();
 
-    await fetch("http://localhost:5000/email", {
+    await fetch("https://group61.herokuapp.com/email", {
       method: "POST",
       mode: "cors",
       headers: {

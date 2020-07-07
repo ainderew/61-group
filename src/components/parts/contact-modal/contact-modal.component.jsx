@@ -23,8 +23,8 @@ export const ContactModal = ({ modalState, parentFunction }) => {
 
   const sendForm = async e => {
     e.preventDefault();
-    parentFunction();
-    await fetch("http://localhost:5000/email", {
+    parentFunction(e);
+    await fetch("https://group61.herokuapp.com/email", {
       method: "POST",
       mode: "cors",
       headers: {
