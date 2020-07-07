@@ -81,8 +81,8 @@ export const ContactPageRussian = () => {
           /> */}
           
           <Image
-            src={ContactPhoto}
-            webp={ContactPhotoJPG}
+            src={ContactPhotoJPG}
+            webp={ContactPhoto}
             alt="contact-Group 61"
             className="contact-img"
           />
