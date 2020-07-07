@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import { Helmet } from "react-helmet";
+import Image from "react-image-webp";
 import "../silica-sand-large.style.scss";
 
 //COMPONENTS
@@ -16,7 +17,7 @@ export const SilicaSandLargeRussian = () => {
   const [modalState, setModalState] = useState(false);
 
   //FUNCTIONS
-  const modalOnClick = (e) => {
+  const modalOnClick = e => {
     e.preventDefault();
     setModalState(prevState => !prevState);
     screen.current.scrollIntoView({ block: "center" });
@@ -52,7 +53,6 @@ export const SilicaSandLargeRussian = () => {
               применяется при производстве бетонных изделий, плитки,
               предназначенной для облицовки дорог, растворов, смесей и прочих
               строительных материалов, использующихся в строительной сфере.
-            
             </p>
           </div>
           <div className="silica-sand-large-contact-container">
@@ -124,9 +124,15 @@ export const SilicaSandLargeRussian = () => {
         </div>
 
         <div className="silica-sand-large-page-col-2">
-          <img
+          {/* <img
             src={ProductImage}
             alt="White Quartz"
+            className="silica-sand-large-col-2-product-img"
+          /> */}
+          <Image
+            src={ProductImageJPG}
+            webp={ProductImage}
+            alt="КВАРЦЕВЫЙ ПЕСОК КРУПНЫХ ФРАКЦИЙ"
             className="silica-sand-large-col-2-product-img"
           />
           <button

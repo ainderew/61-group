@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import { Helmet } from "react-helmet";
+import Image from "react-image-webp";
 import "../white-quartz.style.scss";
 
 //COMPONENTS
@@ -7,6 +8,7 @@ import { ContactModalRussian } from "../../../../parts/contact-modal/contact-mod
 
 import DeliverySVG from "../../../../../assets/icons/delivery.svg";
 import ProductImage from "../../../../../assets/products/White fraction quartz.webp";
+import ProductImageJPG from "../../../../../assets/products/White fraction quartz.jpg";
 
 export const WhiteQuartzRussian = () => {
   //USEREF VARS
@@ -109,8 +111,14 @@ export const WhiteQuartzRussian = () => {
         </div>
 
         <div className="white-quartz-page-col-2">
-          <img
+          {/* <img
             src={ProductImage}
+            alt="White Quartz"
+            className="white-quartz-col-2-product-img"
+          /> */}
+            <Image
+            src={ProductImageJPG}
+            webp={ProductImage}
             alt="White Quartz"
             className="white-quartz-col-2-product-img"
           />

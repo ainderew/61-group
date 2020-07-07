@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import { Helmet } from "react-helmet";
+import Image from "react-image-webp";
 import "../wood-pellets.style.scss";
 
 //COMPONENTS
@@ -7,6 +8,7 @@ import { ContactModalRussian } from "../../../../parts/contact-modal/contact-mod
 //IMAGES
 import DeliverySVG from "../../../../../assets/icons/delivery.svg";
 import ProductImage from "../../../../../assets/products/wood-pellets.webp";
+import ProductImageJPG from "../../../../../assets/products/wood-pellets.jpg";
 export const WoodPelletsRussian = () => {
   //USEREF VARS
   const screen = useRef(null);
@@ -106,9 +108,15 @@ export const WoodPelletsRussian = () => {
         </div>
 
         <div className="wood-pellets-page-col-2">
-          <img
+          {/* <img
             src={ProductImage}
             alt="White Quartz"
+            className="wood-pellets-col-2-product-img"
+          /> */}
+          <Image
+            src={ProductImageJPG}
+            webp={ProductImage}
+            alt="ДРЕВЕСНЫЕ ПЕЛЛЕТЫ"
             className="wood-pellets-col-2-product-img"
           />
           <button

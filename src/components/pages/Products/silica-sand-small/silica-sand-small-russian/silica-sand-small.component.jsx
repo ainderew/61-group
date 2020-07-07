@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import { Helmet } from "react-helmet";
+import Image from "react-image-webp";
 import "../silica-sand-small.style.scss";
 
 //COMPONENTS
@@ -7,6 +8,7 @@ import { ContactModalRussian } from "../../../../parts/contact-modal/contact-mod
 //IMAGES
 import DeliverySVG from "../../../../../assets/icons/delivery.svg";
 import ProductImage from "../../../../../assets/products/Silica sand fines.webp";
+import ProductImageJPG from "../../../../../assets/products/Silica sand fines.jpg";
 
 export const SilicaSandSmallRussian = () => {
   //USEREF VARS
@@ -117,9 +119,15 @@ export const SilicaSandSmallRussian = () => {
         </div>
 
         <div className="silica-sand-small-page-col-2">
-          <img
+          {/* <img
             src={ProductImage}
             alt="White Quartz"
+            className="silica-sand-small-col-2-product-img"
+          /> */}
+          <Image
+            src={ProductImageJPG}
+            webp={ProductImage}
+            alt="КВАРЦЕВЫЙ ПЕСОК МЕЛКИХ ФРАКЦИЙ"
             className="silica-sand-small-col-2-product-img"
           />
           <button
