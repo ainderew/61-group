@@ -12,13 +12,28 @@ import { NewsHomepage } from "../../parts/news-homepage/news-homepage.compnent";
 
 //IMAGES
 import SilicaSandFines from "../../../assets/products/Silica sand fines.webp";
+import SilicaSandFinesJPG from "../../../assets/products/Silica sand fines.jpg";
+
 import SilicaSandLarge from "../../../assets/products/Silica sand of large fractions.webp";
+import SilicaSandLargeJPG from "../../../assets/products/Silica sand of large fractions.jpg";
+
 import SilicaSandMedium from "../../../assets/products/Silica sand of medium fractions.webp";
+import SilicaSandMediumJPG from "../../../assets/products/Silica sand of medium fractions.jpg";
+
 import WhiteQuartz from "../../../assets/products/White fraction quartz.webp";
+import WhiteQuartzJPG from "../../../assets/products/White fraction quartz.jpg";
+
 import WoodPellets from "../../../assets/products/wood-pellets.webp";
+import WoodPelletsJPG from "../../../assets/products/wood-pellets.jpg";
+
 import ArticleSilicaSand from "../../../assets/images/silica-sand-article-home-img.webp";
+import ArticleSilicaSandJPG from "../../../assets/images/silica-sand-article-home-img.jpg";
+
 import ArticleWhiteQuartz from "../../../assets/images/white-quartz-article.webp";
+import ArticleWhiteQuartzJPG from "../../../assets/images/white-quartz-article.jpg";
+
 import ArticleWoodPellets from "../../../assets/images/wood-pellets-article.webp";
+import ArticleWoodPelletsJPG from "../../../assets/images/wood-pellets-article.jpg";
 
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
@@ -59,6 +74,7 @@ export const HomePage = ({ modalState, parentFunction }) => {
             <Link to="/Products/silicasandlarge">
               <ProductHomepage
                 image={SilicaSandLarge}
+                image2={SilicaSandLargeJPG}
                 name={"SILICA SAND"}
                 description="large fractions"
               />
@@ -67,6 +83,7 @@ export const HomePage = ({ modalState, parentFunction }) => {
             <Link to="/Products/silicasandmedium">
               <ProductHomepage
                 image={SilicaSandMedium}
+                image2={SilicaSandMediumJPG}
                 name={"SILICA SAND"}
                 description="medium fractions"
               />
@@ -75,6 +92,7 @@ export const HomePage = ({ modalState, parentFunction }) => {
             <Link to="/Products/silicasandsmall">
               <ProductHomepage
                 image={SilicaSandFines}
+                image2={SilicaSandFinesJPG}
                 name={"SILICA SAND"}
                 description="small fractions"
               />
@@ -84,6 +102,7 @@ export const HomePage = ({ modalState, parentFunction }) => {
               <ProductHomepage
                 style={{ display: "block" }}
                 image={WhiteQuartz}
+                image2={WhiteQuartzJPG}
                 name={"WHITE QUARTZ"}
                 description="crushed"
               />
@@ -92,6 +111,7 @@ export const HomePage = ({ modalState, parentFunction }) => {
             <Link to="/Products/woodpellets">
               <ProductHomepage
                 image={WoodPellets}
+                image2={WoodPelletsJPG}
                 name={"WOOD PELLETS"}
                 description="class A1, A2"
               />
@@ -150,6 +170,7 @@ export const HomePage = ({ modalState, parentFunction }) => {
         <Link to="/silica-sand-article/ru">
             <NewsHomepage
               ArticleImage={ArticleSilicaSand}
+              ArticleImage2={ArticleSilicaSandJPG}
               ArticleHeading={"Кварцевый песок окатанный"}
               ArticleSecondHeading={"Кварцевый песок"}
               ArticleDescription={
@@ -162,6 +183,7 @@ export const HomePage = ({ modalState, parentFunction }) => {
           <Link to="/white-quartz-article/ru">
             <NewsHomepage
               ArticleImage={ArticleWhiteQuartz}
+              ArticleImage2={ArticleWhiteQuartzJPG}
               ArticleHeading={"Белый молочный дробленный кварц"}
               ArticleSecondHeading={"Белый кварц"}
               ArticleDescription={
@@ -174,6 +196,7 @@ export const HomePage = ({ modalState, parentFunction }) => {
           <Link to="/wood-pellets-article/ru">
             <NewsHomepage
               ArticleImage={ArticleWoodPellets}
+              ArticleImage2={ArticleWoodPelletsJPG}
               ArticleHeading={"Древесные топливные пеллеты"}
               ArticleSecondHeading={"Древесные пеллеты"}
               ArticleDescription={
