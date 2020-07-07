@@ -22,6 +22,7 @@ export const ContactModalRussian = ({ modalState, parentFunction }) => {
   };
 
   const sendForm = async e => {
+    parentFunction(e)
     e.preventDefault();
 
     await fetch("http://localhost:5000/email", {
@@ -34,7 +35,7 @@ export const ContactModalRussian = ({ modalState, parentFunction }) => {
     })
       .then(response => response.json())
       .then(data => console.log(data));
-      parentFunction(e)
+      
   };
 
   //USEEFFECT

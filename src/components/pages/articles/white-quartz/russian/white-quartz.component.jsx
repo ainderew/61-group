@@ -41,8 +41,8 @@ export const WhiteQuartzArticle = () => {
                 className="article-img"
               /> */}
               <Image
-                src={image1}
-                webp={image1JPG}
+                src={image1JPG}
+                webp={image1}
                 alt="white quartz mining"
                 className="article-img"
               />
@@ -154,8 +154,8 @@ export const WhiteQuartzArticle = () => {
             <div className="article-quartz-row-7-col-left">
               {/* <img loading="lazy" src={image2} alt="" className="article-img" /> */}
               <Image
-                src={image2}
-                webp={image2JPG}
+                src={image2JPG}
+                webp={image2}
                 alt="white quartz mining"
                 className="article-img"
               />
@@ -163,8 +163,8 @@ export const WhiteQuartzArticle = () => {
             <div className="article-quartz-row-7-col-right">
               {/* <img loading="lazy" src={image3} alt="" className="article-img" /> */}
               <Image
-                src={image3}
-                webp={image3JPG}
+                src={image3JPG}
+                webp={image3}
                 alt="white quartz mining"
                 className="article-img"
               />

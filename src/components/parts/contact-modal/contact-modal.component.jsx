@@ -23,7 +23,7 @@ export const ContactModal = ({ modalState, parentFunction }) => {
 
   const sendForm = async e => {
     e.preventDefault();
-
+    parentFunction();
     await fetch("http://localhost:5000/email", {
       method: "POST",
       mode: "cors",
@@ -34,7 +34,7 @@ export const ContactModal = ({ modalState, parentFunction }) => {
     })
       .then(response => response.json())
       .then(data => console.log(data));
-      parentFunction(e);
+     
   };
 
   //USEEFFECT

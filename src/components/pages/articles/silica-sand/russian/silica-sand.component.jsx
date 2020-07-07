@@ -43,8 +43,8 @@ export const SilicaSandArticle = () => {
                 className="article-row-1-img"
               /> */}
               <Image
-                src={Image1}
-                webp={Image1JPG}
+                src={Image1JPG}
+                webp={Image1}
                 alt="Кварцевый песок окатанный"
                 className="article-row-1-img"
               />
@@ -122,8 +122,8 @@ export const SilicaSandArticle = () => {
             </h4>
             {/* <img loading="lazy" src={Image3} alt="" className="article-img-3" /> */}
             <Image
-              src={Image3}
-              webp={Image3JPG}
+              src={Image3JPG}
+              webp={Image3}
               alt="Кварцевый песок окатанный"
               className="article-img-3"
             />

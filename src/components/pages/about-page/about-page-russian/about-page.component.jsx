@@ -139,14 +139,14 @@ export const AboutUsPageRussian = () => {
         <div className="about-us-col-2">
           {/* <img src={AboutUs1} alt="about 1" className="about-us-img" /> */}
           <Image
-            src={AboutUs1}
-            webp={AboutUs1JPG}
+            src={AboutUs1JPG}
+            webp={AboutUs1}
             alt="About 61 Group"
             className="about-us-img"
           />
           <Image
-            src={AboutUs2}
-            webp={AboutUs2JPG}
+            src={AboutUs2JPG}
+            webp={AboutUs2}
             alt="About 61 Group"
             className="about-us-img"
           />

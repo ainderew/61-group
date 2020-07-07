@@ -22,8 +22,8 @@ export const WoodPelletsArticle = () => {
               className="article-img-1"
             /> */}
             <Image
-                src={Image1}
-                webp={Image1JPG}
+                src={Image1JPG}
+                webp={Image1}
                 alt="Truck carrying wood pellets"
                 className="article-img-1"
               />
