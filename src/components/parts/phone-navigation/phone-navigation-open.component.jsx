@@ -15,19 +15,19 @@ export const PhoneNavOpen = ({ navState, toggleFunction }) => {
         <Link to="/en">
           <li onClick={toggleFunction} className="phone-nav-li">GENERAL</li>
         </Link>
-        <Link to="/Products/silicasandlarge/en">
+        <Link to="/Products/silicasandlarge">
           <li onClick={toggleFunction} className="phone-nav-li">SILICA SAND LARGE FRACTIONS</li>
         </Link>
-        <Link to="/Products/silicasandmedium/en">
+        <Link to="/Products/silicasandmedium">
           <li onClick={toggleFunction} className="phone-nav-li">SILICA SAND LARGE FRACTIONS</li>
         </Link>
-        <Link to="/Products/silicasandsmall/en">
+        <Link to="/Products/silicasandsmall">
           <li onClick={toggleFunction} className="phone-nav-li">SILICA SAND LARGE FRACTIONS</li>
         </Link>
-        <Link to="/Products/whitequartz/en">
+        <Link to="/Products/whitequartz/">
           <li onClick={toggleFunction} className="phone-nav-li">WHITE QUARTZ</li>
         </Link>
-        <Link to="/Products/woodpellets/en">
+        <Link to="/Products/woodpellets">
           <li onClick={toggleFunction} className="phone-nav-li">WOOD PELLETS</li>
         </Link>
 
