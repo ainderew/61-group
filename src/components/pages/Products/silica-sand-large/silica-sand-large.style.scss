@@ -119,6 +119,7 @@
     height: 100%;
     display: grid;
     grid-template-columns: 1fr;
+    grid-auto-rows: auto;
   }
 
   .silica-sand-large-page-col-1 {
