@@ -13,16 +13,16 @@ export const NewsHomepage = ({
     <div className="news-homepage">
       <div className="inner-news-hp-row-1">
         <div className="inner-news-hp-r1-left">
-          <picture>
-            <source srcset={ArticleImage} />
-            <source srcset={ArticleImage2} />
+          {/* <picture>
+            <source srcSet={ArticleImage} type="image/webp" />
+            <source srcSet={ArticleImage2} type="image/jpg" /> */}
             <img
               loading="lazy"
               src={ArticleImage2}
               alt="News"
               className="news-hp-img"
             />
-          </picture>
+          {/* </picture> */}
         </div>
 
         <div className="inner-news-hp-r1-right">

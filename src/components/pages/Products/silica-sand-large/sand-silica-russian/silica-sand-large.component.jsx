@@ -8,6 +8,7 @@ import { ContactModalRussian } from "../../../../parts/contact-modal/contact-mod
 //IAMGES
 import DeliverySVG from "../../../../../assets/icons/delivery.svg";
 import ProductImage from "../../../../../assets/products/Silica sand of large fractions.webp";
+import ProductImageJPG from "../../../../../assets/products/Silica sand of large fractions.jpg";
 export const SilicaSandLargeRussian = () => {
   //USEREF VARS
   const screen = useRef(null);
