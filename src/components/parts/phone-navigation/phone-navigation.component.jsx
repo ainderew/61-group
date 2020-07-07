@@ -5,7 +5,8 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { languageAction } from "../../../redux_actions/index";
 //COMPONENTS
-import { PhoneNavOpen } from "../phone-navigation/phone-navigation-open.component";
+import { PhoneNavOpen } from "./phone-navigation-open.component";
+import { PhoneNavOpenRussian } from "./phone-navigation-russian/phone-navigation-open.component";
 //IMAGES
 import MenuIcon from "../../../assets/icons/menu2.svg";
 import MenuLogo from "../../../assets/logos/Logo.svg";
@@ -74,7 +75,7 @@ export const PhoneNavigation = () => {
         </div>
       </header>
       
-      <PhoneNavOpen navState={navState} toggleFunction={showMenu} />
+      {(language === "Russian") ? <PhoneNavOpenRussian navState={navState} toggleFunction={showMenu} /> : <PhoneNavOpen navState={navState} toggleFunction={showMenu} />}
     </div>
   );
 };

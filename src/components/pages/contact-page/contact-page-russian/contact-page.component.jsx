@@ -12,7 +12,8 @@ export const ContactPageRussian = () => {
   const [modalState, setModalState] = useState(false);
 
   //FUNCTIONS
-  const modalOnClick = () => {
+  const modalOnClick = (e) => {
+    e.preventDefault();
     setModalState(prevState => !prevState);
   };
   return (
@@ -32,6 +33,7 @@ export const ContactPageRussian = () => {
           Ростовское шоссе, 14 б, г. Краснодар, Россия"
         />
       </Helmet>
+      
       <ContactModalRussian
         modalState={modalState}
         parentFunction={modalOnClick}

@@ -15,7 +15,8 @@ export const SilicaSandLarge = () => {
   const [modalState, setModalState] = useState(false);
 
   //FUNCTIONS
-  const modalOnClick = () => {
+  const modalOnClick = (e) => {
+    e.preventDefault();
     setModalState(prevState => !prevState);
     screen.current.scrollIntoView({ block: "center" });
   };

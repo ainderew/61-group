@@ -18,6 +18,7 @@ import WhiteQuartz from "../../../../assets/products/White fraction quartz.webp"
 import WoodPellets from "../../../../assets/products/wood-pellets.webp";
 import ArticleSilicaSand from "../../../../assets/images/silica-sand-article-home-img.webp";
 import ArticleWhiteQuartz from "../../../../assets/images/white-quartz-article.webp";
+import ArticleWoodPellets from "../../../../assets/images/wood-pellets-article.webp";
 
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
@@ -173,8 +174,19 @@ export const HomePageRU = () => {
               Button={"Читать дальше"} 
               />
           </Link>
+          
+          <Link to="/wood-pellets-article/ru">
+            <NewsHomepage
+              ArticleImage={ArticleWoodPellets}
+              ArticleHeading={"Древесные топливные пеллеты"}
+              ArticleSecondHeading={"Древесные пеллеты"}
+              ArticleDescription={
+                "Пеллеты – это топливные гранулы в виде спрессованной древесной стружки."
+              }
+              Button={"Читать дальше"} 
+              />
+          </Link>
 
-            <NewsHomepage />
         </div>
       </div>
     </div>

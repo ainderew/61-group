@@ -135,7 +135,8 @@ export const WebNavigation = () => {
         </div>
         <div className="web-nav-col-3">
           {searchState ? (
-            <input type="text" className="web-nav-search-input" />
+            // 
+            null
           ) : (
             <div onMouseEnter={onLanguageHover} onMouseLeave={onLanguageLeave} className="language-selector">
               <img
@@ -167,12 +168,7 @@ export const WebNavigation = () => {
             </div>
           )}
 
-          <img
-            onClick={onSearchClick}
-            src={SearchIcon}
-            alt="Search Icon"
-            className="web-nav-search-icon"
-          />
+         
         </div>
       </div>
     </header>

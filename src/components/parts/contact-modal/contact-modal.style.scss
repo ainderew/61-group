@@ -81,7 +81,12 @@
     outline: none;
   }
 }
-
+.button-div{
+  display: flex;
+  .contact-form-btn{
+    margin-right: 2rem;
+  }
+}
 @-webkit-keyframes fadeIn {
   0% {
     // transform: translate(-50%,-100%);

@@ -30,6 +30,7 @@ import { WoodPellets } from "../Products/wood-pellets/wood-pellets.component";
 import { WoodPelletsRussian } from "../Products/wood-pellets/wood-pellets-russian/wood-pellets.component";
 import { SilicaSandArticle } from "../articles/silica-sand/russian/silica-sand.component";
 import { WhiteQuartzArticle } from "../articles/white-quartz/russian/white-quartz.component"
+import { WoodPelletsArticle } from "../articles/wood-pellets/russian/wood-pellets.component"
 //COMPONENTS
 import { WebNavigation } from "../../parts/web-navigation/web-navigation.component";
 import { WebNavigationRussian } from "../../parts/web-navigation/web-navigation-russian/web-navigation.component";
@@ -86,7 +87,7 @@ export const MainContainer = () => {
     <Router history={history}>
       <div className="main-container">
         {language === "Russian" ? <WebNavigationRussian /> : <WebNavigation />}
-
+        {/* {language === "Russian" ? <PhoneNavigation /> : <PhoneNavigation />} */}
         <PhoneNavigation />
         {/* to add translation for phone nav */}
 
@@ -151,6 +152,7 @@ export const MainContainer = () => {
           
           <Route path="/silica-sand-article/ru" exact component={SilicaSandArticle} />
           <Route path="/white-quartz-article/ru" exact component={WhiteQuartzArticle} />
+          <Route path="/wood-pellets-article/ru" exact component={WoodPelletsArticle} />
         </Switch>
         
         

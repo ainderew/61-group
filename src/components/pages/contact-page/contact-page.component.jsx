@@ -12,7 +12,8 @@ export const ContactPage = () => {
   const [modalState, setModalState] = useState(false);
 
   //FUNCTIONS
-  const modalOnClick = () => {
+  const modalOnClick = (e) => {
+    e.preventDefault();
     setModalState(prevState => !prevState);
   };
   return (
@@ -51,7 +52,7 @@ export const ContactPage = () => {
             </p>
 
             <button onClick={modalOnClick} className="contact-page-btn">
-              CONTACT GROUP 61
+              CONTACT US
             </button>
 
             <h2 className="contact-page-email-header">CONTACT US BY EMAIL</h2>

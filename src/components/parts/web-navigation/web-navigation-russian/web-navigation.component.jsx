@@ -180,12 +180,12 @@ export const WebNavigationRussian = () => {
             </div>
           )}
 
-          <img
+          {/* <img
             onClick={onSearchClick}
             src={SearchIcon}
             alt="Search Icon"
             className="web-nav-search-icon"
-          />
+          /> */}
         </div>
       </div>
     </header>

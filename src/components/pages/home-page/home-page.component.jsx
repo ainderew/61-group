@@ -16,6 +16,9 @@ import SilicaSandLarge from "../../../assets/products/Silica sand of large fract
 import SilicaSandMedium from "../../../assets/products/Silica sand of medium fractions.webp";
 import WhiteQuartz from "../../../assets/products/White fraction quartz.webp";
 import WoodPellets from "../../../assets/products/wood-pellets.webp";
+import ArticleSilicaSand from "../../../assets/images/silica-sand-article-home-img.webp";
+import ArticleWhiteQuartz from "../../../assets/images/white-quartz-article.webp";
+import ArticleWoodPellets from "../../../assets/images/wood-pellets-article.webp";
 
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
@@ -144,9 +147,41 @@ export const HomePage = ({ modalState, parentFunction }) => {
 
       <div className="bottom-div">
         <div className="bottom-news-container">
-          <NewsHomepage />
-          <NewsHomepage />
-          <NewsHomepage />
+        <Link to="/silica-sand-article/ru">
+            <NewsHomepage
+              ArticleImage={ArticleSilicaSand}
+              ArticleHeading={"Кварцевый песок окатанный"}
+              ArticleSecondHeading={"Кварцевый песок"}
+              ArticleDescription={
+                "Минеральный материал, получаемый в результате разрушения крупных кварцевых пород, с образованием"
+              }
+              Button={"Читать дальше"}
+            />
+          </Link>
+
+          <Link to="/white-quartz-article/ru">
+            <NewsHomepage
+              ArticleImage={ArticleWhiteQuartz}
+              ArticleHeading={"Белый молочный дробленный кварц"}
+              ArticleSecondHeading={"Белый кварц"}
+              ArticleDescription={
+                "Предлагаем дробленый кварц в виде остроугольных зерен."
+              }
+              Button={"Читать дальше"} 
+              />
+          </Link>
+          
+          <Link to="/wood-pellets-article/ru">
+            <NewsHomepage
+              ArticleImage={ArticleWoodPellets}
+              ArticleHeading={"Древесные топливные пеллеты"}
+              ArticleSecondHeading={"Древесные пеллеты"}
+              ArticleDescription={
+                "Пеллеты – это топливные гранулы в виде спрессованной древесной стружки."
+              }
+              Button={"Читать дальше"} 
+              />
+          </Link>
         </div>
       </div>
     </div>

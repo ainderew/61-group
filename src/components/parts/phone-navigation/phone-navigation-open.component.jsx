@@ -10,12 +10,25 @@ export const PhoneNavOpen = ({ navState, toggleFunction }) => {
   return (
     <div className={navState ? "phone-nav-display-open" : "phone-nav-display"}>
       <ul className="phone-nav-ul">
-        <Link to="/Products">
-          <li onClick={toggleFunction} className="phone-nav-li">PRODUCTS</li>
-        </Link>
+        
 
         <Link to="/">
           <li onClick={toggleFunction} className="phone-nav-li">GENERAL</li>
+        </Link>
+        <Link to="/">
+          <li onClick={toggleFunction} className="phone-nav-li">SILICA SAND LARGE FRACTIONS</li>
+        </Link>
+        <Link to="/">
+          <li onClick={toggleFunction} className="phone-nav-li">SILICA SAND LARGE FRACTIONS</li>
+        </Link>
+        <Link to="/">
+          <li onClick={toggleFunction} className="phone-nav-li">SILICA SAND LARGE FRACTIONS</li>
+        </Link>
+        <Link to="/">
+          <li onClick={toggleFunction} className="phone-nav-li">WHITE QUARTZ</li>
+        </Link>
+        <Link to="/">
+          <li onClick={toggleFunction} className="phone-nav-li">WOOD PELLETS</li>
         </Link>
 
         <Link to="/AboutUs">
