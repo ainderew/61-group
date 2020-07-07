@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "react-image-webp";
 import "./news-homepage.style.scss";
 
 export const NewsHomepage = ({
@@ -16,13 +17,14 @@ export const NewsHomepage = ({
           {/* <picture>
             <source srcSet={ArticleImage} type="image/webp" />
             <source srcSet={ArticleImage2} type="image/jpg" /> */}
-            <img
-              loading="lazy"
-              src={ArticleImage2}
-              alt="News"
-              className="news-hp-img"
-            />
+          {/* <img
+            loading="lazy"
+            src={ArticleImage2}
+            alt="News"
+            className="news-hp-img"
+          /> */}
           {/* </picture> */}
+          <Image loading="lazy" src={ArticleImage2} webp={ArticleImage} className="news-hp-img" alt={ArticleHeading} />
         </div>
 
         <div className="inner-news-hp-r1-right">
