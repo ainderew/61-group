@@ -71,6 +71,7 @@ export const HomePage = ({ modalState, parentFunction }) => {
             showArrows={false}
             pagination={false}
             breakPoints={breakPoints}>
+              
             <Link to="/Products/silicasandlarge">
               <ProductHomepage
                 image={SilicaSandLarge}

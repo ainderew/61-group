@@ -12,13 +12,28 @@ import { NewsHomepage } from "../../../parts/news-homepage/news-homepage.compnen
 
 //IMAGES
 import SilicaSandFines from "../../../../assets/products/Silica sand fines.webp";
+import SilicaSandFinesJPG from "../../../../assets/products/Silica sand fines.jpg";
+
 import SilicaSandLarge from "../../../../assets/products/Silica sand of large fractions.webp";
+import SilicaSandLargeJPG from "../../../../assets/products/Silica sand of large fractions.jpg";
+
 import SilicaSandMedium from "../../../../assets/products/Silica sand of medium fractions.webp";
+import SilicaSandMediumJPG from "../../../../assets/products/Silica sand of medium fractions.jpg";
+
 import WhiteQuartz from "../../../../assets/products/White fraction quartz.webp";
+import WhiteQuartzJPG from "../../../../assets/products/White fraction quartz.jpg";
+
 import WoodPellets from "../../../../assets/products/wood-pellets.webp";
+import WoodPelletsJPG from "../../../../assets/products/wood-pellets.jpg";
+
 import ArticleSilicaSand from "../../../../assets/images/silica-sand-article-home-img.webp";
+import ArticleSilicaSandJPG from "../../../../assets/images/silica-sand-article-home-img.jpg";
+
 import ArticleWhiteQuartz from "../../../../assets/images/white-quartz-article.webp";
+import ArticleWhiteQuartzJPG from "../../../../assets/images/white-quartz-article.jpg";
+
 import ArticleWoodPellets from "../../../../assets/images/wood-pellets-article.webp";
+import ArticleWoodPelletsJPG from "../../../../assets/images/wood-pellets-article.jpg";
 
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
@@ -62,6 +77,7 @@ export const HomePageRU = () => {
             <Link to="/Products/silicasandlarge/ru">
               <ProductHomepage
                 image={SilicaSandLarge}
+                image2={SilicaSandLargeJPG}
                 name={"КВАРЦЕВЫЙ ПЕСОК"}
                 description="крупная фракция"
               />
@@ -70,6 +86,7 @@ export const HomePageRU = () => {
             <Link to="/Products/silicasandmedium/ru">
               <ProductHomepage
                 image={SilicaSandMedium}
+                image2={SilicaSandMediumJPG}
                 name={"КВАРЦЕВЫЙ ПЕСОК"}
                 description="(средняя фракция)"
               />
@@ -78,6 +95,7 @@ export const HomePageRU = () => {
             <Link to="/Products/silicasandsmall/ru">
               <ProductHomepage
                 image={SilicaSandFines}
+                image2={SilicaSandFinesJPG}
                 name={"КВАРЦЕВЫЙ ПЕСОК"}
                 description="мелкая фракция"
               />
@@ -87,6 +105,7 @@ export const HomePageRU = () => {
               <ProductHomepage
                 style={{ display: "block" }}
                 image={WhiteQuartz}
+                image2={WhiteQuartzJPG}
                 name={"КВАРЦ ДРОБЛЕНЫЙ"}
                 description="молочного цвета"
               />
@@ -95,6 +114,7 @@ export const HomePageRU = () => {
             <Link to="/Products/woodpellets/ru">
               <ProductHomepage
                 image={WoodPellets}
+                image2={WoodPelletsJPG}
                 name={"ДРЕВЕСНЫЕ ПЕЛЛЕТЫ"}
                 description="класс А1, А2"
               />
@@ -154,6 +174,7 @@ export const HomePageRU = () => {
           <Link to="/silica-sand-article/ru">
             <NewsHomepage
               ArticleImage={ArticleSilicaSand}
+              ArticleImage2={ArticleSilicaSandJPG}
               ArticleHeading={"Кварцевый песок окатанный"}
               ArticleSecondHeading={"Кварцевый песок"}
               ArticleDescription={
@@ -166,6 +187,7 @@ export const HomePageRU = () => {
           <Link to="/white-quartz-article/ru">
             <NewsHomepage
               ArticleImage={ArticleWhiteQuartz}
+              ArticleImage2={ArticleWhiteQuartzJPG}
               ArticleHeading={"Белый молочный дробленный кварц"}
               ArticleSecondHeading={"Белый кварц"}
               ArticleDescription={
@@ -178,6 +200,7 @@ export const HomePageRU = () => {
           <Link to="/wood-pellets-article/ru">
             <NewsHomepage
               ArticleImage={ArticleWoodPellets}
+              ArticleImage2={ArticleWoodPelletsJPG}
               ArticleHeading={"Древесные топливные пеллеты"}
               ArticleSecondHeading={"Древесные пеллеты"}
               ArticleDescription={
