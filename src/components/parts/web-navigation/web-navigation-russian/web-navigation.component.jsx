@@ -147,7 +147,7 @@ export const WebNavigationRussian = () => {
                 alt="russian flag"
                 className="language-flag"
               />
-              <h3 className="language-selected">русский</h3>
+              <h3 className="language-selected">Pусский</h3>
               <div
                 className={
                   languageState
@@ -163,7 +163,7 @@ export const WebNavigationRussian = () => {
                       alt="russian flag"
                       className="language-flag"
                     />
-                    русский
+                    Pусский
                   </li>
                   <li
                     onClick={() => onChangeLanguage(2)}
