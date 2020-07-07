@@ -3,10 +3,19 @@ import "../contact-modal.style.scss";
 
 import CloseIcon from "../../../../assets/icons/close.svg";
 
+//COMPONENTS
+import { SuccessModal } from "../../success modal/success-modal.component";
+import { ErrorModal } from "../../error-modal/error-modal.component";
+import { Loading } from "../../loading/loading.component";
+
 export const ContactModalRussian = ({ modalState, parentFunction }) => {
   //USESTATE VARS
   const [modalClass, setModalClass] = useState("contact-modal");
-
+  const [animationState, setAnimationState] = useState({
+    success: "off",
+    error: "off"
+  })
+  const [loadingState, setLoadingState] = useState("off")
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -14,6 +23,33 @@ export const ContactModalRussian = ({ modalState, parentFunction }) => {
   });
 
   //FUNCTIONS
+  const onServerResponse = (res) =>{
+    console.log(res)
+    if (res.message === "Email Sent"){
+      setAnimationState({
+        ...animationState,
+        success: "success-modal"
+      })
+    }else if (res.message === "Error"){
+      console.log("error else")
+      setAnimationState({
+        ...animationState,
+        error: "error-modal"
+      })
+    }
+  }
+  
+  // const loadingSetter = () =>{
+  //   setLoadingState("loading")
+  // }
+  
+  const Reset = () =>{
+    setAnimationState({
+      success: "off",
+      error: "off"
+    })
+  }
+  
   const formInputChange = (key, e) => {
     setFormData({
       ...formData,
@@ -22,7 +58,7 @@ export const ContactModalRussian = ({ modalState, parentFunction }) => {
   };
 
   const sendForm = async e => {
-    parentFunction(e)
+    setLoadingState("loading");
     e.preventDefault();
 
     await fetch("https://group61.herokuapp.com/email", {
@@ -34,7 +70,16 @@ export const ContactModalRussian = ({ modalState, parentFunction }) => {
       body: JSON.stringify(formData),
     })
       .then(response => response.json())
-      .then(data => console.log(data));
+      .then(data => {
+        setLoadingState("off")
+        onServerResponse(data)
+        console.log(data)
+      });
+      
+      setTimeout(() =>{
+        Reset()
+        parentFunction(e)
+      }, 2000);
       
   };
 
@@ -49,6 +94,9 @@ export const ContactModalRussian = ({ modalState, parentFunction }) => {
 
   return (
     <div className={modalClass}>
+      <SuccessModal classProp={animationState.success} />
+      <ErrorModal classProp={animationState.error}/>
+      <Loading loadingClass={loadingState} />
       <img
         onClick={(e) => parentFunction(e)}
         src={CloseIcon}
