@@ -34,6 +34,7 @@ export const ContactModalRussian = ({ modalState, parentFunction }) => {
     })
       .then(response => response.json())
       .then(data => console.log(data));
+      parentFunction(e)
   };
 
   //USEEFFECT
