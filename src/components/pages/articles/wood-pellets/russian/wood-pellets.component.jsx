@@ -1,8 +1,10 @@
 import React from "react";
+import Image from "react-image-webp"
 import "../wood-pellets.style.scss";
 
 //IMAGES
 import Image1 from "../../../../../assets/images/wood-pellets-article-img-1.webp";
+import Image1JPG from "../../../../../assets/images/wood-pellets-article-img-1.jpg";
 
 export const WoodPelletsArticle = () => {
   return (
@@ -14,11 +16,17 @@ export const WoodPelletsArticle = () => {
       <div className="article-pellets-body">
         <div className="article-pellets-body-inner">
           <div className="article-pellets-row-1">
-            <img
+            {/* <img
               src={Image1}
               alt="Truck carrying wood pellets"
               className="article-img-1"
-            />
+            /> */}
+            <Image
+                src={Image1}
+                webp={Image1JPG}
+                alt="Truck carrying wood pellets"
+                className="article-img-1"
+              />
             <p className="article-p">
               Пеллеты – это топливные гранулы в виде спрессованной древесной
               стружки. Представляют собой цилиндрические изделия, диаметр

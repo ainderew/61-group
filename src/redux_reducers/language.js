@@ -8,6 +8,5 @@ export const languageReducer = (
       return (state = { lang: "English" });
     default:
       return state;
-      break;
   }
 };

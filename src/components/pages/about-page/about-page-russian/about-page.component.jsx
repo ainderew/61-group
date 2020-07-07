@@ -11,7 +11,10 @@ import LocationImg from "../../../../assets/icons/About us/location.svg";
 import PhoneImg from "../../../../assets/icons/About us/phone.svg";
 
 import AboutUs1 from "../../../../assets/images/about-us-1.webp";
+import AboutUs1JPG from "../../../../assets/images/about-us-1.jpg";
+
 import AboutUs2 from "../../../../assets/images/about-us-2.webp";
+import AboutUs2JPG from "../../../../assets/images/about-us-2.jpg";
 // import  from "../../../assets/images/about-us-1.webp";
 
 export const AboutUsPageRussian = () => {
@@ -134,8 +137,20 @@ export const AboutUsPageRussian = () => {
           </div>
         </div>
         <div className="about-us-col-2">
-          <img src={AboutUs1} alt="about 1" className="about-us-img" />
-          <img src={AboutUs2} alt="about 2" className="about-us-img" />
+          {/* <img src={AboutUs1} alt="about 1" className="about-us-img" /> */}
+          <Image
+            src={AboutUs1}
+            webp={AboutUs1JPG}
+            alt="About 61 Group"
+            className="about-us-img"
+          />
+          <Image
+            src={AboutUs2}
+            webp={AboutUs2JPG}
+            alt="About 61 Group"
+            className="about-us-img"
+          />
+          {/* <img src={AboutUs2} alt="about 2" className="about-us-img" /> */}
           <ContactFixedRussian />
         </div>
       </div>

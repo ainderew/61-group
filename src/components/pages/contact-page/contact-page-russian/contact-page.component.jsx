@@ -8,6 +8,7 @@ import { ContactModalRussian } from "../../../parts/contact-modal/contact-modal-
 
 //IMAGES
 import ContactPhoto from "../../../../assets/images/contact-photo.webp";
+import ContactPhotoJPG from "../../../../assets/images/contact-photo.jpg";
 export const ContactPageRussian = () => {
   //USESTATE VARS
   const [modalState, setModalState] = useState(false);
@@ -73,8 +74,15 @@ export const ContactPageRussian = () => {
         </div>
 
         <div className="contact-page-col-2">
-          <img
+          {/* <img
             src={ContactPhoto}
+            alt="contact-Group 61"
+            className="contact-img"
+          /> */}
+          
+          <Image
+            src={ContactPhoto}
+            webp={ContactPhotoJPG}
             alt="contact-Group 61"
             className="contact-img"
           />

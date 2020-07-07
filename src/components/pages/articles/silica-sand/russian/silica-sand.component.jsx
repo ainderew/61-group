@@ -1,15 +1,18 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
+import Image from "react-image-webp";
 import "../silica-sand.style.scss";
 
 //IMAGES
 import Image1 from "../../../../../assets/images/silica-sand-article-img-1.webp";
+import Image1JPG from "../../../../../assets/images/silica-sand-article-img-1.jpg";
 // import Image2 from "../../../../../assets/images/silica-sand-article-img-2.webp";
 import Image3 from "../../../../../assets/images/silica-sand-article-img-3.webp";
+import Image3JPG from "../../../../../assets/images/silica-sand-article-img-3.jpg";
 
 export const SilicaSandArticle = () => {
-  useEffect(() =>{
+  useEffect(() => {
     document.body.scrollIntoView();
-  })
+  });
   return (
     <div className="silica-sand-article">
       <div className="article-hero-banner">
@@ -33,9 +36,15 @@ export const SilicaSandArticle = () => {
               </p>
             </div>
             <div className="article-row-1-col-right">
-              <img
+              {/* <img
                 loading="lazy"
                 src={Image1}
+                alt="Кварцевый песок окатанный"
+                className="article-row-1-img"
+              /> */}
+              <Image
+                src={Image1}
+                webp={Image1JPG}
                 alt="Кварцевый песок окатанный"
                 className="article-row-1-img"
               />
@@ -111,7 +120,14 @@ export const SilicaSandArticle = () => {
             <h4 className="article-row-7-watermark">
               Сферы использования кварцевого песка
             </h4>
-            <img loading="lazy" src={Image3} alt="" className="article-img-3" />
+            {/* <img loading="lazy" src={Image3} alt="" className="article-img-3" /> */}
+            <Image
+              src={Image3}
+              webp={Image3JPG}
+              alt="Кварцевый песок окатанный"
+              className="article-img-3"
+            />
+
             <div className="article-row-7-white-div">
               <h2 className="article-h2">
                 СФЕРЫ ИСПОЛЬЗОВАНИЯ КВАРЦЕВОГО ПЕСОК

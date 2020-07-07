@@ -9,7 +9,7 @@ import { languageAction } from "../../../../redux_actions/index";
 import LogoImg from "../../../../assets/logos/Logo.svg";
 
 //ICON
-import SearchIcon from "../../../../assets/icons/search_white.svg";
+
 import EmailIcon from "../../../../assets/icons/mail_white.svg";
 import PhoneIcon from "../../../../assets/icons/phone_white.svg";
 import RussianFlag from "../../../../assets/icons/russia.svg";
@@ -22,13 +22,13 @@ export const WebNavigationRussian = () => {
   const productsSubMenu = useRef(null);
 
   //USESTATES
-  const [searchState, setSearchState] = useState(false);
+  const [searchState] = useState(false);
   const [languageState, setLanguageState] = useState(false);
 
   //FUNCTIONS
-  const onSearchClick = () => {
-    setSearchState(true);
-  };
+  // const onSearchClick = () => {
+  //   setSearchState(true);
+  // };
 
   const onLanguageHover = () => {
     setLanguageState(true);

@@ -1,10 +1,14 @@
 import React from "react";
+import Image from "react-image-webp";
 import "../white-quartz.style.scss";
 
 //IMAGE
 import image1 from "../../../../../assets/images/white-quartz-article.webp";
+import image1JPG from "../../../../../assets/images/white-quartz-article.jpg";
 import image2 from "../../../../../assets/images/white-quartz-article-img-1.webp";
+import image2JPG from "../../../../../assets/images/white-quartz-article-img-1.jpg";
 import image3 from "../../../../../assets/images/news1.webp";
+import image3JPG from "../../../../../assets/images/news1.jpg";
 
 export const WhiteQuartzArticle = () => {
   return (
@@ -30,9 +34,15 @@ export const WhiteQuartzArticle = () => {
               </p>
             </div>
             <div className="article-quartz-row-1-col-right">
-              <img
+              {/* <img
                 loading="lazy"
                 src={image1}
+                alt="white quartz mining"
+                className="article-img"
+              /> */}
+              <Image
+                src={image1}
+                webp={image1JPG}
                 alt="white quartz mining"
                 className="article-img"
               />
@@ -142,10 +152,22 @@ export const WhiteQuartzArticle = () => {
 
           <div className="article-quartz-row-7">
             <div className="article-quartz-row-7-col-left">
-              <img loading="lazy" src={image2} alt="" className="article-img" />
+              {/* <img loading="lazy" src={image2} alt="" className="article-img" /> */}
+              <Image
+                src={image2}
+                webp={image2JPG}
+                alt="white quartz mining"
+                className="article-img"
+              />
             </div>
             <div className="article-quartz-row-7-col-right">
-              <img loading="lazy" src={image3} alt="" className="article-img" />
+              {/* <img loading="lazy" src={image3} alt="" className="article-img" /> */}
+              <Image
+                src={image3}
+                webp={image3JPG}
+                alt="white quartz mining"
+                className="article-img"
+              />
             </div>
           </div>
 
