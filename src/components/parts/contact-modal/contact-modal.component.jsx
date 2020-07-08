@@ -16,15 +16,28 @@ export const ContactModal = ({ modalState, parentFunction }) => {
     error: "off",
   });
   const [loadingState, setLoadingState] = useState("off");
-
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     message: "",
   });
+  const [emailValidationState, setEmailValidation] = useState(true);
 
   //FUNCTIONS
+  const emailValidation = () => {
+    const emailTest = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    
+    if (formData.email.match(emailTest) == null) {
+      setEmailValidation(false);
+      console.log("invalid")
+      return false;
+    } else {
+      console.log("valid")
+      return true;
+    }
+  };
+
   const onServerResponse = res => {
     console.log(res);
     if (res.message === "Email Sent") {
@@ -47,8 +60,7 @@ export const ContactModal = ({ modalState, parentFunction }) => {
       error: "off",
     });
   };
-  
-  
+
   const formInputChange = (key, e) => {
     setFormData({
       ...formData,
@@ -56,30 +68,34 @@ export const ContactModal = ({ modalState, parentFunction }) => {
     });
   };
 
-  
   const sendForm = async e => {
-    setLoadingState("loading");
+    
     e.preventDefault();
 
-    await fetch("https://group61.herokuapp.com/email", {
-      method: "POST",
-      mode: "cors",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    })
-      .then(response => response.json())
-      .then(data => {
-        setLoadingState("off");
-        onServerResponse(data);
-        console.log(data);
-      });
+    if (emailValidation()) {
+      setLoadingState("loading");
+      await fetch("https://group61.herokuapp.com/email", {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+        .then(response => response.json())
+        .then(data => {
+          setLoadingState("off");
+          onServerResponse(data);
+          console.log(data);
+        });
 
-    setTimeout(() => {
-      Reset();
-      parentFunction(e);
-    }, 2000);
+      setTimeout(() => {
+        Reset();
+        parentFunction(e);
+      }, 2000);
+    } else {
+      
+    }
   };
 
   //USEEFFECT
@@ -120,10 +136,14 @@ export const ContactModal = ({ modalState, parentFunction }) => {
             />
           </div>
           <div className="contact-form-input-container">
-            <label htmlFor="email" className="contact-form-label">
-              Email
+            <label
+              style={emailValidationState ? null : { color: "red" }}
+              htmlFor="email"
+              className="contact-form-label">
+              {emailValidationState ? "Email" : "Enter valid email"}
             </label>
             <input
+              style={emailValidationState ? null : { borderColor: "red" }}
               value={formData.email}
               onChange={e => formInputChange("email", e)}
               type="email"
@@ -166,7 +186,7 @@ export const ContactModal = ({ modalState, parentFunction }) => {
           <button onClick={parentFunction} className="contact-form-btn">
             CANCEL
           </button>
-          <button  type="submit" className="contact-form-btn">
+          <button type="submit" className="contact-form-btn">
             SUBMIT
           </button>
         </div>

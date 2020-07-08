@@ -21,7 +21,22 @@ export const ContactFixedRussian = () => {
     message: "",
   });
 
+  const [emailValidationState, setEmailValidation] = useState(true);
+
   //FUNCTIONS
+  const emailValidation = () => {
+    const emailTest = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if (formData.email.match(emailTest) == null) {
+      setEmailValidation(false);
+      console.log("invalid");
+      return false;
+    } else {
+      console.log("valid");
+      return true;
+    }
+  };
+
   const onServerResponse = res => {
     console.log(res);
     if (res.message === "Email Sent") {
@@ -53,28 +68,33 @@ export const ContactFixedRussian = () => {
   };
 
   const sendForm = async e => {
-    setLoadingState("loading");
+    
     e.preventDefault();
 
-    await fetch("https://group61.herokuapp.com/email", {
-      method: "POST",
-      mode: "cors",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    })
-      .then(response => response.json())
-      .then(data => {
-        setLoadingState("off");
-        onServerResponse(data);
-        console.log(data);
-      });
+    if (emailValidation()) {
+      setLoadingState("loading");
+      await fetch("https://group61.herokuapp.com/email", {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+        .then(response => response.json())
+        .then(data => {
+          setLoadingState("off");
+          onServerResponse(data);
+          console.log(data);
+        });
 
-    setTimeout(() => {
-      Reset();
-    }, 2000);
+      setTimeout(() => {
+        Reset();
+
+      }, 2000);
+    }
   };
+
   
   return (
     <div className="contact-fixed">
@@ -98,16 +118,21 @@ export const ContactFixedRussian = () => {
             />
           </div>
           <div className="contact-form-input-container">
-            <label htmlFor="email" className="contact-form-label">
-              Email
+            <label
+              style={emailValidationState ? null : { color: "red" }}
+              htmlFor="email"
+              className="contact-form-label">
+              {emailValidationState ? "Email" : "Укажите корректный email"}
             </label>
             <input
+              style={emailValidationState ? null : { borderColor: "red" }}
               value={formData.email}
               onChange={e => formInputChange("email", e)}
               type="text"
               name="email"
-              placeholder="Введите ваш email"
+              placeholder="По желанию email"
               className="contact-form-input input-name"
+              required
             />
           </div>
           <div className="contact-form-input-container">

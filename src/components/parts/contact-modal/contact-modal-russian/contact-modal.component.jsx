@@ -13,44 +13,54 @@ export const ContactModalRussian = ({ modalState, parentFunction }) => {
   const [modalClass, setModalClass] = useState("contact-modal");
   const [animationState, setAnimationState] = useState({
     success: "off",
-    error: "off"
-  })
-  const [loadingState, setLoadingState] = useState("off")
+    error: "off",
+  });
+  const [loadingState, setLoadingState] = useState("off");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     message: "",
   });
+  const [emailValidationState, setEmailValidation] = useState(true);
 
   //FUNCTIONS
-  const onServerResponse = (res) =>{
-    console.log(res)
-    if (res.message === "Email Sent"){
-      setAnimationState({
-        ...animationState,
-        success: "success-modal"
-      })
-    }else if (res.message === "Error"){
-      console.log("error else")
-      setAnimationState({
-        ...animationState,
-        error: "error-modal"
-      })
+  const emailValidation = () => {
+    const emailTest = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    
+    if (formData.email.match(emailTest) == null) {
+      setEmailValidation(false);
+      console.log("invalid")
+      return false;
+    } else {
+      console.log("valid")
+      return true;
     }
-  }
-  
-  // const loadingSetter = () =>{
-  //   setLoadingState("loading")
-  // }
-  
-  const Reset = () =>{
+  };
+
+  const onServerResponse = res => {
+    console.log(res);
+    if (res.message === "Email Sent") {
+      setAnimationState({
+        ...animationState,
+        success: "success-modal",
+      });
+    } else if (res.message === "Error") {
+      console.log("error else");
+      setAnimationState({
+        ...animationState,
+        error: "error-modal",
+      });
+    }
+  };
+
+  const Reset = () => {
     setAnimationState({
       success: "off",
-      error: "off"
-    })
-  }
-  
+      error: "off",
+    });
+  };
+
   const formInputChange = (key, e) => {
     setFormData({
       ...formData,
@@ -59,29 +69,33 @@ export const ContactModalRussian = ({ modalState, parentFunction }) => {
   };
 
   const sendForm = async e => {
-    setLoadingState("loading");
+    
     e.preventDefault();
 
-    await fetch("https://group61.herokuapp.com/email", {
-      method: "POST",
-      mode: "cors",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    })
-      .then(response => response.json())
-      .then(data => {
-        setLoadingState("off")
-        onServerResponse(data)
-        console.log(data)
-      });
-      
-      setTimeout(() =>{
-        Reset()
-        parentFunction(e)
+    if (emailValidation()) {
+      setLoadingState("loading");
+      await fetch("https://group61.herokuapp.com/email", {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+        .then(response => response.json())
+        .then(data => {
+          setLoadingState("off");
+          onServerResponse(data);
+          console.log(data);
+        });
+
+      setTimeout(() => {
+        Reset();
+        parentFunction(e);
       }, 2000);
+    } else {
       
+    }
   };
 
   //USEEFFECT
@@ -96,10 +110,10 @@ export const ContactModalRussian = ({ modalState, parentFunction }) => {
   return (
     <div className={modalClass}>
       <SuccessModalRussian classProp={animationState.success} />
-      <ErrorModalRussian classProp={animationState.error}/>
+      <ErrorModalRussian classProp={animationState.error} />
       <Loading loadingClass={loadingState} />
       <img
-        onClick={(e) => parentFunction(e)}
+        onClick={e => parentFunction(e)}
         src={CloseIcon}
         alt="close icon"
         className="contact-form-icon"
@@ -122,16 +136,17 @@ export const ContactModalRussian = ({ modalState, parentFunction }) => {
             />
           </div>
           <div className="contact-form-input-container">
-            <label htmlFor="email" className="contact-form-label">
-              Email
+            <label style = {(emailValidationState) ? null : {color: "red"}} htmlFor="email" className="contact-form-label">
+              {(emailValidationState) ? "Email" : "Укажите корректный email"}
             </label>
             <input
+              style = {(emailValidationState) ? null : {borderColor: "red"}}
               value={formData.email}
               onChange={e => formInputChange("email", e)}
               type="text"
               name="email"
-              placeholder="Введите ваш email"
-              className="contact-form-input"
+              placeholder="По желанию email"
+              className="contact-form-input input-name"
               required
             />
           </div>
@@ -165,8 +180,12 @@ export const ContactModalRussian = ({ modalState, parentFunction }) => {
           </div>
         </div>
         <div className="button-div">
-          <button onClick={parentFunction} className="contact-form-btn">ОТМЕНА</button>
-          <button type="submit" className="contact-form-btn">ОТПРАВИТЬ</button>
+          <button onClick={parentFunction} className="contact-form-btn">
+            ОТМЕНА
+          </button>
+          <button type="submit" className="contact-form-btn">
+            ОТПРАВИТЬ
+          </button>
         </div>
       </form>
     </div>
