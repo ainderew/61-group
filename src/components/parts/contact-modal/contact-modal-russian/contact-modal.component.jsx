@@ -4,8 +4,8 @@ import "../contact-modal.style.scss";
 import CloseIcon from "../../../../assets/icons/close.svg";
 
 //COMPONENTS
-import { SuccessModal } from "../../success modal/success-modal.component";
-import { ErrorModal } from "../../error-modal/error-modal.component";
+import { SuccessModalRussian } from "../../success modal/russian/success-modal.component";
+import { ErrorModalRussian } from "../../error-modal/russian/error-modal.component";
 import { Loading } from "../../loading/loading.component";
 
 export const ContactModalRussian = ({ modalState, parentFunction }) => {
@@ -19,6 +19,7 @@ export const ContactModalRussian = ({ modalState, parentFunction }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     message: "",
   });
 
@@ -94,8 +95,8 @@ export const ContactModalRussian = ({ modalState, parentFunction }) => {
 
   return (
     <div className={modalClass}>
-      <SuccessModal classProp={animationState.success} />
-      <ErrorModal classProp={animationState.error}/>
+      <SuccessModalRussian classProp={animationState.success} />
+      <ErrorModalRussian classProp={animationState.error}/>
       <Loading loadingClass={loadingState} />
       <img
         onClick={(e) => parentFunction(e)}
@@ -103,7 +104,7 @@ export const ContactModalRussian = ({ modalState, parentFunction }) => {
         alt="close icon"
         className="contact-form-icon"
       />
-      <form className="contact-form">
+      <form onSubmit={sendForm} className="contact-form">
         <h3 className="contact-form-header">НАПИШИТЕ НАМ</h3>
         <div className="contact-form-row">
           <div className="contact-form-input-container">
@@ -121,14 +122,27 @@ export const ContactModalRussian = ({ modalState, parentFunction }) => {
           </div>
           <div className="contact-form-input-container">
             <label htmlFor="email" className="contact-form-label">
-              Телефон
+              Email
             </label>
             <input
               value={formData.email}
               onChange={e => formInputChange("email", e)}
               type="text"
               name="email"
-              placeholder="Введите ваш email или телефон"
+              placeholder="Введите ваш email"
+              className="contact-form-input"
+            />
+          </div>
+          <div className="contact-form-input-container">
+            <label htmlFor="phone" className="contact-form-label">
+              Телефон
+            </label>
+            <input
+              value={formData.phone}
+              onChange={e => formInputChange("phone", e)}
+              type="tel"
+              name="phone"
+              placeholder="По желанию телефон"
               className="contact-form-input"
             />
           </div>
@@ -150,7 +164,7 @@ export const ContactModalRussian = ({ modalState, parentFunction }) => {
         </div>
         <div className="button-div">
           <button onClick={parentFunction} className="contact-form-btn">ОТМЕНА</button>
-          <button onClick={sendForm} className="contact-form-btn">ОТПРАВИТЬ</button>
+          <button type="submit" className="contact-form-btn">ОТПРАВИТЬ</button>
         </div>
       </form>
     </div>

@@ -1,19 +1,54 @@
 import React, { useState, useEffect } from "react";
 import "./contact-modal.style.scss";
 
+//COMPONENTS
+import { SuccessModal } from "../success modal/success-modal.component";
+import { ErrorModal } from "../error-modal/error-modal.component";
+import { Loading } from "../loading/loading.component";
+//IMAGES
 import CloseIcon from "../../../assets/icons/close.svg";
 
 export const ContactModal = ({ modalState, parentFunction }) => {
   //USESTATE VARS
   const [modalClass, setModalClass] = useState("contact-modal");
+  const [animationState, setAnimationState] = useState({
+    success: "off",
+    error: "off",
+  });
+  const [loadingState, setLoadingState] = useState("off");
 
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     message: "",
   });
 
   //FUNCTIONS
+  const onServerResponse = res => {
+    console.log(res);
+    if (res.message === "Email Sent") {
+      setAnimationState({
+        ...animationState,
+        success: "success-modal",
+      });
+    } else if (res.message === "Error") {
+      console.log("error else");
+      setAnimationState({
+        ...animationState,
+        error: "error-modal",
+      });
+    }
+  };
+
+  const Reset = () => {
+    setAnimationState({
+      success: "off",
+      error: "off",
+    });
+  };
+  
+  
   const formInputChange = (key, e) => {
     setFormData({
       ...formData,
@@ -21,9 +56,11 @@ export const ContactModal = ({ modalState, parentFunction }) => {
     });
   };
 
+  
   const sendForm = async e => {
+    setLoadingState("loading");
     e.preventDefault();
-    parentFunction(e);
+
     await fetch("https://group61.herokuapp.com/email", {
       method: "POST",
       mode: "cors",
@@ -33,8 +70,16 @@ export const ContactModal = ({ modalState, parentFunction }) => {
       body: JSON.stringify(formData),
     })
       .then(response => response.json())
-      .then(data => console.log(data));
-     
+      .then(data => {
+        setLoadingState("off");
+        onServerResponse(data);
+        console.log(data);
+      });
+
+    setTimeout(() => {
+      Reset();
+      parentFunction(e);
+    }, 2000);
   };
 
   //USEEFFECT
@@ -48,13 +93,16 @@ export const ContactModal = ({ modalState, parentFunction }) => {
 
   return (
     <div className={modalClass}>
+      <SuccessModal classProp={animationState.success} />
+      <ErrorModal classProp={animationState.error} />
+      <Loading loadingClass={loadingState} />
       <img
-        onClick={(e) => parentFunction(e)}
+        onClick={e => parentFunction(e)}
         src={CloseIcon}
         alt="close icon"
         className="contact-form-icon"
       />
-      <form className="contact-form">
+      <form onSubmit={sendForm} className="contact-form">
         <h3 className="contact-form-header">CONTACT US</h3>
         <div className="contact-form-row">
           <div className="contact-form-input-container">
@@ -68,19 +116,34 @@ export const ContactModal = ({ modalState, parentFunction }) => {
               name="name"
               placeholder="Enter Your Name"
               className="contact-form-input input-name"
+              required
             />
           </div>
           <div className="contact-form-input-container">
             <label htmlFor="email" className="contact-form-label">
-              Email/Phone
+              Email
             </label>
             <input
               value={formData.email}
               onChange={e => formInputChange("email", e)}
-              type="text"
+              type="email"
               name="email"
-              placeholder="Enter Your Email and/or Phone Number"
-              className="contact-form-input"
+              placeholder="Enter valid email"
+              className="contact-form-input input-name"
+              required
+            />
+          </div>
+          <div className="contact-form-input-container">
+            <label htmlFor="email" className="contact-form-label">
+              Phone
+            </label>
+            <input
+              value={formData.phone}
+              onChange={e => formInputChange("phone", e)}
+              type="tel"
+              name="phone"
+              placeholder="Optional Phone Number"
+              className="contact-form-input input-name"
             />
           </div>
         </div>
@@ -100,8 +163,12 @@ export const ContactModal = ({ modalState, parentFunction }) => {
           </div>
         </div>
         <div className="button-div">
-          <button onClick={parentFunction} className="contact-form-btn">CANCEL</button>
-          <button onClick={sendForm} className="contact-form-btn">SUBMIT</button>
+          <button onClick={parentFunction} className="contact-form-btn">
+            CANCEL
+          </button>
+          <button  type="submit" className="contact-form-btn">
+            SUBMIT
+          </button>
         </div>
       </form>
     </div>
