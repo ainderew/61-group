@@ -122,7 +122,7 @@ export const ContactFixedRussian = () => {
               style={emailValidationState ? null : { color: "red" }}
               htmlFor="email"
               className="contact-form-label">
-              {emailValidationState ? "Email" : "Укажите корректный email"}
+              Email
             </label>
             <input
               style={emailValidationState ? null : { borderColor: "red" }}

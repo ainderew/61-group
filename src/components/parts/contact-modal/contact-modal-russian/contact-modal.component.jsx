@@ -30,6 +30,10 @@ export const ContactModalRussian = ({ modalState, parentFunction }) => {
     
     if (formData.email.match(emailTest) == null) {
       setEmailValidation(false);
+      setFormData({
+        ...formData,
+        email: ""
+      })
       console.log("invalid")
       return false;
     } else {
@@ -137,7 +141,7 @@ export const ContactModalRussian = ({ modalState, parentFunction }) => {
           </div>
           <div className="contact-form-input-container">
             <label style = {(emailValidationState) ? null : {color: "red"}} htmlFor="email" className="contact-form-label">
-              {(emailValidationState) ? "Email" : "Укажите корректный email"}
+              Email
             </label>
             <input
               style = {(emailValidationState) ? null : {borderColor: "red"}}
@@ -145,7 +149,7 @@ export const ContactModalRussian = ({ modalState, parentFunction }) => {
               onChange={e => formInputChange("email", e)}
               type="text"
               name="email"
-              placeholder="По желанию email"
+              placeholder={emailValidationState? "По желанию email" : "Укажите корректный email"}
               className="contact-form-input input-name"
               required
             />
