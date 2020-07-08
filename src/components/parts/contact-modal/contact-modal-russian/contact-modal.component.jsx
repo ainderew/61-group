@@ -118,6 +118,7 @@ export const ContactModalRussian = ({ modalState, parentFunction }) => {
               name="name"
               placeholder="Введите ваше имя"
               className="contact-form-input input-name"
+              required
             />
           </div>
           <div className="contact-form-input-container">
@@ -131,6 +132,7 @@ export const ContactModalRussian = ({ modalState, parentFunction }) => {
               name="email"
               placeholder="Введите ваш email"
               className="contact-form-input"
+              required
             />
           </div>
           <div className="contact-form-input-container">
