@@ -23,7 +23,8 @@
     "styled-components": "^5.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "Start": "node server.js",
+    "devStart": "react-scripts start",
     "build": "react-scripts build",
     "exp": "node server.js",
     "test": "react-scripts test",
