@@ -76,11 +76,11 @@ export const WebNavigationRussian = () => {
               </div>
               <div className="web-nav-product-sub-menu-row-2">
                 <div className="web-nav-product-sub-menu-col">
-                  <a
-                    href="/Products/silicasandlarge/ru"
+                  <Link
+                    to="/Products/silicasandlarge/ru"
                     className="sub-menu-item">
                     КВАРЦЕВЫЙ ПЕСОК КРУПНЫХ ФРАКЦИЙ
-                  </a>
+                  </Link>
                   <a
                     href="/Products/silicasandmedium/ru"
                     className="sub-menu-item">
